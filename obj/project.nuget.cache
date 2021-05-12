@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "54lFrzB+JCHJUjVMGjoxk0PV2OBurPv/rgfAKqtKseNRQEVSK1RQw2FvbizwnlGhKPkTOENEDk3mXBnhajjAHQ==",
+  "dgSpecHash": "P1fzn2oXp42e2A98cJR7PsVqqDnpqmKVaaTu2v0NG3HnzG7X9Y/zItSXOcc4j5RAloADr3VVEsMxMhgHOzp6uw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Daniel\\Desktop\\2 Семестр\\ООП\\Курсовая\\Car Dealeship\\CourseWork.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Daniel\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

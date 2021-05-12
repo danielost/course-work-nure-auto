@@ -105,6 +105,7 @@ namespace CourseWork
             this.ToRegistrationButton.Size = new System.Drawing.Size(109, 15);
             this.ToRegistrationButton.TabIndex = 5;
             this.ToRegistrationButton.Text = "create an account";
+            this.ToRegistrationButton.Click += new System.EventHandler(this.ToRegistrationButton_Click);
             // 
             // label1
             // 
@@ -143,6 +144,7 @@ namespace CourseWork
             this.SignInButton.TabIndex = 2;
             this.SignInButton.Text = "Sign in";
             this.SignInButton.UseVisualStyleBackColor = false;
+            this.SignInButton.Click += new System.EventHandler(this.SignInButton_Click);
             // 
             // PassAutoBox
             // 

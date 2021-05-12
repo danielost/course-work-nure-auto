@@ -10,10 +10,28 @@ namespace CourseWork
 {
     public partial class LoginForm : Form
     {
+        User curr;
         public LoginForm()
         {
             InitializeComponent();
-            pictureBox1.Image = Image.FromFile("C:\\Users\\Daniel\\Desktop\\2 Семестр\\ООП\\Курсовая\\CourseWork\\assets\\logo.bmp");
+            Serializer sr = new Serializer();
+            curr = sr.JsonDeserialize(typeof(User), "data.save") as User;       
+        }
+
+        private void SignInButton_Click(object sender, EventArgs e)
+        {
+            User user = new User("Gosha", "gosha228", "123456789");
+            Serializer sr = new Serializer();
+            sr.JsonSerialize(user);
+        }
+
+        private void ToRegistrationButton_Click(object sender, EventArgs e)
+        {
+            User user = new User("Gosha", LoginAutoBox.Text, PassAutoBox.Text);
+            if (curr.Password == user.Password)
+            {
+                LoginAutoBox.BackColor = Color.Red;
+            }
         }
     }
 }
