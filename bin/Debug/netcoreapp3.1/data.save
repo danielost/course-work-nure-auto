@@ -1,17 +1,1 @@
-[
-  {
-    "Name": "Gosha",
-    "Login": "Gosha228",
-    "Password": "12345"
-  },
-  {
-    "Name": "Andrew",
-    "Login": "Andrew228",
-    "Password": "123456789"
-  },
-  {
-    "Name": "admin",
-    "Login": "admin",
-    "Password": "password"
-  }
-]
+[{"Name":"Gosha","Login":"Gosha228","Password":"12345"},{"Name":"Andrew","Login":"Andrew228","Password":"123456789"},{"Name":"admin","Login":"admin","Password":"password"},{"Name":"Daniel","Login":"danny24","Password":"dan135246"}]
