@@ -9,9 +9,8 @@ namespace CourseWork
 {
     class Serializer
     {
-        public void JsonSerialize(object data)
+        public void Serialize(object data, string path)
         {
-            string path = "data.save";
             JsonSerializer jsonSerializer = new JsonSerializer();
             if (File.Exists(path))
             {
@@ -26,7 +25,7 @@ namespace CourseWork
             sw.Close();
         }
 
-        public object readUsers(string fileName)
+        public object Deserialize(string fileName)
         {
             string jsonFilePath = @"C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\" + fileName;
             using (StreamReader r = new StreamReader(jsonFilePath))

@@ -19,17 +19,19 @@ namespace CourseWork
             InitializeComponent();
             appUsers = new AppUsers();
             Serializer sr = new Serializer();
-            appUsers.users = sr.readUsers("data.save") as List<User>;
+            appUsers.users = sr.Deserialize("data.save") as List<User>;
             WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
         }
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            User user = new User("Gosha", LoginAutoBox.Text, PassAutoBox.Text);
+            User user = new User("", LoginAutoBox.Text, PassAutoBox.Text);
 
             if (appUsers.Search(user))
             {
-                LoginAutoBox.BackColor = Color.Red;
+                this.Hide();
+                MainForm mf = new MainForm();
+                mf.Show();
             }
             else
             {
@@ -37,11 +39,9 @@ namespace CourseWork
             }
         }
 
-        private void ToRegistrationButton_Click(object sender, EventArgs e)
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
+            Application.Exit();
         }
-
-        
     }
 }

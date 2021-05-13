@@ -1,25 +1,10 @@
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.csprojAssemblyReference.cache
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.LoginForm.resources
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.csproj.GenerateResource.cache
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.AssemblyInfoInputs.cache
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.AssemblyInfo.cs
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.csproj.CoreCompileInputs.cache
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\bin\Debug\netcoreapp3.1\CourseWork.exe
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\bin\Debug\netcoreapp3.1\CourseWork.deps.json
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\bin\Debug\netcoreapp3.1\CourseWork.runtimeconfig.json
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\bin\Debug\netcoreapp3.1\CourseWork.runtimeconfig.dev.json
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\bin\Debug\netcoreapp3.1\CourseWork.dll
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\bin\Debug\netcoreapp3.1\CourseWork.pdb
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.dll
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.pdb
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.genruntimeconfig.cache
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\CourseWork\obj\Debug\netcoreapp3.1\CourseWork.Properties.Resources.resources
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\CourseWork.exe
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\CourseWork.deps.json
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\CourseWork.runtimeconfig.json
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\CourseWork.runtimeconfig.dev.json
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\CourseWork.dll
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\CourseWork.pdb
+C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.csprojAssemblyReference.cache
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.LoginForm.resources
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.Properties.Resources.resources
@@ -27,8 +12,8 @@ C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\o
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.AssemblyInfoInputs.cache
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.AssemblyInfo.cs
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.csproj.CopyComplete
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.dll
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.pdb
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.genruntimeconfig.cache
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.csproj.CopyComplete
+C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.MainForm.resources
