@@ -1,7 +1,7 @@
 ﻿
 namespace CourseWork
 {
-    partial class LoginForm
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,8 @@ namespace CourseWork
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.WrongDataLabel = new System.Windows.Forms.Label();
             this.LoginAutoBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@ namespace CourseWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.panel1.Controls.Add(this.WrongDataLabel);
             this.panel1.Controls.Add(this.LoginAutoBox);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
@@ -61,25 +59,13 @@ namespace CourseWork
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 681);
-            this.panel1.TabIndex = 0;
-            // 
-            // WrongDataLabel
-            // 
-            this.WrongDataLabel.AutoSize = true;
-            this.WrongDataLabel.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.WrongDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.WrongDataLabel.Location = new System.Drawing.Point(512, 495);
-            this.WrongDataLabel.Name = "WrongDataLabel";
-            this.WrongDataLabel.Size = new System.Drawing.Size(230, 14);
-            this.WrongDataLabel.TabIndex = 9;
-            this.WrongDataLabel.Text = "Wrong login or password, please try again";
-            this.WrongDataLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.panel1.TabIndex = 1;
             // 
             // LoginAutoBox
             // 
             this.LoginAutoBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LoginAutoBox.Font = new System.Drawing.Font("Roboto", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LoginAutoBox.Location = new System.Drawing.Point(498, 339);
+            this.LoginAutoBox.Location = new System.Drawing.Point(509, 340);
             this.LoginAutoBox.Name = "LoginAutoBox";
             this.LoginAutoBox.PlaceholderText = "Login";
             this.LoginAutoBox.Size = new System.Drawing.Size(265, 28);
@@ -89,7 +75,7 @@ namespace CourseWork
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(587, 197);
+            this.pictureBox1.Location = new System.Drawing.Point(598, 198);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +87,7 @@ namespace CourseWork
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(509, 308);
+            this.label3.Location = new System.Drawing.Point(520, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 15);
             this.label3.TabIndex = 6;
@@ -114,18 +100,17 @@ namespace CourseWork
             this.ToRegistrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ToRegistrationButton.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.ToRegistrationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.ToRegistrationButton.Location = new System.Drawing.Point(643, 308);
+            this.ToRegistrationButton.Location = new System.Drawing.Point(654, 309);
             this.ToRegistrationButton.Name = "ToRegistrationButton";
             this.ToRegistrationButton.Size = new System.Drawing.Size(109, 15);
             this.ToRegistrationButton.TabIndex = 5;
             this.ToRegistrationButton.Text = "create an account";
-            this.ToRegistrationButton.Click += new System.EventHandler(this.ToRegistrationButton_Click);
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Bebas Neue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(508, 276);
+            this.label1.Location = new System.Drawing.Point(519, 277);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 21);
             this.label1.TabIndex = 4;
@@ -137,7 +122,7 @@ namespace CourseWork
             this.KeepSignedCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.KeepSignedCheckBox.AutoSize = true;
             this.KeepSignedCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.KeepSignedCheckBox.Location = new System.Drawing.Point(568, 463);
+            this.KeepSignedCheckBox.Location = new System.Drawing.Point(579, 464);
             this.KeepSignedCheckBox.Name = "KeepSignedCheckBox";
             this.KeepSignedCheckBox.Size = new System.Drawing.Size(123, 19);
             this.KeepSignedCheckBox.TabIndex = 3;
@@ -152,35 +137,32 @@ namespace CourseWork
             this.SignInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SignInButton.ForeColor = System.Drawing.Color.White;
-            this.SignInButton.Location = new System.Drawing.Point(498, 413);
+            this.SignInButton.Location = new System.Drawing.Point(509, 414);
             this.SignInButton.Name = "SignInButton";
             this.SignInButton.Size = new System.Drawing.Size(265, 31);
             this.SignInButton.TabIndex = 2;
             this.SignInButton.Text = "Sign in";
             this.SignInButton.UseVisualStyleBackColor = false;
-            this.SignInButton.Click += new System.EventHandler(this.SignInButton_Click);
             // 
             // PassAutoBox
             // 
             this.PassAutoBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PassAutoBox.Font = new System.Drawing.Font("Roboto", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PassAutoBox.Location = new System.Drawing.Point(498, 374);
+            this.PassAutoBox.Location = new System.Drawing.Point(509, 375);
             this.PassAutoBox.Name = "PassAutoBox";
             this.PassAutoBox.PlaceholderText = "Password";
             this.PassAutoBox.Size = new System.Drawing.Size(265, 28);
             this.PassAutoBox.TabIndex = 1;
             this.PassAutoBox.UseSystemPasswordChar = true;
             // 
-            // LoginForm
+            // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel1);
-            this.Name = "LoginForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nure Automotive - Login";
+            this.Name = "RegistrationForm";
+            this.Text = "RegistrationForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -191,15 +173,14 @@ namespace CourseWork
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox LoginAutoBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ToRegistrationButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox KeepSignedCheckBox;
         private System.Windows.Forms.Button SignInButton;
         private System.Windows.Forms.TextBox PassAutoBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label ToRegistrationButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox LoginAutoBox;
-        private System.Windows.Forms.Label WrongDataLabel;
     }
 }

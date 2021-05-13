@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>cartransport_coch_7076.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

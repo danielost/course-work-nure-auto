@@ -20,6 +20,7 @@ namespace CourseWork
             appUsers = new AppUsers();
             Serializer sr = new Serializer();
             appUsers.users = sr.readUsers("data.save") as List<User>;
+            WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
         }
 
         private void SignInButton_Click(object sender, EventArgs e)
@@ -30,11 +31,15 @@ namespace CourseWork
             {
                 LoginAutoBox.BackColor = Color.Red;
             }
+            else
+            {
+                WrongDataLabel.ForeColor = Color.Red;
+            }
         }
 
         private void ToRegistrationButton_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
         }
 
         
