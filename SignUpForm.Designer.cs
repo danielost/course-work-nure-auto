@@ -31,6 +31,7 @@ namespace CourseWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.WrongDataLabel = new System.Windows.Forms.Label();
             this.RegName = new System.Windows.Forms.TextBox();
             this.RegPassConfirm = new System.Windows.Forms.TextBox();
             this.ToRegistrationButton = new System.Windows.Forms.Label();
@@ -40,12 +41,15 @@ namespace CourseWork
             this.label1 = new System.Windows.Forms.Label();
             this.SignUpButton = new System.Windows.Forms.Button();
             this.RegPass = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.RegName);
             this.panel1.Controls.Add(this.RegPassConfirm);
             this.panel1.Controls.Add(this.ToRegistrationButton);
@@ -60,6 +64,19 @@ namespace CourseWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // WrongDataLabel
+            // 
+            this.WrongDataLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WrongDataLabel.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WrongDataLabel.ForeColor = System.Drawing.Color.Red;
+            this.WrongDataLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.WrongDataLabel.Location = new System.Drawing.Point(0, 0);
+            this.WrongDataLabel.Name = "WrongDataLabel";
+            this.WrongDataLabel.Size = new System.Drawing.Size(265, 100);
+            this.WrongDataLabel.TabIndex = 18;
+            this.WrongDataLabel.Text = "Wrong login or password, please try again";
+            this.WrongDataLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // RegName
             // 
@@ -166,6 +183,14 @@ namespace CourseWork
             this.RegPass.TabIndex = 9;
             this.RegPass.UseSystemPasswordChar = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.WrongDataLabel);
+            this.panel2.Location = new System.Drawing.Point(500, 509);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(265, 100);
+            this.panel2.TabIndex = 19;
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -175,11 +200,13 @@ namespace CourseWork
             this.Controls.Add(this.panel1);
             this.Name = "SignUpForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nure Automotive - Sign Up";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -196,5 +223,7 @@ namespace CourseWork
         private System.Windows.Forms.TextBox RegName;
         private System.Windows.Forms.TextBox RegPassConfirm;
         private System.Windows.Forms.Label ToRegistrationButton;
+        private System.Windows.Forms.Label WrongDataLabel;
+        private System.Windows.Forms.Panel panel2;
     }
 }

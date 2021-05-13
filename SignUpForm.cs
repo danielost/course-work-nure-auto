@@ -13,6 +13,7 @@ namespace CourseWork
         public SignUpForm()
         {
             InitializeComponent();
+            WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
         }
 
         private void ToRegistrationButton_Click(object sender, EventArgs e)
@@ -29,35 +30,73 @@ namespace CourseWork
 
         private bool LengthCheck(TextBox tb)
         {
-            return tb.Text.Length > 2;
+            return tb.Text.Length == 0;
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            if (!LengthCheck(RegLogin) || !LengthCheck(RegName) || !LengthCheck(RegPass) || !LengthCheck(RegPassConfirm))
+            if (LengthCheck(RegName))
             {
+                WrongDataLabel.Text = "You didn't enter the name";
+                WrongDataLabel.ForeColor = Color.Red;
+                return;
+            }
+            if (LengthCheck(RegLogin))
+            {
+                WrongDataLabel.Text = "You didn't enter the login";
+                WrongDataLabel.ForeColor = Color.Red;
+                return;
+            }
+            if (LengthCheck(RegPass))
+            {
+                WrongDataLabel.Text = "You didn't enter the password";
+                WrongDataLabel.ForeColor = Color.Red;
+                return;
+            }
+            if (LengthCheck(RegPassConfirm))
+            {
+                WrongDataLabel.Text = "You didn't confirm the password";
+                WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
             if (RegPass.Text != RegPassConfirm.Text)
             {
+                WrongDataLabel.Text = "Password confirmation was not successful";
+                WrongDataLabel.ForeColor = Color.Red;
+                return;
+            }
+
+            if (RegLogin.Text.Length < 4)
+            {
+                WrongDataLabel.Text = "Minimum login length is 4 symbols";
+                WrongDataLabel.ForeColor = Color.Red;
+                return;
+            }
+            if (RegPass.Text.Length < 6)
+            {
+                WrongDataLabel.Text = "Minimum password length is 6 symbols";
+                WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
             User user = new User(RegName.Text, RegLogin.Text, RegPass.Text);
             Serializer sr = new Serializer();
             List<User> readUsers = sr.Deserialize("data.save") as List<User>;
-            foreach(User currUser in readUsers)
+            foreach (User currUser in readUsers)
             {
-                if (currUser.Password == user.Password)
-                {
-                    return;
-                }
                 if (currUser.Login == user.Login)
                 {
+                    WrongDataLabel.Text = "This login is already taken by someone else";
+                    WrongDataLabel.ForeColor = Color.Red;
                     return;
                 }
             }
+            WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
             readUsers.Add(user);
             sr.Serialize(readUsers, "data.save");
+            MessageBox.Show("Account was successfully created");
+            this.Hide();
+            LoginForm lf = new LoginForm();
+            lf.Show();
         }
     }
 }
