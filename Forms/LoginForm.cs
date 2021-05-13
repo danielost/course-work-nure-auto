@@ -43,5 +43,12 @@ namespace CourseWork
         {
             Application.Exit();
         }
+
+        private void ToRegistrationButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUpForm suf = new SignUpForm();
+            suf.Show();
+        }
     }
 }
