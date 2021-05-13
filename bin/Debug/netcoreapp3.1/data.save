@@ -8,5 +8,10 @@
     "Name": "Andrew",
     "Login": "Andrew228",
     "Password": "123456789"
+  },
+  {
+    "Name": "admin",
+    "Login": "admin",
+    "Password": "password"
   }
 ]

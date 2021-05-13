@@ -29,14 +29,21 @@ namespace CourseWork
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.adminPanelBtn = new System.Windows.Forms.Button();
             this.requestSupplyBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
             this.contactsBtn = new System.Windows.Forms.Button();
             this.catalogBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.adminPanelBtn = new System.Windows.Forms.Button();
+            this.homeBtn = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.labelCurr = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,8 +61,27 @@ namespace CourseWork
             this.panel1.Size = new System.Drawing.Size(220, 681);
             this.panel1.TabIndex = 0;
             // 
+            // adminPanelBtn
+            // 
+            this.adminPanelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminPanelBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.adminPanelBtn.FlatAppearance.BorderSize = 0;
+            this.adminPanelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminPanelBtn.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.adminPanelBtn.ForeColor = System.Drawing.Color.White;
+            this.adminPanelBtn.Location = new System.Drawing.Point(0, 380);
+            this.adminPanelBtn.Name = "adminPanelBtn";
+            this.adminPanelBtn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.adminPanelBtn.Size = new System.Drawing.Size(220, 60);
+            this.adminPanelBtn.TabIndex = 5;
+            this.adminPanelBtn.Text = "Admin panel";
+            this.adminPanelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminPanelBtn.UseVisualStyleBackColor = true;
+            this.adminPanelBtn.Click += new System.EventHandler(this.adminPanelBtn_Click);
+            // 
             // requestSupplyBtn
             // 
+            this.requestSupplyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.requestSupplyBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.requestSupplyBtn.FlatAppearance.BorderSize = 0;
             this.requestSupplyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -66,13 +92,14 @@ namespace CourseWork
             this.requestSupplyBtn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.requestSupplyBtn.Size = new System.Drawing.Size(220, 60);
             this.requestSupplyBtn.TabIndex = 4;
-            this.requestSupplyBtn.Text = "Request supply";
+            this.requestSupplyBtn.Text = "Supply Requests";
             this.requestSupplyBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.requestSupplyBtn.UseVisualStyleBackColor = true;
             this.requestSupplyBtn.Click += new System.EventHandler(this.requestSupplyBtn_Click);
             // 
             // helpBtn
             // 
+            this.helpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.helpBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.helpBtn.FlatAppearance.BorderSize = 0;
             this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -90,6 +117,7 @@ namespace CourseWork
             // 
             // contactsBtn
             // 
+            this.contactsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contactsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.contactsBtn.FlatAppearance.BorderSize = 0;
             this.contactsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,6 +135,7 @@ namespace CourseWork
             // 
             // catalogBtn
             // 
+            this.catalogBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.catalogBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.catalogBtn.FlatAppearance.BorderSize = 0;
             this.catalogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -124,28 +153,45 @@ namespace CourseWork
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.homeBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 140);
             this.panel2.TabIndex = 0;
             // 
-            // adminPanelBtn
+            // homeBtn
             // 
-            this.adminPanelBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.adminPanelBtn.FlatAppearance.BorderSize = 0;
-            this.adminPanelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminPanelBtn.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.adminPanelBtn.ForeColor = System.Drawing.Color.White;
-            this.adminPanelBtn.Location = new System.Drawing.Point(0, 380);
-            this.adminPanelBtn.Name = "adminPanelBtn";
-            this.adminPanelBtn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.adminPanelBtn.Size = new System.Drawing.Size(220, 60);
-            this.adminPanelBtn.TabIndex = 5;
-            this.adminPanelBtn.Text = "Admin panel";
-            this.adminPanelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminPanelBtn.UseVisualStyleBackColor = true;
-            this.adminPanelBtn.Click += new System.EventHandler(this.adminPanelBtn_Click);
+            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeBtn.Image")));
+            this.homeBtn.Location = new System.Drawing.Point(65, 42);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(81, 60);
+            this.homeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homeBtn.TabIndex = 0;
+            this.homeBtn.TabStop = false;
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.panel3.Controls.Add(this.labelCurr);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(220, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1044, 80);
+            this.panel3.TabIndex = 1;
+            // 
+            // labelCurr
+            // 
+            this.labelCurr.AutoSize = true;
+            this.labelCurr.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelCurr.ForeColor = System.Drawing.Color.White;
+            this.labelCurr.Location = new System.Drawing.Point(35, 31);
+            this.labelCurr.Name = "labelCurr";
+            this.labelCurr.Size = new System.Drawing.Size(48, 18);
+            this.labelCurr.TabIndex = 0;
+            this.labelCurr.Text = "Home";
             // 
             // MainForm
             // 
@@ -153,12 +199,18 @@ namespace CourseWork
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "Nure Automotive - Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +224,8 @@ namespace CourseWork
         private System.Windows.Forms.Button catalogBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button adminPanelBtn;
+        private System.Windows.Forms.PictureBox homeBtn;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label labelCurr;
     }
 }

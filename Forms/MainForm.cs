@@ -11,6 +11,7 @@ namespace CourseWork
     public partial class MainForm : Form
     {
         private Button currentBtn;
+        //private Form currentChildForm;
 
         public MainForm()
         {
@@ -22,6 +23,11 @@ namespace CourseWork
             Application.Exit();
         }
 
+        //private void OpenChildForm(Form form)
+        //{
+
+        //}
+
         private void ActivateBtn(object btn)
         {
             if (btn != null)
@@ -30,6 +36,7 @@ namespace CourseWork
                 currentBtn = btn as Button;
                 currentBtn.BackColor = Color.FromArgb(60, 110, 113);
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                labelCurr.Text = currentBtn.Text;
             }
         }
 
@@ -65,6 +72,17 @@ namespace CourseWork
         private void adminPanelBtn_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Reset()
+        {
+            DisableBtn();
+            labelCurr.Text = "Home";
         }
     }
 }
