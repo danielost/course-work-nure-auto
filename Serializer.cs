@@ -26,20 +26,15 @@ namespace CourseWork
             sw.Close();
         }
 
-        public object JsonDeserialize(Type dataType, string path)
+        public object readUsers(string fileName)
         {
-            JObject obj = null;
-            JsonSerializer jsonSerializer = new JsonSerializer();
-            if (File.Exists(path))
+            string jsonFilePath = @"C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\" + fileName;
+            using (StreamReader r = new StreamReader(jsonFilePath))
             {
-                StreamReader sr = new StreamReader(path);
-                JsonReader jsonReader = new JsonTextReader(sr);
-                obj = jsonSerializer.Deserialize(jsonReader) as JObject;
-                jsonReader.Close();
-                sr.Close();
+                string json = r.ReadToEnd();
+                List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+                return users;
             }
-
-            return obj == null ? null : obj.ToObject(dataType);
         }
     }
 }

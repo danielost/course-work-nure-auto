@@ -19,7 +19,7 @@ namespace CourseWork
 
         public bool Compare(User user)
         {
-            if (Name == user.Name && Login == user.Login && Password == user.Password) return true;
+            if (Login == user.Login && Password == user.Password) return true;
             return false;
         }
     }
