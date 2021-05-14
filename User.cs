@@ -10,12 +10,14 @@ namespace CourseWork
         public string Login { get; set; }
         public string Password { get; set; }
 
+        public string Status { get; set; }
 
-        public User(string name, string login, string password)
+        public User(string name, string login, string password, string status)
         {
             Name = name;
             Login = login;
             Password = password;
+            Status = status;
         }
 
         public bool Compare(User user)

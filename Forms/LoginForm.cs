@@ -25,7 +25,7 @@ namespace CourseWork
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            User user = new User("", LoginAutoBox.Text, PassAutoBox.Text);
+            User user = new User("", LoginAutoBox.Text, PassAutoBox.Text, "");
 
             if (appUsers.Search(user))
             {

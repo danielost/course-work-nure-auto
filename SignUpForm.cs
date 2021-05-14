@@ -78,7 +78,7 @@ namespace CourseWork
                 WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
-            User user = new User(RegName.Text, RegLogin.Text, RegPass.Text);
+            User user = new User(RegName.Text, RegLogin.Text, RegPass.Text, "user");
             Serializer sr = new Serializer();
             List<User> readUsers = sr.Deserialize("data.save") as List<User>;
             foreach (User currUser in readUsers)

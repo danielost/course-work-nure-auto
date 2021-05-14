@@ -63,6 +63,7 @@ namespace CourseWork
         private void catalogBtn_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            OpenChildForm(new VehiclesForm());
         }
 
         private void contactsBtn_Click(object sender, EventArgs e)
