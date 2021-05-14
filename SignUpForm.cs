@@ -33,7 +33,7 @@ namespace CourseWork
             return tb.Text.Length == 0;
         }
 
-        private void SignUpButton_Click(object sender, EventArgs e)
+        private void SignUp()
         {
             if (LengthCheck(RegName))
             {
@@ -97,6 +97,16 @@ namespace CourseWork
             this.Hide();
             LoginForm lf = new LoginForm();
             lf.Show();
+        }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            SignUp();
+        }
+
+        private void SignUpForm_Enter(object sender, EventArgs e)
+        {
+            SignUp();
         }
     }
 }

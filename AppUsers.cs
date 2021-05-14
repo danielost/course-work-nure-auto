@@ -10,6 +10,7 @@ namespace CourseWork
 
         public bool KeepMeSigned = false;
 
+        //public User current;
         public bool Search(User toFind)
         {
             foreach(User user in users)

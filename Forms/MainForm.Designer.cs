@@ -31,6 +31,7 @@ namespace CourseWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.adminPanelBtn = new System.Windows.Forms.Button();
             this.requestSupplyBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
@@ -39,7 +40,9 @@ namespace CourseWork
             this.panel2 = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.logOutBtn = new System.Windows.Forms.Label();
             this.labelCurr = new System.Windows.Forms.Label();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).BeginInit();
@@ -49,6 +52,7 @@ namespace CourseWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.adminPanelBtn);
             this.panel1.Controls.Add(this.requestSupplyBtn);
             this.panel1.Controls.Add(this.helpBtn);
@@ -60,6 +64,24 @@ namespace CourseWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 440);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(220, 60);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "My account";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // adminPanelBtn
             // 
@@ -175,12 +197,27 @@ namespace CourseWork
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.panel3.Controls.Add(this.logOutBtn);
             this.panel3.Controls.Add(this.labelCurr);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(220, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1044, 80);
             this.panel3.TabIndex = 1;
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logOutBtn.AutoSize = true;
+            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logOutBtn.ForeColor = System.Drawing.Color.White;
+            this.logOutBtn.Location = new System.Drawing.Point(947, 31);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(57, 18);
+            this.logOutBtn.TabIndex = 1;
+            this.logOutBtn.Text = "Log out";
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // labelCurr
             // 
@@ -193,12 +230,21 @@ namespace CourseWork
             this.labelCurr.TabIndex = 0;
             this.labelCurr.Text = "Home";
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(220, 80);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1044, 601);
+            this.mainPanel.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
@@ -227,5 +273,8 @@ namespace CourseWork
         private System.Windows.Forms.PictureBox homeBtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelCurr;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label logOutBtn;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }

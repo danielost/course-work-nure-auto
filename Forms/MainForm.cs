@@ -11,7 +11,7 @@ namespace CourseWork
     public partial class MainForm : Form
     {
         private Button currentBtn;
-        //private Form currentChildForm;
+        private Form currentChildForm;
 
         public MainForm()
         {
@@ -23,10 +23,21 @@ namespace CourseWork
             Application.Exit();
         }
 
-        //private void OpenChildForm(Form form)
-        //{
-
-        //}
+        private void OpenChildForm(Form form)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(form);
+            mainPanel.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
 
         private void ActivateBtn(object btn)
         {
@@ -74,6 +85,11 @@ namespace CourseWork
             ActivateBtn(sender);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ActivateBtn(sender);
+        }
+
         private void homeBtn_Click(object sender, EventArgs e)
         {
             Reset();
@@ -83,6 +99,13 @@ namespace CourseWork
         {
             DisableBtn();
             labelCurr.Text = "Home";
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm lf = new LoginForm();
+            lf.Show();
         }
     }
 }

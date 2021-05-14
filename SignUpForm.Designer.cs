@@ -31,6 +31,7 @@ namespace CourseWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.WrongDataLabel = new System.Windows.Forms.Label();
             this.RegName = new System.Windows.Forms.TextBox();
             this.RegPassConfirm = new System.Windows.Forms.TextBox();
@@ -41,10 +42,9 @@ namespace CourseWork
             this.label1 = new System.Windows.Forms.Label();
             this.SignUpButton = new System.Windows.Forms.Button();
             this.RegPass = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,6 +64,14 @@ namespace CourseWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.WrongDataLabel);
+            this.panel2.Location = new System.Drawing.Point(500, 509);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(265, 100);
+            this.panel2.TabIndex = 19;
             // 
             // WrongDataLabel
             // 
@@ -86,7 +94,7 @@ namespace CourseWork
             this.RegName.Name = "RegName";
             this.RegName.PlaceholderText = "Name";
             this.RegName.Size = new System.Drawing.Size(265, 28);
-            this.RegName.TabIndex = 17;
+            this.RegName.TabIndex = 1;
             // 
             // RegPassConfirm
             // 
@@ -96,7 +104,7 @@ namespace CourseWork
             this.RegPassConfirm.Name = "RegPassConfirm";
             this.RegPassConfirm.PlaceholderText = "Confirm password";
             this.RegPassConfirm.Size = new System.Drawing.Size(265, 28);
-            this.RegPassConfirm.TabIndex = 16;
+            this.RegPassConfirm.TabIndex = 4;
             this.RegPassConfirm.UseSystemPasswordChar = true;
             // 
             // ToRegistrationButton
@@ -109,7 +117,7 @@ namespace CourseWork
             this.ToRegistrationButton.Location = new System.Drawing.Point(686, 302);
             this.ToRegistrationButton.Name = "ToRegistrationButton";
             this.ToRegistrationButton.Size = new System.Drawing.Size(90, 15);
-            this.ToRegistrationButton.TabIndex = 15;
+            this.ToRegistrationButton.TabIndex = 6;
             this.ToRegistrationButton.Text = "sign in window";
             this.ToRegistrationButton.Click += new System.EventHandler(this.ToRegistrationButton_Click);
             // 
@@ -121,7 +129,7 @@ namespace CourseWork
             this.RegLogin.Name = "RegLogin";
             this.RegLogin.PlaceholderText = "Login";
             this.RegLogin.Size = new System.Drawing.Size(265, 28);
-            this.RegLogin.TabIndex = 14;
+            this.RegLogin.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -167,7 +175,7 @@ namespace CourseWork
             this.SignUpButton.Location = new System.Drawing.Point(500, 472);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.Size = new System.Drawing.Size(265, 31);
-            this.SignUpButton.TabIndex = 10;
+            this.SignUpButton.TabIndex = 5;
             this.SignUpButton.Text = "Sign up";
             this.SignUpButton.UseVisualStyleBackColor = false;
             this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
@@ -180,16 +188,8 @@ namespace CourseWork
             this.RegPass.Name = "RegPass";
             this.RegPass.PlaceholderText = "Password";
             this.RegPass.Size = new System.Drawing.Size(265, 28);
-            this.RegPass.TabIndex = 9;
+            this.RegPass.TabIndex = 3;
             this.RegPass.UseSystemPasswordChar = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.WrongDataLabel);
-            this.panel2.Location = new System.Drawing.Point(500, 509);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(265, 100);
-            this.panel2.TabIndex = 19;
             // 
             // SignUpForm
             // 
@@ -203,10 +203,11 @@ namespace CourseWork
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nure Automotive - Sign Up";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm_FormClosing);
+            this.Enter += new System.EventHandler(this.SignUpForm_Enter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

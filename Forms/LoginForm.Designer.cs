@@ -84,7 +84,7 @@ namespace CourseWork
             this.LoginAutoBox.Name = "LoginAutoBox";
             this.LoginAutoBox.PlaceholderText = "Login";
             this.LoginAutoBox.Size = new System.Drawing.Size(265, 28);
-            this.LoginAutoBox.TabIndex = 8;
+            this.LoginAutoBox.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -141,7 +141,7 @@ namespace CourseWork
             this.KeepSignedCheckBox.Location = new System.Drawing.Point(568, 463);
             this.KeepSignedCheckBox.Name = "KeepSignedCheckBox";
             this.KeepSignedCheckBox.Size = new System.Drawing.Size(123, 19);
-            this.KeepSignedCheckBox.TabIndex = 3;
+            this.KeepSignedCheckBox.TabIndex = 4;
             this.KeepSignedCheckBox.Text = "Keep me signed in";
             this.KeepSignedCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -156,7 +156,7 @@ namespace CourseWork
             this.SignInButton.Location = new System.Drawing.Point(498, 413);
             this.SignInButton.Name = "SignInButton";
             this.SignInButton.Size = new System.Drawing.Size(265, 31);
-            this.SignInButton.TabIndex = 2;
+            this.SignInButton.TabIndex = 3;
             this.SignInButton.Text = "Sign in";
             this.SignInButton.UseVisualStyleBackColor = false;
             this.SignInButton.Click += new System.EventHandler(this.SignInButton_Click);
@@ -169,7 +169,7 @@ namespace CourseWork
             this.PassAutoBox.Name = "PassAutoBox";
             this.PassAutoBox.PlaceholderText = "Password";
             this.PassAutoBox.Size = new System.Drawing.Size(265, 28);
-            this.PassAutoBox.TabIndex = 1;
+            this.PassAutoBox.TabIndex = 2;
             this.PassAutoBox.UseSystemPasswordChar = true;
             // 
             // LoginForm

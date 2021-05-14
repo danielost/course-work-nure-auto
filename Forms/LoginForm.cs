@@ -39,6 +39,11 @@ namespace CourseWork
             }
         }
 
+        private bool LengthCheck(TextBox tb)
+        {
+            return tb.Text.Length == 0;
+        }
+
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
