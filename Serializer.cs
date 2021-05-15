@@ -25,13 +25,24 @@ namespace CourseWork
             sw.Close();
         }
 
-        public object Deserialize(string fileName)
+        public object DeserializeUser(string fileName)
         {
             string jsonFilePath = @"C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\" + fileName;
             using (StreamReader r = new StreamReader(jsonFilePath))
             {
                 string json = r.ReadToEnd();
                 List<User> users = JsonConvert.DeserializeObject<List<User>>(json);
+                return users;
+            }
+        }
+
+        public object DeserializeCar(string fileName)
+        {
+            string jsonFilePath = @"C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\" + fileName;
+            using (StreamReader r = new StreamReader(jsonFilePath))
+            {
+                string json = r.ReadToEnd();
+                List<Car> users = JsonConvert.DeserializeObject<List<Car>>(json);
                 return users;
             }
         }

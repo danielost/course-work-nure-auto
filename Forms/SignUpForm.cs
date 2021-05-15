@@ -80,7 +80,7 @@ namespace CourseWork
             }
             User user = new User(RegName.Text, RegLogin.Text, RegPass.Text, "user");
             Serializer sr = new Serializer();
-            List<User> readUsers = sr.Deserialize("data.save") as List<User>;
+            List<User> readUsers = sr.DeserializeUser("data.save") as List<User>;
             foreach (User currUser in readUsers)
             {
                 if (currUser.Login == user.Login)

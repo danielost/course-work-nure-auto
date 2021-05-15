@@ -32,7 +32,7 @@ namespace CourseWork
             this.vehiclesBG = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.vehiclesNavPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddCarBtn = new System.Windows.Forms.Button();
             this.modelTextBox = new System.Windows.Forms.TextBox();
             this.MakeTextBox = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -67,7 +67,7 @@ namespace CourseWork
             // vehiclesNavPanel
             // 
             this.vehiclesNavPanel.BackColor = System.Drawing.Color.Gray;
-            this.vehiclesNavPanel.Controls.Add(this.button1);
+            this.vehiclesNavPanel.Controls.Add(this.AddCarBtn);
             this.vehiclesNavPanel.Controls.Add(this.modelTextBox);
             this.vehiclesNavPanel.Controls.Add(this.MakeTextBox);
             this.vehiclesNavPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,15 +76,19 @@ namespace CourseWork
             this.vehiclesNavPanel.Size = new System.Drawing.Size(1044, 48);
             this.vehiclesNavPanel.TabIndex = 0;
             // 
-            // button1
+            // AddCarBtn
             // 
-            this.button1.Location = new System.Drawing.Point(812, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 30);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AddCarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.AddCarBtn.FlatAppearance.BorderSize = 0;
+            this.AddCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCarBtn.ForeColor = System.Drawing.Color.White;
+            this.AddCarBtn.Location = new System.Drawing.Point(908, 12);
+            this.AddCarBtn.Name = "AddCarBtn";
+            this.AddCarBtn.Size = new System.Drawing.Size(114, 23);
+            this.AddCarBtn.TabIndex = 2;
+            this.AddCarBtn.Text = "Add a car";
+            this.AddCarBtn.UseVisualStyleBackColor = false;
+            this.AddCarBtn.Click += new System.EventHandler(this.AddCarBtn_Click);
             // 
             // modelTextBox
             // 
@@ -172,6 +176,6 @@ namespace CourseWork
         private System.Windows.Forms.Panel vehiclesNavPanel;
         private System.Windows.Forms.TextBox MakeTextBox;
         private System.Windows.Forms.TextBox modelTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddCarBtn;
     }
 }
