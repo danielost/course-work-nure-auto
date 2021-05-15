@@ -46,5 +46,10 @@ namespace CourseWork
             Price = price;
             Year = year;
         }
+
+        public bool Compare(Car car)
+        {
+            return car.Make == Make && car.Model == Model && car.EngCapacity == EngCapacity && car.HorsePower == HorsePower && car.Type == Type && car.Condition == Condition && car.Price == Price && car.Year == Year;
+        }
     }
 }

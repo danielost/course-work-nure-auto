@@ -40,15 +40,18 @@ namespace CourseWork
             // DelCarBtn
             // 
             this.DelCarBtn.AutoSize = true;
+            this.DelCarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelCarBtn.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DelCarBtn.Location = new System.Drawing.Point(283, 11);
             this.DelCarBtn.Name = "DelCarBtn";
             this.DelCarBtn.Size = new System.Drawing.Size(40, 14);
             this.DelCarBtn.TabIndex = 0;
             this.DelCarBtn.Text = "Delete";
+            this.DelCarBtn.Click += new System.EventHandler(this.DelCarBtn_Click);
             // 
             // CarPic
             // 
+            this.CarPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CarPic.Image = ((System.Drawing.Image)(resources.GetObject("CarPic.Image")));
             this.CarPic.Location = new System.Drawing.Point(19, 28);
             this.CarPic.Name = "CarPic";
