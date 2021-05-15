@@ -46,7 +46,6 @@ namespace CourseWork
                 DisableBtn();
                 currentBtn = btn as Button;
                 currentBtn.BackColor = Color.FromArgb(60, 110, 113);
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 labelCurr.Text = currentBtn.Text;
             }
         }

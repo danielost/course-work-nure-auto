@@ -37,7 +37,6 @@ namespace CourseWork
             this.label3 = new System.Windows.Forms.Label();
             this.ToRegistrationButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.KeepSignedCheckBox = new System.Windows.Forms.CheckBox();
             this.SignInButton = new System.Windows.Forms.Button();
             this.PassAutoBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -54,7 +53,6 @@ namespace CourseWork
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.ToRegistrationButton);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.KeepSignedCheckBox);
             this.panel1.Controls.Add(this.SignInButton);
             this.panel1.Controls.Add(this.PassAutoBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -69,7 +67,7 @@ namespace CourseWork
             this.WrongDataLabel.AutoSize = true;
             this.WrongDataLabel.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WrongDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.WrongDataLabel.Location = new System.Drawing.Point(512, 495);
+            this.WrongDataLabel.Location = new System.Drawing.Point(517, 458);
             this.WrongDataLabel.Name = "WrongDataLabel";
             this.WrongDataLabel.Size = new System.Drawing.Size(230, 14);
             this.WrongDataLabel.TabIndex = 9;
@@ -133,18 +131,6 @@ namespace CourseWork
             this.label1.Text = "Welcome to Nure Automotive!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // KeepSignedCheckBox
-            // 
-            this.KeepSignedCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.KeepSignedCheckBox.AutoSize = true;
-            this.KeepSignedCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.KeepSignedCheckBox.Location = new System.Drawing.Point(568, 463);
-            this.KeepSignedCheckBox.Name = "KeepSignedCheckBox";
-            this.KeepSignedCheckBox.Size = new System.Drawing.Size(123, 19);
-            this.KeepSignedCheckBox.TabIndex = 4;
-            this.KeepSignedCheckBox.Text = "Keep me signed in";
-            this.KeepSignedCheckBox.UseVisualStyleBackColor = true;
-            // 
             // SignInButton
             // 
             this.SignInButton.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -194,7 +180,6 @@ namespace CourseWork
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox KeepSignedCheckBox;
         private System.Windows.Forms.Button SignInButton;
         private System.Windows.Forms.TextBox PassAutoBox;
         private System.Windows.Forms.Label label3;

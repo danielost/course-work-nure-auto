@@ -8,8 +8,6 @@ namespace CourseWork
     {
         public List<User> users = new List<User>();
 
-        public bool KeepMeSigned = false;
-
         //public User current;
         public bool Search(User toFind)
         {
