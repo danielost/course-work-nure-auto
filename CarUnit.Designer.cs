@@ -59,6 +59,7 @@ namespace CourseWork
             this.CarPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CarPic.TabIndex = 1;
             this.CarPic.TabStop = false;
+            this.CarPic.Click += new System.EventHandler(this.CarPic_Click);
             // 
             // carPrice
             // 

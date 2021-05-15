@@ -34,5 +34,19 @@ namespace CourseWork
             sr.Serialize(carList.List, "cars.save");
             this.Hide();
         }
+
+        private void CarPic_Click(object sender, EventArgs e)
+        {
+            Panel parent = (Panel)Parent.Parent;
+            parent.Controls.Clear();
+            CarInfoForm cif = new CarInfoForm();
+            cif.TopLevel = false;
+            cif.FormBorderStyle = FormBorderStyle.None;
+            cif.Dock = DockStyle.Fill;
+            parent.Controls.Add(cif);
+            parent.Tag = cif;
+            cif.BringToFront();
+            cif.Show();
+        }
     }
 }
