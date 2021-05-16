@@ -38,8 +38,8 @@ namespace CourseWork
         private void CarPic_Click(object sender, EventArgs e)
         {
             Panel parent = (Panel)Parent.Parent;
-            parent.Controls.Clear();
-            CarInfoForm cif = new CarInfoForm();
+            //parent.Controls.Clear();
+            CarInfoForm cif = new CarInfoForm(currentCar);
             cif.TopLevel = false;
             cif.FormBorderStyle = FormBorderStyle.None;
             cif.Dock = DockStyle.Fill;

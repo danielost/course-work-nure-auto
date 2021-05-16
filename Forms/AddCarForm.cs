@@ -64,26 +64,6 @@ namespace CourseWork
                 MessageBox.Show("Price field is empty");
                 return;
             }
-            if (Convert.ToInt32(addYear.Text) > 2021 || Convert.ToInt32(addYear.Text) < 1950)
-            {
-                MessageBox.Show("Year value is inappropriate");
-                return;
-            }
-            if (Convert.ToInt32(addPower.Text) > 1000 || Convert.ToInt32(addPower.Text) < 60)
-            {
-                MessageBox.Show("Horse power value is inappropriate");
-                return;
-            }
-            if (Convert.ToDouble(addCapacity.Text) > 8 || Convert.ToDouble(addCapacity.Text) < 0.5)
-            {
-                MessageBox.Show("Engine capacity value is inappropriate");
-                return;
-            }
-            if (Convert.ToInt32(addPrice.Text) > 1000000 || Convert.ToInt32(addPrice.Text) < 2000)
-            {
-                MessageBox.Show("Horse power value is inappropriate");
-                return;
-            }
             CarList carList = new CarList();
             Serializer sr = new Serializer();
             carList.List = sr.DeserializeCar("cars.save") as List<Car>;
