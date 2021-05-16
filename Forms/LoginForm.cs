@@ -27,10 +27,12 @@ namespace CourseWork
         {
             User user = new User("", LoginAutoBox.Text, PassAutoBox.Text, "");
 
-            if (appUsers.Search(user))
+            User fromJson = appUsers.Search(user);
+
+            if (fromJson != null)
             {
                 this.Hide();
-                MainForm mf = new MainForm();
+                MainForm mf = new MainForm(fromJson);
                 mf.Show();
             }
             else
@@ -54,6 +56,13 @@ namespace CourseWork
             this.Hide();
             SignUpForm suf = new SignUpForm();
             suf.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mf = new MainForm(new User("Admin", "admin", "12345", "admin"));
+            mf.Show();
         }
     }
 }

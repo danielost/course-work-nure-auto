@@ -14,9 +14,13 @@ namespace CourseWork
         Serializer sr;
         CarList carList;
 
-        public CarInfoForm(Car car)
+        public CarInfoForm(Car car, bool isAdmin)
         {
             InitializeComponent();
+            if (!isAdmin)
+            {
+                editBtn.Hide();
+            }
             EditBtnsHide();
             currentCar = car;
             Reload(car);

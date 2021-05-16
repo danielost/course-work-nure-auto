@@ -12,15 +12,19 @@ namespace CourseWork
     {
         private CarList carList;
 
-        public VehiclesForm()
+        public VehiclesForm(bool isAdmin)
         {
             InitializeComponent();
+            if (!isAdmin)
+            {
+                AddCarBtn.Hide();
+            }
             carList = new CarList();
             Serializer sr = new Serializer();
             carList.List = sr.DeserializeCar("cars.save") as List<Car>;
             foreach (Car curr in carList.List)
             {
-                flowLayoutPanel1.Controls.Add(new CarUnit(curr));
+                flowLayoutPanel1.Controls.Add(new CarUnit(curr, isAdmin));
             }
         }
         

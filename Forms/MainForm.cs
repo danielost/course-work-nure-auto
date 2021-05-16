@@ -12,10 +12,21 @@ namespace CourseWork
     {
         private Button currentBtn;
         private Form currentChildForm;
+        private bool isAdmin;
 
-        public MainForm()
+        public MainForm(User user)
         {
             InitializeComponent();
+            if (user.Status == "admin")
+            {
+                isAdmin = true;
+            }
+            else isAdmin = false;
+            if (!isAdmin)
+            {
+                adminPanelBtn.Hide();
+                requestSupplyBtn.Hide();
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -62,7 +73,7 @@ namespace CourseWork
         private void catalogBtn_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
-            OpenChildForm(new VehiclesForm());
+            OpenChildForm(new VehiclesForm(isAdmin));
         }
 
         private void contactsBtn_Click(object sender, EventArgs e)

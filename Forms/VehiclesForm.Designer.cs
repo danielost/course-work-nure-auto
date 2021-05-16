@@ -32,6 +32,8 @@ namespace CourseWork
             this.vehiclesBG = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.vehiclesNavPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.AddCarBtn = new System.Windows.Forms.Button();
             this.modelTextBox = new System.Windows.Forms.TextBox();
             this.MakeTextBox = new System.Windows.Forms.TextBox();
@@ -40,7 +42,6 @@ namespace CourseWork
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.vehiclesBG.SuspendLayout();
             this.vehiclesNavPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,13 +79,38 @@ namespace CourseWork
             this.vehiclesNavPanel.Size = new System.Drawing.Size(1044, 48);
             this.vehiclesNavPanel.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AddCarBtn);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(673, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(371, 48);
+            this.panel1.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sort by price Ascending",
+            "Sort by price Descending",
+            "Sort by Name (A-Z)",
+            "Sort by Name (Z-A)"});
+            this.comboBox1.Location = new System.Drawing.Point(155, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(204, 22);
+            this.comboBox1.TabIndex = 3;
+            // 
             // AddCarBtn
             // 
             this.AddCarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.AddCarBtn.FlatAppearance.BorderSize = 0;
             this.AddCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCarBtn.ForeColor = System.Drawing.Color.White;
-            this.AddCarBtn.Location = new System.Drawing.Point(30, 12);
+            this.AddCarBtn.Location = new System.Drawing.Point(25, 12);
             this.AddCarBtn.Name = "AddCarBtn";
             this.AddCarBtn.Size = new System.Drawing.Size(114, 23);
             this.AddCarBtn.TabIndex = 2;
@@ -150,15 +176,6 @@ namespace CourseWork
             this.panel3.Size = new System.Drawing.Size(340, 100);
             this.panel3.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.AddCarBtn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(879, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 48);
-            this.panel1.TabIndex = 3;
-            // 
             // VehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -190,5 +207,6 @@ namespace CourseWork
         private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.Button AddCarBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

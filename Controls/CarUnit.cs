@@ -10,13 +10,20 @@ namespace CourseWork
 {
     public partial class CarUnit : UserControl
     {
-        Car currentCar;
-        public CarUnit(Car car)
+        private Car currentCar;
+        private bool isAdmin;
+
+        public CarUnit(Car car, bool isAdmin)
         {
             InitializeComponent();
             carName.Text = $"{car.Year} {car.Make} {car.Model}";
             carPrice.Text = "$" + car.Price.ToString();
             currentCar = car;
+            if (!isAdmin)
+            {
+                DelCarBtn.Hide();
+            }
+            this.isAdmin = isAdmin;
         }
 
         private void DelCarBtn_Click(object sender, EventArgs e)
@@ -38,8 +45,7 @@ namespace CourseWork
         private void CarPic_Click(object sender, EventArgs e)
         {
             Panel parent = (Panel)Parent.Parent;
-            //parent.Controls.Clear();
-            CarInfoForm cif = new CarInfoForm(currentCar);
+            CarInfoForm cif = new CarInfoForm(currentCar, isAdmin);
             cif.TopLevel = false;
             cif.FormBorderStyle = FormBorderStyle.None;
             cif.Dock = DockStyle.Fill;

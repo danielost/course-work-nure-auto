@@ -9,16 +9,16 @@ namespace CourseWork
         public List<User> users = new List<User>();
 
         //public User current;
-        public bool Search(User toFind)
+        public User Search(User toFind)
         {
             foreach(User user in users)
             {
                 if (toFind.Compare(user))
                 {
-                    return true;
+                    return user;
                 }
             }
-            return false;
+            return null;
         }
     }
 }

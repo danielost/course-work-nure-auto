@@ -6,11 +6,10 @@ namespace CourseWork
 {
     public class User
     {
-        public string Name { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-
-        public string Status { get; set; }
+        public string Name { get; private set; }
+        public string Login { get; private set; }
+        public string Password { get; private set; }
+        public string Status { get; private set; }
 
         public User(string name, string login, string password, string status)
         {
