@@ -40,8 +40,10 @@ namespace CourseWork
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.vehiclesBG.SuspendLayout();
             this.vehiclesNavPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // vehiclesBG
@@ -67,7 +69,7 @@ namespace CourseWork
             // vehiclesNavPanel
             // 
             this.vehiclesNavPanel.BackColor = System.Drawing.Color.Gray;
-            this.vehiclesNavPanel.Controls.Add(this.AddCarBtn);
+            this.vehiclesNavPanel.Controls.Add(this.panel1);
             this.vehiclesNavPanel.Controls.Add(this.modelTextBox);
             this.vehiclesNavPanel.Controls.Add(this.MakeTextBox);
             this.vehiclesNavPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,7 +84,7 @@ namespace CourseWork
             this.AddCarBtn.FlatAppearance.BorderSize = 0;
             this.AddCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCarBtn.ForeColor = System.Drawing.Color.White;
-            this.AddCarBtn.Location = new System.Drawing.Point(908, 12);
+            this.AddCarBtn.Location = new System.Drawing.Point(30, 12);
             this.AddCarBtn.Name = "AddCarBtn";
             this.AddCarBtn.Size = new System.Drawing.Size(114, 23);
             this.AddCarBtn.TabIndex = 2;
@@ -148,6 +150,15 @@ namespace CourseWork
             this.panel3.Size = new System.Drawing.Size(340, 100);
             this.panel3.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AddCarBtn);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(879, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(165, 48);
+            this.panel1.TabIndex = 3;
+            // 
             // VehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -160,6 +171,7 @@ namespace CourseWork
             this.vehiclesBG.ResumeLayout(false);
             this.vehiclesNavPanel.ResumeLayout(false);
             this.vehiclesNavPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -177,5 +189,6 @@ namespace CourseWork
         private System.Windows.Forms.TextBox MakeTextBox;
         private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.Button AddCarBtn;
+        private System.Windows.Forms.Panel panel1;
     }
 }
