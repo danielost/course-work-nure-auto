@@ -14,6 +14,7 @@ namespace CourseWork
         {
             InitializeComponent();
             addType.SelectedIndex = 0;
+            addCondition.SelectedIndex = 0;
         }
 
         public Car CreateCar()

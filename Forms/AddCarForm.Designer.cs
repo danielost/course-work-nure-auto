@@ -31,38 +31,133 @@ namespace CourseWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCarForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addCapacity = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.addYear = new System.Windows.Forms.NumericUpDown();
             this.AddCarBtn = new System.Windows.Forms.Button();
             this.addType = new System.Windows.Forms.ComboBox();
-            this.addPrice = new System.Windows.Forms.TextBox();
-            this.addCondition = new System.Windows.Forms.TextBox();
-            this.addCapacity = new System.Windows.Forms.TextBox();
-            this.addPower = new System.Windows.Forms.TextBox();
-            this.addYear = new System.Windows.Forms.TextBox();
             this.addModel = new System.Windows.Forms.TextBox();
             this.addMake = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.addCondition = new System.Windows.Forms.ComboBox();
+            this.addPower = new System.Windows.Forms.NumericUpDown();
+            this.addPrice = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addCapacity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPower)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.panel1.Controls.Add(this.AddCarBtn);
-            this.panel1.Controls.Add(this.addType);
             this.panel1.Controls.Add(this.addPrice);
+            this.panel1.Controls.Add(this.addPower);
             this.panel1.Controls.Add(this.addCondition);
             this.panel1.Controls.Add(this.addCapacity);
-            this.panel1.Controls.Add(this.addPower);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.addYear);
+            this.panel1.Controls.Add(this.AddCarBtn);
+            this.panel1.Controls.Add(this.addType);
             this.panel1.Controls.Add(this.addModel);
             this.panel1.Controls.Add(this.addMake);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(718, 218);
+            this.panel1.Size = new System.Drawing.Size(837, 218);
             this.panel1.TabIndex = 0;
+            // 
+            // addCapacity
+            // 
+            this.addCapacity.DecimalPlaces = 1;
+            this.addCapacity.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addCapacity.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.addCapacity.Location = new System.Drawing.Point(483, 12);
+            this.addCapacity.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.addCapacity.Minimum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            65536});
+            this.addCapacity.Name = "addCapacity";
+            this.addCapacity.Size = new System.Drawing.Size(216, 27);
+            this.addCapacity.TabIndex = 15;
+            this.addCapacity.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            65536});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(715, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Engine capacity";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(715, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 18);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Price";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(715, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Horse power";
+            // 
+            // addYear
+            // 
+            this.addYear.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addYear.Location = new System.Drawing.Point(247, 96);
+            this.addYear.Maximum = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.addYear.Minimum = new decimal(new int[] {
+            1950,
+            0,
+            0,
+            0});
+            this.addYear.Name = "addYear";
+            this.addYear.Size = new System.Drawing.Size(216, 27);
+            this.addYear.TabIndex = 3;
+            this.addYear.Value = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
             // 
             // AddCarBtn
             // 
@@ -70,77 +165,33 @@ namespace CourseWork
             this.AddCarBtn.FlatAppearance.BorderSize = 0;
             this.AddCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCarBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddCarBtn.Location = new System.Drawing.Point(490, 137);
+            this.AddCarBtn.Location = new System.Drawing.Point(483, 137);
             this.AddCarBtn.Name = "AddCarBtn";
             this.AddCarBtn.Size = new System.Drawing.Size(216, 27);
-            this.AddCarBtn.TabIndex = 10;
+            this.AddCarBtn.TabIndex = 9;
             this.AddCarBtn.Text = "Add";
             this.AddCarBtn.UseVisualStyleBackColor = false;
             this.AddCarBtn.Click += new System.EventHandler(this.AddCarBtn_Click);
             // 
             // addType
             // 
+            this.addType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.addType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addType.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addType.FormattingEnabled = true;
             this.addType.Items.AddRange(new object[] {
-            "Sedan",
             "Coupe",
-            "SUV",
             "CUV",
-            "Van",
+            "Sedan",
+            "Supercar",
+            "SUV",
             "Truck",
-            "Supercar"});
+            "Van"});
             this.addType.Location = new System.Drawing.Point(247, 138);
             this.addType.Name = "addType";
             this.addType.Size = new System.Drawing.Size(216, 27);
+            this.addType.Sorted = true;
             this.addType.TabIndex = 4;
-            // 
-            // addPrice
-            // 
-            this.addPrice.BackColor = System.Drawing.Color.White;
-            this.addPrice.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addPrice.Location = new System.Drawing.Point(490, 96);
-            this.addPrice.Name = "addPrice";
-            this.addPrice.PlaceholderText = "Price";
-            this.addPrice.Size = new System.Drawing.Size(216, 27);
-            this.addPrice.TabIndex = 8;
-            // 
-            // addCondition
-            // 
-            this.addCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addCondition.Location = new System.Drawing.Point(490, 54);
-            this.addCondition.Name = "addCondition";
-            this.addCondition.PlaceholderText = "Condition";
-            this.addCondition.Size = new System.Drawing.Size(216, 27);
-            this.addCondition.TabIndex = 7;
-            // 
-            // addCapacity
-            // 
-            this.addCapacity.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addCapacity.Location = new System.Drawing.Point(490, 12);
-            this.addCapacity.Name = "addCapacity";
-            this.addCapacity.PlaceholderText = "Engine capacity";
-            this.addCapacity.Size = new System.Drawing.Size(216, 27);
-            this.addCapacity.TabIndex = 6;
-            // 
-            // addPower
-            // 
-            this.addPower.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addPower.Location = new System.Drawing.Point(247, 180);
-            this.addPower.Name = "addPower";
-            this.addPower.PlaceholderText = "Horse power";
-            this.addPower.Size = new System.Drawing.Size(216, 27);
-            this.addPower.TabIndex = 5;
-            // 
-            // addYear
-            // 
-            this.addYear.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addYear.Location = new System.Drawing.Point(247, 96);
-            this.addYear.Name = "addYear";
-            this.addYear.PlaceholderText = "Year";
-            this.addYear.Size = new System.Drawing.Size(216, 27);
-            this.addYear.TabIndex = 3;
             // 
             // addModel
             // 
@@ -170,11 +221,77 @@ namespace CourseWork
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // addCondition
+            // 
+            this.addCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.addCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addCondition.FormattingEnabled = true;
+            this.addCondition.Items.AddRange(new object[] {
+            "Brand new",
+            "Used"});
+            this.addCondition.Location = new System.Drawing.Point(247, 179);
+            this.addCondition.Name = "addCondition";
+            this.addCondition.Size = new System.Drawing.Size(216, 27);
+            this.addCondition.Sorted = true;
+            this.addCondition.TabIndex = 16;
+            // 
+            // addPower
+            // 
+            this.addPower.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addPower.Location = new System.Drawing.Point(483, 54);
+            this.addPower.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.addPower.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.addPower.Name = "addPower";
+            this.addPower.Size = new System.Drawing.Size(216, 27);
+            this.addPower.TabIndex = 17;
+            this.addPower.Value = new decimal(new int[] {
+            160,
+            0,
+            0,
+            0});
+            // 
+            // addPrice
+            // 
+            this.addPrice.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addPrice.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.addPrice.Location = new System.Drawing.Point(483, 96);
+            this.addPrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.addPrice.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.addPrice.Name = "addPrice";
+            this.addPrice.Size = new System.Drawing.Size(216, 27);
+            this.addPrice.TabIndex = 18;
+            this.addPrice.Value = new decimal(new int[] {
+            15000,
+            0,
+            0,
+            0});
+            // 
             // AddCarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 218);
+            this.ClientSize = new System.Drawing.Size(837, 218);
             this.Controls.Add(this.panel1);
             this.Name = "AddCarForm";
             this.ShowIcon = false;
@@ -182,7 +299,11 @@ namespace CourseWork
             this.Text = "AddCarForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addCapacity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPower)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,15 +311,18 @@ namespace CourseWork
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox addYear;
         private System.Windows.Forms.TextBox addModel;
         private System.Windows.Forms.TextBox addMake;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox addCapacity;
-        private System.Windows.Forms.TextBox addPower;
         private System.Windows.Forms.ComboBox addType;
-        private System.Windows.Forms.TextBox addPrice;
-        private System.Windows.Forms.TextBox addCondition;
         private System.Windows.Forms.Button AddCarBtn;
+        private System.Windows.Forms.NumericUpDown addYear;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown addCapacity;
+        private System.Windows.Forms.ComboBox addCondition;
+        private System.Windows.Forms.NumericUpDown addPrice;
+        private System.Windows.Forms.NumericUpDown addPower;
     }
 }
