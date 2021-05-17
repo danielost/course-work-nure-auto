@@ -10,6 +10,8 @@ namespace CourseWork
 {
     public partial class AddCarForm : Form
     {
+        Image carPic;
+
         public AddCarForm()
         {
             InitializeComponent();
@@ -67,10 +69,22 @@ namespace CourseWork
             CarList carList = new CarList();
             Serializer sr = new Serializer();
             carList.List = sr.DeserializeCar("cars.save") as List<Car>;
-            carList.List.Add(CreateCar());
+            Car newCar = CreateCar();
+            //newCar.CarPic = carPic;
+            carList.List.Add(newCar);
             sr.Serialize(carList.List, "cars.save");
             MessageBox.Show("Car was successfully added\nPlease reload the page for the new unit to appear");
             this.Close();
+        }
+
+        private void addPicBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                carPic= Image.FromFile(ofd.FileName);
+            }
+            pictureBox1.Image = carPic;
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Net;
 using System.Text;
+using System.Windows.Forms;
 
 namespace CourseWork
 {
@@ -21,6 +24,8 @@ namespace CourseWork
         public int Price { get; set; }
 
         private int year;
+
+        public string base64image { get; private set; }
 
         public int Year { get
             {
@@ -51,5 +56,7 @@ namespace CourseWork
         {
             return car.Make == Make && car.Model == Model && car.EngCapacity == EngCapacity && car.HorsePower == HorsePower && car.Type == Type && car.Condition == Condition && car.Price == Price && car.Year == Year;
         }
+
+        
     }
 }

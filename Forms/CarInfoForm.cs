@@ -10,9 +10,9 @@ namespace CourseWork
 {    
     public partial class CarInfoForm : Form
     {
-        public Car currentCar;
-        Serializer sr;
-        CarList carList;
+        private Car currentCar;
+        private Serializer sr;
+        private CarList carList;
 
         public CarInfoForm(Car car, bool isAdmin)
         {
@@ -110,6 +110,7 @@ namespace CourseWork
             engineLbl.Text = "Engine: " + car.HorsePower + "hp " + car.EngCapacity + "l.";
             conditionLbl.Text = "Condition: " + car.Condition;
             priceLbl.Text = "Price: $" + car.Price.ToString();
+            //infoFormCarPic.Image = car.CarPic;
         }
     }
 }

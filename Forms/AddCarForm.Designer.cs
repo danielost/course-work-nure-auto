@@ -31,6 +31,9 @@ namespace CourseWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCarForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addPrice = new System.Windows.Forms.NumericUpDown();
+            this.addPower = new System.Windows.Forms.NumericUpDown();
+            this.addCondition = new System.Windows.Forms.ComboBox();
             this.addCapacity = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,20 +44,19 @@ namespace CourseWork
             this.addModel = new System.Windows.Forms.TextBox();
             this.addMake = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.addCondition = new System.Windows.Forms.ComboBox();
-            this.addPower = new System.Windows.Forms.NumericUpDown();
-            this.addPrice = new System.Windows.Forms.NumericUpDown();
+            this.addPicBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCapacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addPower)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.panel1.Controls.Add(this.addPicBtn);
             this.panel1.Controls.Add(this.addPrice);
             this.panel1.Controls.Add(this.addPower);
             this.panel1.Controls.Add(this.addCondition);
@@ -73,6 +75,72 @@ namespace CourseWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(837, 218);
             this.panel1.TabIndex = 0;
+            // 
+            // addPrice
+            // 
+            this.addPrice.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addPrice.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.addPrice.Location = new System.Drawing.Point(483, 96);
+            this.addPrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.addPrice.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.addPrice.Name = "addPrice";
+            this.addPrice.Size = new System.Drawing.Size(216, 27);
+            this.addPrice.TabIndex = 18;
+            this.addPrice.Value = new decimal(new int[] {
+            15000,
+            0,
+            0,
+            0});
+            // 
+            // addPower
+            // 
+            this.addPower.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addPower.Location = new System.Drawing.Point(483, 54);
+            this.addPower.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.addPower.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.addPower.Name = "addPower";
+            this.addPower.Size = new System.Drawing.Size(216, 27);
+            this.addPower.TabIndex = 17;
+            this.addPower.Value = new decimal(new int[] {
+            160,
+            0,
+            0,
+            0});
+            // 
+            // addCondition
+            // 
+            this.addCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.addCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addCondition.FormattingEnabled = true;
+            this.addCondition.Items.AddRange(new object[] {
+            "Brand new",
+            "Used"});
+            this.addCondition.Location = new System.Drawing.Point(247, 179);
+            this.addCondition.Name = "addCondition";
+            this.addCondition.Size = new System.Drawing.Size(216, 27);
+            this.addCondition.Sorted = true;
+            this.addCondition.TabIndex = 16;
             // 
             // addCapacity
             // 
@@ -165,11 +233,11 @@ namespace CourseWork
             this.AddCarBtn.FlatAppearance.BorderSize = 0;
             this.AddCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCarBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddCarBtn.Location = new System.Drawing.Point(483, 137);
+            this.AddCarBtn.Location = new System.Drawing.Point(483, 178);
             this.AddCarBtn.Name = "AddCarBtn";
             this.AddCarBtn.Size = new System.Drawing.Size(216, 27);
             this.AddCarBtn.TabIndex = 9;
-            this.AddCarBtn.Text = "Add";
+            this.AddCarBtn.Text = "Add the car";
             this.AddCarBtn.UseVisualStyleBackColor = false;
             this.AddCarBtn.Click += new System.EventHandler(this.AddCarBtn_Click);
             // 
@@ -221,71 +289,19 @@ namespace CourseWork
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // addCondition
+            // addPicBtn
             // 
-            this.addCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.addCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addCondition.FormattingEnabled = true;
-            this.addCondition.Items.AddRange(new object[] {
-            "Brand new",
-            "Used"});
-            this.addCondition.Location = new System.Drawing.Point(247, 179);
-            this.addCondition.Name = "addCondition";
-            this.addCondition.Size = new System.Drawing.Size(216, 27);
-            this.addCondition.Sorted = true;
-            this.addCondition.TabIndex = 16;
-            // 
-            // addPower
-            // 
-            this.addPower.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addPower.Location = new System.Drawing.Point(483, 54);
-            this.addPower.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.addPower.Minimum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.addPower.Name = "addPower";
-            this.addPower.Size = new System.Drawing.Size(216, 27);
-            this.addPower.TabIndex = 17;
-            this.addPower.Value = new decimal(new int[] {
-            160,
-            0,
-            0,
-            0});
-            // 
-            // addPrice
-            // 
-            this.addPrice.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addPrice.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.addPrice.Location = new System.Drawing.Point(483, 96);
-            this.addPrice.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.addPrice.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.addPrice.Name = "addPrice";
-            this.addPrice.Size = new System.Drawing.Size(216, 27);
-            this.addPrice.TabIndex = 18;
-            this.addPrice.Value = new decimal(new int[] {
-            15000,
-            0,
-            0,
-            0});
+            this.addPicBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.addPicBtn.FlatAppearance.BorderSize = 0;
+            this.addPicBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPicBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addPicBtn.Location = new System.Drawing.Point(483, 138);
+            this.addPicBtn.Name = "addPicBtn";
+            this.addPicBtn.Size = new System.Drawing.Size(216, 27);
+            this.addPicBtn.TabIndex = 19;
+            this.addPicBtn.Text = "Add a picture";
+            this.addPicBtn.UseVisualStyleBackColor = false;
+            this.addPicBtn.Click += new System.EventHandler(this.addPicBtn_Click);
             // 
             // AddCarForm
             // 
@@ -299,11 +315,11 @@ namespace CourseWork
             this.Text = "AddCarForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCapacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addPower)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,5 +340,6 @@ namespace CourseWork
         private System.Windows.Forms.ComboBox addCondition;
         private System.Windows.Forms.NumericUpDown addPrice;
         private System.Windows.Forms.NumericUpDown addPower;
+        private System.Windows.Forms.Button addPicBtn;
     }
 }

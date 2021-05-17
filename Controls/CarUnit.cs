@@ -18,6 +18,7 @@ namespace CourseWork
             InitializeComponent();
             carName.Text = $"{car.Year} {car.Make} {car.Model}";
             carPrice.Text = "$" + car.Price.ToString();
+            //CarPic.Image = car.CarPic;
             currentCar = car;
             if (!isAdmin)
             {
