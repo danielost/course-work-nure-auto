@@ -92,6 +92,7 @@ namespace CourseWork
             // AddCarBtn
             // 
             this.AddCarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.AddCarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddCarBtn.FlatAppearance.BorderSize = 0;
             this.AddCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCarBtn.ForeColor = System.Drawing.Color.White;

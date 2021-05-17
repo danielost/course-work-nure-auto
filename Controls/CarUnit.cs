@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -18,7 +19,10 @@ namespace CourseWork
             InitializeComponent();
             carName.Text = $"{car.Year} {car.Make} {car.Model}";
             carPrice.Text = "$" + car.Price.ToString();
-            //CarPic.Image = car.CarPic;
+            if (car.base64image != null)
+            {
+                CarPic.Image = FromBase64(car.base64image);
+            }           
             currentCar = car;
             if (!isAdmin)
             {
@@ -27,20 +31,18 @@ namespace CourseWork
             this.isAdmin = isAdmin;
         }
 
-        private void DelCarBtn_Click(object sender, EventArgs e)
+        private Image FromBase64(string base64pic)
         {
-            CarList carList = new CarList();
-            Serializer sr = new Serializer();
-            carList.List = sr.DeserializeCar("cars.save") as List<Car>;
-            for (int i = carList.List.Count - 1; i >= 0; i--)
+            if (base64pic != null)
             {
-                if (carList.List[i].Compare(currentCar))
+                byte[] bytes = Convert.FromBase64String(base64pic);
+
+                using (MemoryStream ms = new MemoryStream(bytes))
                 {
-                    carList.List.RemoveAt(i);
+                    return Image.FromStream(ms);
                 }
             }
-            sr.Serialize(carList.List, "cars.save");
-            this.Hide();
+            return null;
         }
 
         private void CarPic_Click(object sender, EventArgs e)
@@ -54,6 +56,22 @@ namespace CourseWork
             parent.Tag = cif;
             cif.BringToFront();
             cif.Show();
+        }
+
+        private void DelCarBtn_Click_1(object sender, EventArgs e)
+        {
+            CarList carList = new CarList();
+            Serializer<Car> sr = new Serializer<Car>();
+            carList.List = sr.Deserialize("cars.save");
+            for (int i = carList.List.Count - 1; i >= 0; i--)
+            {
+                if (carList.List[i].Compare(currentCar))
+                {
+                    carList.List.RemoveAt(i);
+                }
+            }
+            sr.Serialize(carList.List, "cars.save");
+            this.Hide();
         }
     }
 }

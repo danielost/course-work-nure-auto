@@ -10,7 +10,7 @@ namespace CourseWork
 {
     public partial class AddCarForm : Form
     {
-        Image carPic;
+        string base64Pic;
 
         public AddCarForm()
         {
@@ -67,24 +67,30 @@ namespace CourseWork
                 return;
             }
             CarList carList = new CarList();
-            Serializer sr = new Serializer();
-            carList.List = sr.DeserializeCar("cars.save") as List<Car>;
+            Serializer<Car> sr = new Serializer<Car>();
+            carList.List = sr.Deserialize("cars.save");
             Car newCar = CreateCar();
-            //newCar.CarPic = carPic;
+            newCar.base64image = base64Pic;
             carList.List.Add(newCar);
             sr.Serialize(carList.List, "cars.save");
             MessageBox.Show("Car was successfully added\nPlease reload the page for the new unit to appear");
             this.Close();
         }
 
+        private string ToBase64(string path)
+        {
+            byte[] imageArray = System.IO.File.ReadAllBytes(path);
+            return Convert.ToBase64String(imageArray);
+        }
+
         private void addPicBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                carPic= Image.FromFile(ofd.FileName);
+                base64Pic = ToBase64(ofd.FileName);
             }
-            pictureBox1.Image = carPic;
+            pictureBox1.Image = Image.FromFile(ofd.FileName);
         }
     }
 }

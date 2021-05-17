@@ -18,8 +18,8 @@ namespace CourseWork
         {
             InitializeComponent();
             appUsers = new AppUsers();
-            Serializer sr = new Serializer();
-            appUsers.users = sr.DeserializeUser("data.save") as List<User>;
+            Serializer<User> sr = new Serializer<User>();
+            appUsers.users = sr.Deserialize("data.save");
             WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,8 +12,9 @@ namespace CourseWork
     public partial class CarInfoForm : Form
     {
         private Car currentCar;
-        private Serializer sr;
+        private Serializer<Car> sr;
         private CarList carList;
+        private BaseImageConverter bic = new BaseImageConverter();
 
         public CarInfoForm(Car car, bool isAdmin)
         {
@@ -24,8 +26,9 @@ namespace CourseWork
             EditBtnsHide();
             currentCar = car;
             Reload(car);
-            sr = new Serializer();
+            sr = new Serializer<Car>();
             carList = new CarList();
+            //bic = new BaseImageConverter();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,7 +38,7 @@ namespace CourseWork
 
         private void purchaseBtn_Click(object sender, EventArgs e)
         {
-            carList.List = sr.DeserializeCar("cars.save") as List<Car>;
+            carList.List = sr.Deserialize("cars.save");
             for (int i = carList.List.Count - 1; i >= 0; i--)
             {
                 if (carList.List[i].Compare(currentCar))
@@ -57,6 +60,7 @@ namespace CourseWork
             editPrice.Show();
             editType.Show();
             SaveBtn.Show();
+            editPhotoBtn.Show();
         }
 
         private void EditBtnsHide()
@@ -68,6 +72,7 @@ namespace CourseWork
             editPrice.Hide();
             editType.Hide();
             SaveBtn.Hide();
+            editPhotoBtn.Hide();
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -83,7 +88,7 @@ namespace CourseWork
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            carList.List = sr.DeserializeCar("cars.save") as List<Car>;
+            carList.List = sr.Deserialize("cars.save");
             for (int i = carList.List.Count - 1; i >= 0; i--)
             {
                 if (carList.List[i].Compare(currentCar))
@@ -110,7 +115,29 @@ namespace CourseWork
             engineLbl.Text = "Engine: " + car.HorsePower + "hp " + car.EngCapacity + "l.";
             conditionLbl.Text = "Condition: " + car.Condition;
             priceLbl.Text = "Price: $" + car.Price.ToString();
-            //infoFormCarPic.Image = car.CarPic;
+            if (car.base64image != null)
+            {
+                infoFormCarPic.Image = bic.FromBase64(car.base64image);
+            }            
+        }
+
+        private void editPhotoBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            carList.List = sr.Deserialize("cars.save");
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                currentCar.base64image = bic.ToBase64(ofd.FileName);
+                infoFormCarPic.Image = Image.FromFile(ofd.FileName);
+            }
+            for (int i = carList.List.Count - 1; i >= 0; i--)
+            {
+                if (carList.List[i].Compare(currentCar))
+                {
+                    carList.List[i] = currentCar;
+                }
+            }
+            sr.Serialize(carList.List, "cars.save");
         }
     }
 }

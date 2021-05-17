@@ -25,7 +25,7 @@ namespace CourseWork
 
         private int year;
 
-        public string base64image { get; private set; }
+        public string base64image { get; set; }
 
         public int Year { get
             {

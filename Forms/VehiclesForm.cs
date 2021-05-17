@@ -20,8 +20,8 @@ namespace CourseWork
                 AddCarBtn.Hide();
             }
             carList = new CarList();
-            Serializer sr = new Serializer();
-            carList.List = sr.DeserializeCar("cars.save") as List<Car>;
+            Serializer<Car> sr = new Serializer<Car>();
+            carList.List = sr.Deserialize("cars.save");
             foreach (Car curr in carList.List)
             {
                 flowLayoutPanel1.Controls.Add(new CarUnit(curr, isAdmin));

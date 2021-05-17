@@ -30,32 +30,20 @@ namespace CourseWork
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarUnit));
-            this.DelCarBtn = new System.Windows.Forms.Label();
             this.CarPic = new System.Windows.Forms.PictureBox();
             this.carPrice = new System.Windows.Forms.Label();
             this.carName = new System.Windows.Forms.Label();
+            this.DelCarBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CarPic)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DelCarBtn
-            // 
-            this.DelCarBtn.AutoSize = true;
-            this.DelCarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DelCarBtn.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DelCarBtn.Location = new System.Drawing.Point(283, 11);
-            this.DelCarBtn.Name = "DelCarBtn";
-            this.DelCarBtn.Size = new System.Drawing.Size(40, 14);
-            this.DelCarBtn.TabIndex = 0;
-            this.DelCarBtn.Text = "Delete";
-            this.DelCarBtn.Click += new System.EventHandler(this.DelCarBtn_Click);
             // 
             // CarPic
             // 
             this.CarPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CarPic.Image = ((System.Drawing.Image)(resources.GetObject("CarPic.Image")));
-            this.CarPic.Location = new System.Drawing.Point(19, 28);
+            this.CarPic.Location = new System.Drawing.Point(12, 8);
             this.CarPic.Name = "CarPic";
-            this.CarPic.Size = new System.Drawing.Size(299, 161);
+            this.CarPic.Size = new System.Drawing.Size(311, 175);
             this.CarPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CarPic.TabIndex = 1;
             this.CarPic.TabStop = false;
@@ -81,15 +69,31 @@ namespace CourseWork
             this.carName.TabIndex = 3;
             this.carName.Text = "[Year], [Make], [Model]";
             // 
+            // DelCarBtn
+            // 
+            this.DelCarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.DelCarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DelCarBtn.FlatAppearance.BorderSize = 0;
+            this.DelCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DelCarBtn.Font = new System.Drawing.Font("Roboto Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DelCarBtn.ForeColor = System.Drawing.Color.White;
+            this.DelCarBtn.Location = new System.Drawing.Point(244, 8);
+            this.DelCarBtn.Name = "DelCarBtn";
+            this.DelCarBtn.Size = new System.Drawing.Size(79, 32);
+            this.DelCarBtn.TabIndex = 4;
+            this.DelCarBtn.Text = "Delete";
+            this.DelCarBtn.UseVisualStyleBackColor = false;
+            this.DelCarBtn.Click += new System.EventHandler(this.DelCarBtn_Click_1);
+            // 
             // CarUnit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Controls.Add(this.DelCarBtn);
             this.Controls.Add(this.carName);
             this.Controls.Add(this.carPrice);
             this.Controls.Add(this.CarPic);
-            this.Controls.Add(this.DelCarBtn);
             this.Name = "CarUnit";
             this.Size = new System.Drawing.Size(335, 270);
             ((System.ComponentModel.ISupportInitialize)(this.CarPic)).EndInit();
@@ -99,10 +103,9 @@ namespace CourseWork
         }
 
         #endregion
-
-        private System.Windows.Forms.Label DelCarBtn;
         private System.Windows.Forms.PictureBox CarPic;
         private System.Windows.Forms.Label carPrice;
         private System.Windows.Forms.Label carName;
+        private System.Windows.Forms.Button DelCarBtn;
     }
 }

@@ -47,6 +47,7 @@ namespace CourseWork
             this.editCondition = new System.Windows.Forms.ComboBox();
             this.editPrice = new System.Windows.Forms.NumericUpDown();
             this.SaveBtn = new System.Windows.Forms.Button();
+            this.editPhotoBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.infoFormCarPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editPower)).BeginInit();
@@ -57,9 +58,9 @@ namespace CourseWork
             // infoFormCarPic
             // 
             this.infoFormCarPic.Image = ((System.Drawing.Image)(resources.GetObject("infoFormCarPic.Image")));
-            this.infoFormCarPic.Location = new System.Drawing.Point(12, 12);
+            this.infoFormCarPic.Location = new System.Drawing.Point(63, 12);
             this.infoFormCarPic.Name = "infoFormCarPic";
-            this.infoFormCarPic.Size = new System.Drawing.Size(355, 230);
+            this.infoFormCarPic.Size = new System.Drawing.Size(399, 225);
             this.infoFormCarPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.infoFormCarPic.TabIndex = 0;
             this.infoFormCarPic.TabStop = false;
@@ -68,7 +69,7 @@ namespace CourseWork
             // 
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Roboto Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.nameLbl.Location = new System.Drawing.Point(383, 12);
+            this.nameLbl.Location = new System.Drawing.Point(478, 12);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(140, 29);
             this.nameLbl.TabIndex = 1;
@@ -78,7 +79,7 @@ namespace CourseWork
             // 
             this.yearLbl.AutoSize = true;
             this.yearLbl.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.yearLbl.Location = new System.Drawing.Point(383, 56);
+            this.yearLbl.Location = new System.Drawing.Point(478, 56);
             this.yearLbl.Name = "yearLbl";
             this.yearLbl.Size = new System.Drawing.Size(101, 23);
             this.yearLbl.TabIndex = 2;
@@ -88,7 +89,7 @@ namespace CourseWork
             // 
             this.typeLbl.AutoSize = true;
             this.typeLbl.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.typeLbl.Location = new System.Drawing.Point(383, 90);
+            this.typeLbl.Location = new System.Drawing.Point(478, 90);
             this.typeLbl.Name = "typeLbl";
             this.typeLbl.Size = new System.Drawing.Size(109, 23);
             this.typeLbl.TabIndex = 3;
@@ -98,7 +99,7 @@ namespace CourseWork
             // 
             this.engineLbl.AutoSize = true;
             this.engineLbl.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.engineLbl.Location = new System.Drawing.Point(383, 124);
+            this.engineLbl.Location = new System.Drawing.Point(478, 124);
             this.engineLbl.Name = "engineLbl";
             this.engineLbl.Size = new System.Drawing.Size(251, 23);
             this.engineLbl.TabIndex = 4;
@@ -108,7 +109,7 @@ namespace CourseWork
             // 
             this.conditionLbl.AutoSize = true;
             this.conditionLbl.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.conditionLbl.Location = new System.Drawing.Point(383, 157);
+            this.conditionLbl.Location = new System.Drawing.Point(478, 157);
             this.conditionLbl.Name = "conditionLbl";
             this.conditionLbl.Size = new System.Drawing.Size(187, 23);
             this.conditionLbl.TabIndex = 5;
@@ -118,7 +119,7 @@ namespace CourseWork
             // 
             this.priceLbl.AutoSize = true;
             this.priceLbl.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceLbl.Location = new System.Drawing.Point(12, 260);
+            this.priceLbl.Location = new System.Drawing.Point(63, 250);
             this.priceLbl.Name = "priceLbl";
             this.priceLbl.Size = new System.Drawing.Size(147, 29);
             this.priceLbl.TabIndex = 6;
@@ -131,9 +132,9 @@ namespace CourseWork
             this.purchaseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.purchaseBtn.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.purchaseBtn.ForeColor = System.Drawing.Color.White;
-            this.purchaseBtn.Location = new System.Drawing.Point(12, 301);
+            this.purchaseBtn.Location = new System.Drawing.Point(63, 289);
             this.purchaseBtn.Name = "purchaseBtn";
-            this.purchaseBtn.Size = new System.Drawing.Size(147, 31);
+            this.purchaseBtn.Size = new System.Drawing.Size(147, 55);
             this.purchaseBtn.TabIndex = 7;
             this.purchaseBtn.Text = "Purchase";
             this.purchaseBtn.UseVisualStyleBackColor = false;
@@ -329,12 +330,28 @@ namespace CourseWork
             this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
+            // editPhotoBtn
+            // 
+            this.editPhotoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.editPhotoBtn.FlatAppearance.BorderSize = 0;
+            this.editPhotoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editPhotoBtn.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.editPhotoBtn.ForeColor = System.Drawing.Color.White;
+            this.editPhotoBtn.Location = new System.Drawing.Point(63, 200);
+            this.editPhotoBtn.Name = "editPhotoBtn";
+            this.editPhotoBtn.Size = new System.Drawing.Size(119, 37);
+            this.editPhotoBtn.TabIndex = 23;
+            this.editPhotoBtn.Text = "Change photo";
+            this.editPhotoBtn.UseVisualStyleBackColor = false;
+            this.editPhotoBtn.Click += new System.EventHandler(this.editPhotoBtn_Click);
+            // 
             // CarInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(1044, 601);
+            this.Controls.Add(this.editPhotoBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.editPrice);
             this.Controls.Add(this.editCondition);
@@ -384,5 +401,6 @@ namespace CourseWork
         private System.Windows.Forms.ComboBox editCondition;
         private System.Windows.Forms.NumericUpDown editPrice;
         private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button editPhotoBtn;
     }
 }
