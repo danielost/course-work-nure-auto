@@ -19,7 +19,7 @@ namespace CourseWork
             InitializeComponent();
             carName.Text = $"{car.Year} {car.Make} {car.Model}";
             carPrice.Text = "$" + car.Price.ToString();
-            condLbl.Text = "–  " + car.Condition;
+            condLbl.Text = $"–  {car.Mileage} miles, {car.Origin}";
             if (car.base64image != null)
             {
                 CarPic.Image = FromBase64(car.base64image);

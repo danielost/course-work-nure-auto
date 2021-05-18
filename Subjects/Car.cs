@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CourseWork
 {
-    public class Car
+    public class Car : IComparable
     {
         public string Make { get; set; }
 
@@ -27,8 +27,11 @@ namespace CourseWork
 
         public string base64image { get; set; }
 
+        public int Mileage { get; set; }
 
-        public Car(string make, string model, double cap, int hp, string type, string cond, int price, int year)
+        public string Origin { get; set; }
+
+        public Car(string make, string model, double cap, int hp, string type, string cond, int price, int year, int mileage, string origin)
         {
             Make = make;
             Model = model;
@@ -38,6 +41,8 @@ namespace CourseWork
             Condition = cond;
             Price = price;
             Year = year;
+            Mileage = mileage;
+            Origin = origin;
         }
 
         public bool Compare(Car car)
@@ -45,6 +50,10 @@ namespace CourseWork
             return car.Make == Make && car.Model == Model && car.EngCapacity == EngCapacity && car.HorsePower == HorsePower && car.Type == Type && car.Condition == Condition && car.Price == Price && car.Year == Year;
         }
 
-        
+        public int CompareTo(object obj)
+        {
+            Car objCar = obj as Car;
+            return this.Make.CompareTo(objCar.Make);
+        }
     }
 }

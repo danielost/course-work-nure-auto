@@ -31,6 +31,31 @@ namespace CourseWork
         {
             this.vehiclesBG = new System.Windows.Forms.Panel();
             this.AdvancedSearchPanel = new System.Windows.Forms.Panel();
+            this.mileageTo = new System.Windows.Forms.NumericUpDown();
+            this.mileageFrom = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.priceTo = new System.Windows.Forms.NumericUpDown();
+            this.priceFrom = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.yearTo = new System.Windows.Forms.NumericUpDown();
+            this.yearFrom = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.searchOrigin = new System.Windows.Forms.ComboBox();
+            this.supercarCheckBox = new System.Windows.Forms.CheckBox();
+            this.truckCheckBox = new System.Windows.Forms.CheckBox();
+            this.vanCheckBox = new System.Windows.Forms.CheckBox();
+            this.CUVCheckBox = new System.Windows.Forms.CheckBox();
+            this.SUVCheckBox = new System.Windows.Forms.CheckBox();
+            this.sedanCheckBox = new System.Windows.Forms.CheckBox();
+            this.coupeCheckBox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.vehiclesNavPanel = new System.Windows.Forms.Panel();
             this.AdvSrchBtn = new System.Windows.Forms.Label();
@@ -43,9 +68,18 @@ namespace CourseWork
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.vehiclesBG.SuspendLayout();
+            this.AdvancedSearchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mileageTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mileageFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearFrom)).BeginInit();
             this.vehiclesNavPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // vehiclesBG
@@ -63,11 +97,418 @@ namespace CourseWork
             // AdvancedSearchPanel
             // 
             this.AdvancedSearchPanel.BackColor = System.Drawing.Color.Gray;
+            this.AdvancedSearchPanel.Controls.Add(this.mileageTo);
+            this.AdvancedSearchPanel.Controls.Add(this.mileageFrom);
+            this.AdvancedSearchPanel.Controls.Add(this.label9);
+            this.AdvancedSearchPanel.Controls.Add(this.label10);
+            this.AdvancedSearchPanel.Controls.Add(this.label11);
+            this.AdvancedSearchPanel.Controls.Add(this.priceTo);
+            this.AdvancedSearchPanel.Controls.Add(this.priceFrom);
+            this.AdvancedSearchPanel.Controls.Add(this.label6);
+            this.AdvancedSearchPanel.Controls.Add(this.label7);
+            this.AdvancedSearchPanel.Controls.Add(this.label8);
+            this.AdvancedSearchPanel.Controls.Add(this.label5);
+            this.AdvancedSearchPanel.Controls.Add(this.label4);
+            this.AdvancedSearchPanel.Controls.Add(this.yearTo);
+            this.AdvancedSearchPanel.Controls.Add(this.yearFrom);
+            this.AdvancedSearchPanel.Controls.Add(this.label3);
+            this.AdvancedSearchPanel.Controls.Add(this.label2);
+            this.AdvancedSearchPanel.Controls.Add(this.searchOrigin);
+            this.AdvancedSearchPanel.Controls.Add(this.supercarCheckBox);
+            this.AdvancedSearchPanel.Controls.Add(this.truckCheckBox);
+            this.AdvancedSearchPanel.Controls.Add(this.vanCheckBox);
+            this.AdvancedSearchPanel.Controls.Add(this.CUVCheckBox);
+            this.AdvancedSearchPanel.Controls.Add(this.SUVCheckBox);
+            this.AdvancedSearchPanel.Controls.Add(this.sedanCheckBox);
+            this.AdvancedSearchPanel.Controls.Add(this.coupeCheckBox);
+            this.AdvancedSearchPanel.Controls.Add(this.label1);
             this.AdvancedSearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AdvancedSearchPanel.Location = new System.Drawing.Point(0, 48);
             this.AdvancedSearchPanel.Name = "AdvancedSearchPanel";
-            this.AdvancedSearchPanel.Size = new System.Drawing.Size(1044, 257);
+            this.AdvancedSearchPanel.Size = new System.Drawing.Size(1044, 216);
             this.AdvancedSearchPanel.TabIndex = 2;
+            // 
+            // mileageTo
+            // 
+            this.mileageTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mileageTo.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mileageTo.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.mileageTo.Location = new System.Drawing.Point(302, 171);
+            this.mileageTo.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.mileageTo.Name = "mileageTo";
+            this.mileageTo.Size = new System.Drawing.Size(107, 27);
+            this.mileageTo.TabIndex = 47;
+            this.mileageTo.Value = new decimal(new int[] {
+            250000,
+            0,
+            0,
+            0});
+            this.mileageTo.ValueChanged += new System.EventHandler(this.mileageTo_ValueChanged);
+            // 
+            // mileageFrom
+            // 
+            this.mileageFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mileageFrom.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mileageFrom.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.mileageFrom.Location = new System.Drawing.Point(141, 171);
+            this.mileageFrom.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.mileageFrom.Name = "mileageFrom";
+            this.mileageFrom.Size = new System.Drawing.Size(107, 27);
+            this.mileageFrom.TabIndex = 46;
+            this.mileageFrom.ValueChanged += new System.EventHandler(this.mileageFrom_ValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(261, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 19);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "to";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(93, 173);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 19);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "from";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(14, 173);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 19);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Mileage:";
+            // 
+            // priceTo
+            // 
+            this.priceTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceTo.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.priceTo.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.priceTo.Location = new System.Drawing.Point(302, 134);
+            this.priceTo.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.priceTo.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.priceTo.Name = "priceTo";
+            this.priceTo.Size = new System.Drawing.Size(107, 27);
+            this.priceTo.TabIndex = 40;
+            this.priceTo.Value = new decimal(new int[] {
+            80000,
+            0,
+            0,
+            0});
+            this.priceTo.ValueChanged += new System.EventHandler(this.priceTo_ValueChanged);
+            // 
+            // priceFrom
+            // 
+            this.priceFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceFrom.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.priceFrom.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.priceFrom.Location = new System.Drawing.Point(141, 134);
+            this.priceFrom.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.priceFrom.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.priceFrom.Name = "priceFrom";
+            this.priceFrom.Size = new System.Drawing.Size(107, 27);
+            this.priceFrom.TabIndex = 39;
+            this.priceFrom.Value = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
+            this.priceFrom.ValueChanged += new System.EventHandler(this.priceFrom_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(261, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 19);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "to";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(93, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 19);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "from";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(35, 136);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 19);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Price:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(214, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 19);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "to";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(91, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 19);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "from";
+            // 
+            // yearTo
+            // 
+            this.yearTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.yearTo.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.yearTo.Location = new System.Drawing.Point(252, 94);
+            this.yearTo.Maximum = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.yearTo.Minimum = new decimal(new int[] {
+            1950,
+            0,
+            0,
+            0});
+            this.yearTo.Name = "yearTo";
+            this.yearTo.Size = new System.Drawing.Size(57, 27);
+            this.yearTo.TabIndex = 31;
+            this.yearTo.Value = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.yearTo.ValueChanged += new System.EventHandler(this.yearTo_ValueChanged);
+            // 
+            // yearFrom
+            // 
+            this.yearFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.yearFrom.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.yearFrom.Location = new System.Drawing.Point(142, 94);
+            this.yearFrom.Maximum = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.yearFrom.Minimum = new decimal(new int[] {
+            1950,
+            0,
+            0,
+            0});
+            this.yearFrom.Name = "yearFrom";
+            this.yearFrom.Size = new System.Drawing.Size(57, 27);
+            this.yearFrom.TabIndex = 30;
+            this.yearFrom.Value = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.yearFrom.ValueChanged += new System.EventHandler(this.yearFrom_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(39, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 19);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Year:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(28, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 19);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Origin:";
+            // 
+            // searchOrigin
+            // 
+            this.searchOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchOrigin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchOrigin.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchOrigin.FormattingEnabled = true;
+            this.searchOrigin.Items.AddRange(new object[] {
+            "Germany",
+            "Italy",
+            "Japan",
+            "Korea",
+            "Russia",
+            "Sweden",
+            "UK",
+            "USA"});
+            this.searchOrigin.Location = new System.Drawing.Point(93, 54);
+            this.searchOrigin.Name = "searchOrigin";
+            this.searchOrigin.Size = new System.Drawing.Size(216, 27);
+            this.searchOrigin.Sorted = true;
+            this.searchOrigin.TabIndex = 27;
+            // 
+            // supercarCheckBox
+            // 
+            this.supercarCheckBox.AutoSize = true;
+            this.supercarCheckBox.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.supercarCheckBox.ForeColor = System.Drawing.Color.White;
+            this.supercarCheckBox.Location = new System.Drawing.Point(488, 18);
+            this.supercarCheckBox.Name = "supercarCheckBox";
+            this.supercarCheckBox.Size = new System.Drawing.Size(83, 21);
+            this.supercarCheckBox.TabIndex = 7;
+            this.supercarCheckBox.Text = "Supercar";
+            this.supercarCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // truckCheckBox
+            // 
+            this.truckCheckBox.AutoSize = true;
+            this.truckCheckBox.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.truckCheckBox.ForeColor = System.Drawing.Color.White;
+            this.truckCheckBox.Location = new System.Drawing.Point(418, 18);
+            this.truckCheckBox.Name = "truckCheckBox";
+            this.truckCheckBox.Size = new System.Drawing.Size(61, 21);
+            this.truckCheckBox.TabIndex = 6;
+            this.truckCheckBox.Text = "Truck";
+            this.truckCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // vanCheckBox
+            // 
+            this.vanCheckBox.AutoSize = true;
+            this.vanCheckBox.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vanCheckBox.ForeColor = System.Drawing.Color.White;
+            this.vanCheckBox.Location = new System.Drawing.Point(357, 18);
+            this.vanCheckBox.Name = "vanCheckBox";
+            this.vanCheckBox.Size = new System.Drawing.Size(52, 21);
+            this.vanCheckBox.TabIndex = 5;
+            this.vanCheckBox.Text = "Van";
+            this.vanCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // CUVCheckBox
+            // 
+            this.CUVCheckBox.AutoSize = true;
+            this.CUVCheckBox.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CUVCheckBox.ForeColor = System.Drawing.Color.White;
+            this.CUVCheckBox.Location = new System.Drawing.Point(298, 18);
+            this.CUVCheckBox.Name = "CUVCheckBox";
+            this.CUVCheckBox.Size = new System.Drawing.Size(54, 21);
+            this.CUVCheckBox.TabIndex = 4;
+            this.CUVCheckBox.Text = "CUV";
+            this.CUVCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SUVCheckBox
+            // 
+            this.SUVCheckBox.AutoSize = true;
+            this.SUVCheckBox.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SUVCheckBox.ForeColor = System.Drawing.Color.White;
+            this.SUVCheckBox.Location = new System.Drawing.Point(238, 18);
+            this.SUVCheckBox.Name = "SUVCheckBox";
+            this.SUVCheckBox.Size = new System.Drawing.Size(53, 21);
+            this.SUVCheckBox.TabIndex = 3;
+            this.SUVCheckBox.Text = "SUV";
+            this.SUVCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // sedanCheckBox
+            // 
+            this.sedanCheckBox.AutoSize = true;
+            this.sedanCheckBox.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sedanCheckBox.ForeColor = System.Drawing.Color.White;
+            this.sedanCheckBox.Location = new System.Drawing.Point(166, 18);
+            this.sedanCheckBox.Name = "sedanCheckBox";
+            this.sedanCheckBox.Size = new System.Drawing.Size(66, 21);
+            this.sedanCheckBox.TabIndex = 2;
+            this.sedanCheckBox.Text = "Sedan";
+            this.sedanCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // coupeCheckBox
+            // 
+            this.coupeCheckBox.AutoSize = true;
+            this.coupeCheckBox.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.coupeCheckBox.ForeColor = System.Drawing.Color.White;
+            this.coupeCheckBox.Location = new System.Drawing.Point(93, 18);
+            this.coupeCheckBox.Name = "coupeCheckBox";
+            this.coupeCheckBox.Size = new System.Drawing.Size(67, 21);
+            this.coupeCheckBox.TabIndex = 1;
+            this.coupeCheckBox.Text = "Coupe";
+            this.coupeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(36, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Type:";
             // 
             // flowLayoutPanel1
             // 
@@ -81,6 +522,7 @@ namespace CourseWork
             // vehiclesNavPanel
             // 
             this.vehiclesNavPanel.BackColor = System.Drawing.Color.Gray;
+            this.vehiclesNavPanel.Controls.Add(this.pictureBox1);
             this.vehiclesNavPanel.Controls.Add(this.AdvSrchBtn);
             this.vehiclesNavPanel.Controls.Add(this.panel1);
             this.vehiclesNavPanel.Controls.Add(this.MakeTextBox);
@@ -95,7 +537,7 @@ namespace CourseWork
             this.AdvSrchBtn.AutoSize = true;
             this.AdvSrchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdvSrchBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AdvSrchBtn.Location = new System.Drawing.Point(261, 16);
+            this.AdvSrchBtn.Location = new System.Drawing.Point(281, 16);
             this.AdvSrchBtn.Name = "AdvSrchBtn";
             this.AdvSrchBtn.Size = new System.Drawing.Size(131, 19);
             this.AdvSrchBtn.TabIndex = 4;
@@ -133,14 +575,15 @@ namespace CourseWork
             this.comboBox1.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Sort by price Ascending",
-            "Sort by price Descending",
-            "Sort by Name (A-Z)",
-            "Sort by Name (Z-A)"});
+            "Price Ascending",
+            "Price Descending",
+            "Name (A-Z)",
+            "Name (Z-A)"});
             this.comboBox1.Location = new System.Drawing.Point(155, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(204, 22);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MakeTextBox
             // 
@@ -191,6 +634,16 @@ namespace CourseWork
             this.panel3.Size = new System.Drawing.Size(340, 100);
             this.panel3.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CourseWork.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(247, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // VehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -201,9 +654,18 @@ namespace CourseWork
             this.Name = "VehiclesForm";
             this.Text = "VehiclesForm";
             this.vehiclesBG.ResumeLayout(false);
+            this.AdvancedSearchPanel.ResumeLayout(false);
+            this.AdvancedSearchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mileageTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mileageFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearFrom)).EndInit();
             this.vehiclesNavPanel.ResumeLayout(false);
             this.vehiclesNavPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,5 +686,31 @@ namespace CourseWork
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel AdvancedSearchPanel;
         private System.Windows.Forms.Label AdvSrchBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox supercarCheckBox;
+        private System.Windows.Forms.CheckBox truckCheckBox;
+        private System.Windows.Forms.CheckBox vanCheckBox;
+        private System.Windows.Forms.CheckBox CUVCheckBox;
+        private System.Windows.Forms.CheckBox SUVCheckBox;
+        private System.Windows.Forms.CheckBox sedanCheckBox;
+        private System.Windows.Forms.CheckBox coupeCheckBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown yearTo;
+        private System.Windows.Forms.NumericUpDown yearFrom;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown priceTo;
+        private System.Windows.Forms.NumericUpDown priceFrom;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown mileageTo;
+        private System.Windows.Forms.NumericUpDown mileageFrom;
+        private System.Windows.Forms.ComboBox searchOrigin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

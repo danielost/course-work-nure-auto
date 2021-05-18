@@ -61,6 +61,8 @@ namespace CourseWork
             editType.Show();
             SaveBtn.Show();
             editPhotoBtn.Show();
+            editMileage.Show();
+            editOrigin.Show();
         }
 
         private void EditBtnsHide()
@@ -73,6 +75,8 @@ namespace CourseWork
             editType.Hide();
             SaveBtn.Hide();
             editPhotoBtn.Hide();
+            editMileage.Hide();
+            editOrigin.Hide();
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -83,6 +87,8 @@ namespace CourseWork
             editPrice.Value = currentCar.Price;
             editType.Text = currentCar.Type;
             editYear.Value = currentCar.Year;
+            editMileage.Value = currentCar.Mileage;
+            editOrigin.Text = currentCar.Origin;
             EditBtnsShow();
         }
 
@@ -99,6 +105,8 @@ namespace CourseWork
                     currentCar.EngCapacity = (double)editCapacity.Value;
                     currentCar.Condition = editCondition.Text;
                     currentCar.Price = (int)editPrice.Value;
+                    currentCar.Mileage = (int)editMileage.Value;
+                    currentCar.Origin = editOrigin.Text;
                     carList.List[i] = currentCar;
                 }
             }
@@ -114,7 +122,9 @@ namespace CourseWork
             typeLbl.Text = "Type: " + car.Type;
             engineLbl.Text = "Engine: " + car.HorsePower + "hp " + car.EngCapacity + "l.";
             conditionLbl.Text = "Condition: " + car.Condition;
-            priceLbl.Text = "Price: $" + car.Price.ToString();
+            priceLbl.Text = "$" + car.Price.ToString();
+            mileageLbl.Text = "Mileage: " + car.Mileage;
+            originLbl.Text = "Origin: " + car.Origin;
             if (car.base64image != null)
             {
                 infoFormCarPic.Image = bic.FromBase64(car.base64image);

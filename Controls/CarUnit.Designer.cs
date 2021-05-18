@@ -110,8 +110,8 @@ namespace CourseWork
             this.condLbl.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.condLbl.Location = new System.Drawing.Point(77, 0);
             this.condLbl.Name = "condLbl";
-            this.condLbl.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.condLbl.Size = new System.Drawing.Size(121, 31);
+            this.condLbl.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.condLbl.Size = new System.Drawing.Size(121, 33);
             this.condLbl.TabIndex = 7;
             this.condLbl.Text = "–  [Condition]";
             // 

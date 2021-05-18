@@ -48,11 +48,16 @@ namespace CourseWork
             this.editPrice = new System.Windows.Forms.NumericUpDown();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.editPhotoBtn = new System.Windows.Forms.Button();
+            this.mileageLbl = new System.Windows.Forms.Label();
+            this.originLbl = new System.Windows.Forms.Label();
+            this.editOrigin = new System.Windows.Forms.ComboBox();
+            this.editMileage = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.infoFormCarPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editCapacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editMileage)).BeginInit();
             this.SuspendLayout();
             // 
             // infoFormCarPic
@@ -118,10 +123,11 @@ namespace CourseWork
             // priceLbl
             // 
             this.priceLbl.AutoSize = true;
-            this.priceLbl.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceLbl.Location = new System.Drawing.Point(63, 250);
+            this.priceLbl.Font = new System.Drawing.Font("Bebas Neue", 29F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.priceLbl.ForeColor = System.Drawing.Color.Green;
+            this.priceLbl.Location = new System.Drawing.Point(57, 242);
             this.priceLbl.Name = "priceLbl";
-            this.priceLbl.Size = new System.Drawing.Size(147, 29);
+            this.priceLbl.Size = new System.Drawing.Size(187, 47);
             this.priceLbl.TabIndex = 6;
             this.priceLbl.Text = "Price: [Price]";
             // 
@@ -293,7 +299,7 @@ namespace CourseWork
             0,
             0,
             0});
-            this.editPrice.Location = new System.Drawing.Point(816, 266);
+            this.editPrice.Location = new System.Drawing.Point(816, 330);
             this.editPrice.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -322,7 +328,7 @@ namespace CourseWork
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveBtn.ForeColor = System.Drawing.Color.White;
-            this.SaveBtn.Location = new System.Drawing.Point(885, 301);
+            this.SaveBtn.Location = new System.Drawing.Point(885, 365);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(147, 31);
             this.SaveBtn.TabIndex = 22;
@@ -345,12 +351,77 @@ namespace CourseWork
             this.editPhotoBtn.UseVisualStyleBackColor = false;
             this.editPhotoBtn.Click += new System.EventHandler(this.editPhotoBtn_Click);
             // 
+            // mileageLbl
+            // 
+            this.mileageLbl.AutoSize = true;
+            this.mileageLbl.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mileageLbl.Location = new System.Drawing.Point(478, 189);
+            this.mileageLbl.Name = "mileageLbl";
+            this.mileageLbl.Size = new System.Drawing.Size(159, 23);
+            this.mileageLbl.TabIndex = 24;
+            this.mileageLbl.Text = "Mileage: [Mileage]";
+            // 
+            // originLbl
+            // 
+            this.originLbl.AutoSize = true;
+            this.originLbl.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.originLbl.Location = new System.Drawing.Point(478, 221);
+            this.originLbl.Name = "originLbl";
+            this.originLbl.Size = new System.Drawing.Size(125, 23);
+            this.originLbl.TabIndex = 25;
+            this.originLbl.Text = "Origin: [Origin]";
+            // 
+            // editOrigin
+            // 
+            this.editOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.editOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.editOrigin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editOrigin.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.editOrigin.FormattingEnabled = true;
+            this.editOrigin.Items.AddRange(new object[] {
+            "Germany",
+            "Italy",
+            "Japan",
+            "Korea",
+            "Russia",
+            "Sweden",
+            "UK",
+            "USA"});
+            this.editOrigin.Location = new System.Drawing.Point(816, 269);
+            this.editOrigin.Name = "editOrigin";
+            this.editOrigin.Size = new System.Drawing.Size(216, 27);
+            this.editOrigin.Sorted = true;
+            this.editOrigin.TabIndex = 26;
+            // 
+            // editMileage
+            // 
+            this.editMileage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.editMileage.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.editMileage.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.editMileage.Location = new System.Drawing.Point(816, 231);
+            this.editMileage.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.editMileage.Name = "editMileage";
+            this.editMileage.Size = new System.Drawing.Size(216, 27);
+            this.editMileage.TabIndex = 27;
+            // 
             // CarInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(1044, 601);
+            this.Controls.Add(this.editMileage);
+            this.Controls.Add(this.editOrigin);
+            this.Controls.Add(this.originLbl);
+            this.Controls.Add(this.mileageLbl);
             this.Controls.Add(this.editPhotoBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.editPrice);
@@ -377,6 +448,7 @@ namespace CourseWork
             ((System.ComponentModel.ISupportInitialize)(this.editPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editCapacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editMileage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,5 +474,9 @@ namespace CourseWork
         private System.Windows.Forms.NumericUpDown editPrice;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button editPhotoBtn;
+        private System.Windows.Forms.Label mileageLbl;
+        private System.Windows.Forms.Label originLbl;
+        private System.Windows.Forms.ComboBox editOrigin;
+        private System.Windows.Forms.NumericUpDown editMileage;
     }
 }

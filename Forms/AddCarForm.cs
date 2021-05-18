@@ -17,11 +17,12 @@ namespace CourseWork
             InitializeComponent();
             addType.SelectedIndex = 0;
             addCondition.SelectedIndex = 0;
+            addOrigin.SelectedIndex = 0;
         }
 
         public Car CreateCar()
         {
-            return new Car(addMake.Text, addModel.Text, Convert.ToDouble(addCapacity.Text), Convert.ToInt32(addPower.Text), addType.Text, addCondition.Text, Convert.ToInt32(addPrice.Text), Convert.ToInt32(addYear.Text));
+            return new Car(addMake.Text, addModel.Text, Convert.ToDouble(addCapacity.Text), Convert.ToInt32(addPower.Text), addType.Text, addCondition.Text, Convert.ToInt32(addPrice.Text), Convert.ToInt32(addYear.Text), (int)addMileage.Value, addOrigin.Text);
         }
 
         public void AddCarBtn_Click(object sender, EventArgs e)
@@ -64,6 +65,16 @@ namespace CourseWork
             if (addPrice.Text == "")
             {
                 MessageBox.Show("Price field is empty");
+                return;
+            }
+            if (addMileage.Text == "")
+            {
+                MessageBox.Show("Mileage field is empty");
+                return;
+            }
+            if (addOrigin.Text == "")
+            {
+                MessageBox.Show("Origin field is empty");
                 return;
             }
             CarList carList = new CarList();

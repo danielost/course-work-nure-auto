@@ -31,6 +31,10 @@ namespace CourseWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCarForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.addOrigin = new System.Windows.Forms.ComboBox();
+            this.addMileage = new System.Windows.Forms.NumericUpDown();
+            this.addPicBtn = new System.Windows.Forms.Button();
             this.addPrice = new System.Windows.Forms.NumericUpDown();
             this.addPower = new System.Windows.Forms.NumericUpDown();
             this.addCondition = new System.Windows.Forms.ComboBox();
@@ -44,8 +48,8 @@ namespace CourseWork
             this.addModel = new System.Windows.Forms.TextBox();
             this.addMake = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.addPicBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addMileage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCapacity)).BeginInit();
@@ -56,6 +60,9 @@ namespace CourseWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.addOrigin);
+            this.panel1.Controls.Add(this.addMileage);
             this.panel1.Controls.Add(this.addPicBtn);
             this.panel1.Controls.Add(this.addPrice);
             this.panel1.Controls.Add(this.addPower);
@@ -73,8 +80,72 @@ namespace CourseWork
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 218);
+            this.panel1.Size = new System.Drawing.Size(837, 262);
             this.panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(715, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 18);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Mileage";
+            // 
+            // addOrigin
+            // 
+            this.addOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.addOrigin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addOrigin.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addOrigin.FormattingEnabled = true;
+            this.addOrigin.Items.AddRange(new object[] {
+            "Germany",
+            "Italy",
+            "Japan",
+            "Korea",
+            "Russia",
+            "Sweden",
+            "UK",
+            "USA"});
+            this.addOrigin.Location = new System.Drawing.Point(247, 220);
+            this.addOrigin.Name = "addOrigin";
+            this.addOrigin.Size = new System.Drawing.Size(216, 27);
+            this.addOrigin.Sorted = true;
+            this.addOrigin.TabIndex = 21;
+            // 
+            // addMileage
+            // 
+            this.addMileage.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addMileage.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.addMileage.Location = new System.Drawing.Point(483, 139);
+            this.addMileage.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.addMileage.Name = "addMileage";
+            this.addMileage.Size = new System.Drawing.Size(216, 27);
+            this.addMileage.TabIndex = 20;
+            // 
+            // addPicBtn
+            // 
+            this.addPicBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.addPicBtn.FlatAppearance.BorderSize = 0;
+            this.addPicBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPicBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addPicBtn.Location = new System.Drawing.Point(483, 179);
+            this.addPicBtn.Name = "addPicBtn";
+            this.addPicBtn.Size = new System.Drawing.Size(216, 27);
+            this.addPicBtn.TabIndex = 19;
+            this.addPicBtn.Text = "Add a picture";
+            this.addPicBtn.UseVisualStyleBackColor = false;
+            this.addPicBtn.Click += new System.EventHandler(this.addPicBtn_Click);
             // 
             // addPrice
             // 
@@ -233,7 +304,7 @@ namespace CourseWork
             this.AddCarBtn.FlatAppearance.BorderSize = 0;
             this.AddCarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCarBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddCarBtn.Location = new System.Drawing.Point(483, 178);
+            this.AddCarBtn.Location = new System.Drawing.Point(483, 220);
             this.AddCarBtn.Name = "AddCarBtn";
             this.AddCarBtn.Size = new System.Drawing.Size(216, 27);
             this.AddCarBtn.TabIndex = 9;
@@ -282,32 +353,18 @@ namespace CourseWork
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 195);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // addPicBtn
-            // 
-            this.addPicBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.addPicBtn.FlatAppearance.BorderSize = 0;
-            this.addPicBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addPicBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addPicBtn.Location = new System.Drawing.Point(483, 138);
-            this.addPicBtn.Name = "addPicBtn";
-            this.addPicBtn.Size = new System.Drawing.Size(216, 27);
-            this.addPicBtn.TabIndex = 19;
-            this.addPicBtn.Text = "Add a picture";
-            this.addPicBtn.UseVisualStyleBackColor = false;
-            this.addPicBtn.Click += new System.EventHandler(this.addPicBtn_Click);
-            // 
             // AddCarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 218);
+            this.ClientSize = new System.Drawing.Size(837, 262);
             this.Controls.Add(this.panel1);
             this.Name = "AddCarForm";
             this.ShowIcon = false;
@@ -315,6 +372,7 @@ namespace CourseWork
             this.Text = "AddCarForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addMileage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addCapacity)).EndInit();
@@ -341,5 +399,8 @@ namespace CourseWork
         private System.Windows.Forms.NumericUpDown addPrice;
         private System.Windows.Forms.NumericUpDown addPower;
         private System.Windows.Forms.Button addPicBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox addOrigin;
+        private System.Windows.Forms.NumericUpDown addMileage;
     }
 }
