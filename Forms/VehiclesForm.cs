@@ -26,6 +26,7 @@ namespace CourseWork
             {
                 flowLayoutPanel1.Controls.Add(new CarUnit(curr, isAdmin));
             }
+            AdvancedSearchPanel.Hide();
         }
         
         private void FlowReset()
@@ -37,6 +38,11 @@ namespace CourseWork
         {
             AddCarForm acf = new AddCarForm();
             acf.Show();
+        }
+
+        private void AdvSrchBtn_Click(object sender, EventArgs e)
+        {
+            AdvancedSearchPanel.Show();
         }
     }
 }

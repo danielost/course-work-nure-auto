@@ -14,21 +14,21 @@ namespace CourseWork
         private Car currentCar;
         private Serializer<Car> sr;
         private CarList carList;
-        private BaseImageConverter bic = new BaseImageConverter();
+        private BaseImageConverter bic;
 
         public CarInfoForm(Car car, bool isAdmin)
         {
             InitializeComponent();
+            bic = new BaseImageConverter();
+            sr = new Serializer<Car>();
+            carList = new CarList();
             if (!isAdmin)
             {
                 editBtn.Hide();
             }
             EditBtnsHide();
             currentCar = car;
-            Reload(car);
-            sr = new Serializer<Car>();
-            carList = new CarList();
-            //bic = new BaseImageConverter();
+            Reload(car);           
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -30,12 +30,13 @@ namespace CourseWork
         private void InitializeComponent()
         {
             this.vehiclesBG = new System.Windows.Forms.Panel();
+            this.AdvancedSearchPanel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.vehiclesNavPanel = new System.Windows.Forms.Panel();
+            this.AdvSrchBtn = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AddCarBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.modelTextBox = new System.Windows.Forms.TextBox();
             this.MakeTextBox = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -50,6 +51,7 @@ namespace CourseWork
             // vehiclesBG
             // 
             this.vehiclesBG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.vehiclesBG.Controls.Add(this.AdvancedSearchPanel);
             this.vehiclesBG.Controls.Add(this.flowLayoutPanel1);
             this.vehiclesBG.Controls.Add(this.vehiclesNavPanel);
             this.vehiclesBG.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -57,6 +59,14 @@ namespace CourseWork
             this.vehiclesBG.Name = "vehiclesBG";
             this.vehiclesBG.Size = new System.Drawing.Size(1044, 601);
             this.vehiclesBG.TabIndex = 0;
+            // 
+            // AdvancedSearchPanel
+            // 
+            this.AdvancedSearchPanel.BackColor = System.Drawing.Color.Gray;
+            this.AdvancedSearchPanel.Location = new System.Drawing.Point(0, 48);
+            this.AdvancedSearchPanel.Name = "AdvancedSearchPanel";
+            this.AdvancedSearchPanel.Size = new System.Drawing.Size(1044, 257);
+            this.AdvancedSearchPanel.TabIndex = 2;
             // 
             // flowLayoutPanel1
             // 
@@ -70,14 +80,25 @@ namespace CourseWork
             // vehiclesNavPanel
             // 
             this.vehiclesNavPanel.BackColor = System.Drawing.Color.Gray;
+            this.vehiclesNavPanel.Controls.Add(this.AdvSrchBtn);
             this.vehiclesNavPanel.Controls.Add(this.panel1);
-            this.vehiclesNavPanel.Controls.Add(this.modelTextBox);
             this.vehiclesNavPanel.Controls.Add(this.MakeTextBox);
             this.vehiclesNavPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.vehiclesNavPanel.Location = new System.Drawing.Point(0, 0);
             this.vehiclesNavPanel.Name = "vehiclesNavPanel";
             this.vehiclesNavPanel.Size = new System.Drawing.Size(1044, 48);
             this.vehiclesNavPanel.TabIndex = 0;
+            // 
+            // AdvSrchBtn
+            // 
+            this.AdvSrchBtn.AutoSize = true;
+            this.AdvSrchBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdvSrchBtn.Location = new System.Drawing.Point(261, 16);
+            this.AdvSrchBtn.Name = "AdvSrchBtn";
+            this.AdvSrchBtn.Size = new System.Drawing.Size(131, 19);
+            this.AdvSrchBtn.TabIndex = 4;
+            this.AdvSrchBtn.Text = "Advanced Search";
+            this.AdvSrchBtn.Click += new System.EventHandler(this.AdvSrchBtn_Click);
             // 
             // panel1
             // 
@@ -119,22 +140,13 @@ namespace CourseWork
             this.comboBox1.Size = new System.Drawing.Size(204, 22);
             this.comboBox1.TabIndex = 3;
             // 
-            // modelTextBox
-            // 
-            this.modelTextBox.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.modelTextBox.Location = new System.Drawing.Point(237, 9);
-            this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.PlaceholderText = "Model";
-            this.modelTextBox.Size = new System.Drawing.Size(168, 30);
-            this.modelTextBox.TabIndex = 1;
-            // 
             // MakeTextBox
             // 
             this.MakeTextBox.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MakeTextBox.Location = new System.Drawing.Point(36, 9);
             this.MakeTextBox.Name = "MakeTextBox";
             this.MakeTextBox.PlaceholderText = "Make";
-            this.MakeTextBox.Size = new System.Drawing.Size(168, 30);
+            this.MakeTextBox.Size = new System.Drawing.Size(205, 30);
             this.MakeTextBox.TabIndex = 0;
             // 
             // panel10
@@ -205,9 +217,10 @@ namespace CourseWork
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel vehiclesNavPanel;
         private System.Windows.Forms.TextBox MakeTextBox;
-        private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.Button AddCarBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel AdvancedSearchPanel;
+        private System.Windows.Forms.Label AdvSrchBtn;
     }
 }

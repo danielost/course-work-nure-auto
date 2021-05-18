@@ -23,22 +23,10 @@ namespace CourseWork
 
         public int Price { get; set; }
 
-        private int year;
+        public int Year { get; set; }
 
         public string base64image { get; set; }
 
-        public int Year { get
-            {
-                return year;
-            }
-            set
-            {
-                if (value < 2022 && value > 1070)
-                {
-                    year = value;
-                }
-            }
-        }
 
         public Car(string make, string model, double cap, int hp, string type, string cond, int price, int year)
         {
