@@ -63,6 +63,7 @@ namespace CourseWork
             // AdvancedSearchPanel
             // 
             this.AdvancedSearchPanel.BackColor = System.Drawing.Color.Gray;
+            this.AdvancedSearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AdvancedSearchPanel.Location = new System.Drawing.Point(0, 48);
             this.AdvancedSearchPanel.Name = "AdvancedSearchPanel";
             this.AdvancedSearchPanel.Size = new System.Drawing.Size(1044, 257);
@@ -92,6 +93,7 @@ namespace CourseWork
             // AdvSrchBtn
             // 
             this.AdvSrchBtn.AutoSize = true;
+            this.AdvSrchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdvSrchBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdvSrchBtn.Location = new System.Drawing.Point(261, 16);
             this.AdvSrchBtn.Name = "AdvSrchBtn";

@@ -19,6 +19,7 @@ namespace CourseWork
             InitializeComponent();
             carName.Text = $"{car.Year} {car.Make} {car.Model}";
             carPrice.Text = "$" + car.Price.ToString();
+            condLbl.Text = "–  " + car.Condition;
             if (car.base64image != null)
             {
                 CarPic.Image = FromBase64(car.base64image);
@@ -47,6 +48,11 @@ namespace CourseWork
 
         private void CarPic_Click(object sender, EventArgs e)
         {
+            OpenChildInfo();
+        }
+
+        private void OpenChildInfo()
+        {
             Panel parent = (Panel)Parent.Parent;
             CarInfoForm cif = new CarInfoForm(currentCar, isAdmin);
             cif.TopLevel = false;
@@ -72,6 +78,11 @@ namespace CourseWork
             }
             sr.Serialize(carList.List, "cars.save");
             this.Hide();
+        }
+
+        private void carName_Click(object sender, EventArgs e)
+        {
+            OpenChildInfo();
         }
     }
 }

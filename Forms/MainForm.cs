@@ -17,6 +17,7 @@ namespace CourseWork
         public MainForm(User user)
         {
             InitializeComponent();
+            wlcmLbl.Text = "Welcome, " + user.Name;
             if (user.Status == "admin")
             {
                 isAdmin = true;
@@ -112,7 +113,7 @@ namespace CourseWork
             labelCurr.Text = "Home";
         }
 
-        private void logOutBtn_Click(object sender, EventArgs e)
+        private void logOutBtn_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             LoginForm lf = new LoginForm();

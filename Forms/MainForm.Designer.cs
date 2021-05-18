@@ -40,6 +40,8 @@ namespace CourseWork
             this.panel2 = new System.Windows.Forms.Panel();
             this.homeBtn = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.wlcmLbl = new System.Windows.Forms.Label();
             this.logOutBtn = new System.Windows.Forms.Label();
             this.labelCurr = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -47,6 +49,7 @@ namespace CourseWork
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -197,7 +200,7 @@ namespace CourseWork
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.panel3.Controls.Add(this.logOutBtn);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.labelCurr);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(220, 0);
@@ -205,19 +208,43 @@ namespace CourseWork
             this.panel3.Size = new System.Drawing.Size(1044, 80);
             this.panel3.TabIndex = 1;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.wlcmLbl);
+            this.panel4.Controls.Add(this.logOutBtn);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(507, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(537, 80);
+            this.panel4.TabIndex = 3;
+            // 
+            // wlcmLbl
+            // 
+            this.wlcmLbl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.wlcmLbl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.wlcmLbl.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.wlcmLbl.ForeColor = System.Drawing.Color.White;
+            this.wlcmLbl.Location = new System.Drawing.Point(251, 0);
+            this.wlcmLbl.Name = "wlcmLbl";
+            this.wlcmLbl.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.wlcmLbl.Size = new System.Drawing.Size(202, 80);
+            this.wlcmLbl.TabIndex = 2;
+            this.wlcmLbl.Text = "Welcome, [Name]";
+            this.wlcmLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // logOutBtn
             // 
-            this.logOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logOutBtn.AutoSize = true;
             this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.logOutBtn.Font = new System.Drawing.Font("Roboto Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Location = new System.Drawing.Point(947, 31);
+            this.logOutBtn.Location = new System.Drawing.Point(453, 0);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(57, 18);
+            this.logOutBtn.Size = new System.Drawing.Size(84, 80);
             this.logOutBtn.TabIndex = 1;
             this.logOutBtn.Text = "Log out";
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            this.logOutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click_1);
             // 
             // labelCurr
             // 
@@ -257,6 +284,7 @@ namespace CourseWork
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -274,7 +302,9 @@ namespace CourseWork
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelCurr;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label logOutBtn;
+        private System.Windows.Forms.Label wlcmLbl;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label logOutBtn;
     }
 }

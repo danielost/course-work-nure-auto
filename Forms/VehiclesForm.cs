@@ -11,6 +11,7 @@ namespace CourseWork
     public partial class VehiclesForm : Form
     {
         private CarList carList;
+        private bool advSrch;
 
         public VehiclesForm(bool isAdmin)
         {
@@ -26,6 +27,7 @@ namespace CourseWork
             {
                 flowLayoutPanel1.Controls.Add(new CarUnit(curr, isAdmin));
             }
+            advSrch = false;
             AdvancedSearchPanel.Hide();
         }
         
@@ -42,7 +44,16 @@ namespace CourseWork
 
         private void AdvSrchBtn_Click(object sender, EventArgs e)
         {
-            AdvancedSearchPanel.Show();
+            if (!advSrch)
+            {
+                AdvancedSearchPanel.Show();
+                advSrch = true;
+            }
+            else
+            {
+                AdvancedSearchPanel.Hide();
+                advSrch = false;
+            }
         }
     }
 }
