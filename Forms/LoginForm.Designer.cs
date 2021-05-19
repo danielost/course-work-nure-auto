@@ -31,6 +31,8 @@ namespace CourseWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.showBtn = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.WrongDataLabel = new System.Windows.Forms.Label();
             this.LoginAutoBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,7 +42,6 @@ namespace CourseWork
             this.SignInButton = new System.Windows.Forms.Button();
             this.PassAutoBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@ namespace CourseWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.Controls.Add(this.showBtn);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.WrongDataLabel);
             this.panel1.Controls.Add(this.LoginAutoBox);
@@ -62,6 +64,30 @@ namespace CourseWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // showBtn
+            // 
+            this.showBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.showBtn.AutoSize = true;
+            this.showBtn.BackColor = System.Drawing.Color.White;
+            this.showBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showBtn.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.showBtn.Location = new System.Drawing.Point(721, 380);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.Size = new System.Drawing.Size(39, 15);
+            this.showBtn.TabIndex = 11;
+            this.showBtn.Text = "Show";
+            this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(784, 339);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(268, 105);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Fast log in";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // WrongDataLabel
             // 
@@ -160,16 +186,6 @@ namespace CourseWork
             this.PassAutoBox.TabIndex = 2;
             this.PassAutoBox.UseSystemPasswordChar = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(784, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 105);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Fast log in";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -201,5 +217,6 @@ namespace CourseWork
         private System.Windows.Forms.TextBox LoginAutoBox;
         private System.Windows.Forms.Label WrongDataLabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label showBtn;
     }
 }

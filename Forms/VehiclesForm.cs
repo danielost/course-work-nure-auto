@@ -54,6 +54,8 @@ namespace CourseWork
         {
             if (!advSrch)
             {
+                searchCondition.SelectedIndex = 0;
+                searchOrigin.SelectedIndex = 0;
                 AdvancedSearchPanel.Show();
                 advSrch = true;
             }
@@ -152,13 +154,14 @@ namespace CourseWork
         {
             List<Car> cars = sr.Deserialize("cars.save");
             List<Car> result = new List<Car>();
-            string toFind = MakeTextBox.Text;
-            toFind.Replace(" ", "");
+            string name = MakeTextBox.Text;
+            string toFind = String.Concat(name.Where(c => !Char.IsWhiteSpace(c)));
+
             if (!advSrch)
             {
                 foreach (Car car in cars)
                 {
-                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) != -1)
+                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) != -1 || (car.Model + car.Make).ToLower().IndexOf(toFind.ToLower()) != -1)
                     {
                         result.Add(car);
                     }
@@ -188,6 +191,14 @@ namespace CourseWork
                 foreach (Car car in result.ToList())
                 {
                     if (car.Origin != searchOrigin.Text && car.Year > yearTo.Value && car.Year < yearFrom.Value && car.Mileage > mileageTo.Value && car.Mileage < mileageFrom.Value && car.Price > priceTo.Value && car.Price < priceFrom.Value)
+                    {
+                        result.Remove(car);
+                    }
+                }
+
+                foreach (Car car in result.ToList())
+                {
+                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) == -1 || (car.Model + car.Make).ToLower().IndexOf(toFind.ToLower()) == -1)
                     {
                         result.Remove(car);
                     }

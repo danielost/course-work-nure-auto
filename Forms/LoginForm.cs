@@ -64,5 +64,19 @@ namespace CourseWork
             MainForm mf = new MainForm(new User("Admin", "admin", "12345", "admin"));
             mf.Show();
         }
+
+        private void showBtn_Click(object sender, EventArgs e)
+        {
+            if (PassAutoBox.UseSystemPasswordChar)
+            {
+                PassAutoBox.UseSystemPasswordChar = false;
+                showBtn.Text = "Hide";
+            }
+            else
+            {
+                PassAutoBox.UseSystemPasswordChar = true;
+                showBtn.Text = "Show";
+            }
+        }
     }
 }

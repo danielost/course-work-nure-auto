@@ -69,6 +69,8 @@ namespace CourseWork
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.searchCondition = new System.Windows.Forms.ComboBox();
             this.vehiclesBG.SuspendLayout();
             this.AdvancedSearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mileageTo)).BeginInit();
@@ -96,6 +98,8 @@ namespace CourseWork
             // AdvancedSearchPanel
             // 
             this.AdvancedSearchPanel.BackColor = System.Drawing.Color.Gray;
+            this.AdvancedSearchPanel.Controls.Add(this.label12);
+            this.AdvancedSearchPanel.Controls.Add(this.searchCondition);
             this.AdvancedSearchPanel.Controls.Add(this.mileageTo);
             this.AdvancedSearchPanel.Controls.Add(this.mileageFrom);
             this.AdvancedSearchPanel.Controls.Add(this.label9);
@@ -124,7 +128,7 @@ namespace CourseWork
             this.AdvancedSearchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AdvancedSearchPanel.Location = new System.Drawing.Point(0, 48);
             this.AdvancedSearchPanel.Name = "AdvancedSearchPanel";
-            this.AdvancedSearchPanel.Size = new System.Drawing.Size(1044, 216);
+            this.AdvancedSearchPanel.Size = new System.Drawing.Size(1044, 245);
             this.AdvancedSearchPanel.TabIndex = 2;
             // 
             // mileageTo
@@ -136,7 +140,7 @@ namespace CourseWork
             0,
             0,
             0});
-            this.mileageTo.Location = new System.Drawing.Point(302, 171);
+            this.mileageTo.Location = new System.Drawing.Point(302, 204);
             this.mileageTo.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -161,7 +165,7 @@ namespace CourseWork
             0,
             0,
             0});
-            this.mileageFrom.Location = new System.Drawing.Point(141, 171);
+            this.mileageFrom.Location = new System.Drawing.Point(141, 204);
             this.mileageFrom.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -177,7 +181,7 @@ namespace CourseWork
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(261, 173);
+            this.label9.Location = new System.Drawing.Point(261, 206);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(23, 19);
             this.label9.TabIndex = 43;
@@ -188,7 +192,7 @@ namespace CourseWork
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(91, 173);
+            this.label10.Location = new System.Drawing.Point(91, 206);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 19);
             this.label10.TabIndex = 42;
@@ -199,7 +203,7 @@ namespace CourseWork
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(14, 173);
+            this.label11.Location = new System.Drawing.Point(14, 206);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 19);
             this.label11.TabIndex = 41;
@@ -214,7 +218,7 @@ namespace CourseWork
             0,
             0,
             0});
-            this.priceTo.Location = new System.Drawing.Point(302, 134);
+            this.priceTo.Location = new System.Drawing.Point(302, 167);
             this.priceTo.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -244,7 +248,7 @@ namespace CourseWork
             0,
             0,
             0});
-            this.priceFrom.Location = new System.Drawing.Point(141, 134);
+            this.priceFrom.Location = new System.Drawing.Point(141, 167);
             this.priceFrom.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -270,7 +274,7 @@ namespace CourseWork
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(261, 136);
+            this.label6.Location = new System.Drawing.Point(261, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 19);
             this.label6.TabIndex = 38;
@@ -281,7 +285,7 @@ namespace CourseWork
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(91, 136);
+            this.label7.Location = new System.Drawing.Point(91, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 19);
             this.label7.TabIndex = 37;
@@ -292,7 +296,7 @@ namespace CourseWork
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(35, 136);
+            this.label8.Location = new System.Drawing.Point(35, 169);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 19);
             this.label8.TabIndex = 34;
@@ -303,7 +307,7 @@ namespace CourseWork
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(214, 96);
+            this.label5.Location = new System.Drawing.Point(214, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 19);
             this.label5.TabIndex = 33;
@@ -314,7 +318,7 @@ namespace CourseWork
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(91, 96);
+            this.label4.Location = new System.Drawing.Point(91, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 19);
             this.label4.TabIndex = 32;
@@ -324,7 +328,7 @@ namespace CourseWork
             // 
             this.yearTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.yearTo.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.yearTo.Location = new System.Drawing.Point(252, 94);
+            this.yearTo.Location = new System.Drawing.Point(252, 127);
             this.yearTo.Maximum = new decimal(new int[] {
             2021,
             0,
@@ -349,7 +353,7 @@ namespace CourseWork
             // 
             this.yearFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.yearFrom.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.yearFrom.Location = new System.Drawing.Point(142, 94);
+            this.yearFrom.Location = new System.Drawing.Point(142, 127);
             this.yearFrom.Maximum = new decimal(new int[] {
             2021,
             0,
@@ -375,7 +379,7 @@ namespace CourseWork
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(39, 96);
+            this.label3.Location = new System.Drawing.Point(39, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 19);
             this.label3.TabIndex = 29;
@@ -386,7 +390,7 @@ namespace CourseWork
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 57);
+            this.label2.Location = new System.Drawing.Point(28, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 19);
             this.label2.TabIndex = 28;
@@ -400,6 +404,7 @@ namespace CourseWork
             this.searchOrigin.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.searchOrigin.FormattingEnabled = true;
             this.searchOrigin.Items.AddRange(new object[] {
+            "All",
             "Germany",
             "Italy",
             "Japan",
@@ -408,7 +413,7 @@ namespace CourseWork
             "Sweden",
             "UK",
             "USA"});
-            this.searchOrigin.Location = new System.Drawing.Point(93, 54);
+            this.searchOrigin.Location = new System.Drawing.Point(93, 87);
             this.searchOrigin.Name = "searchOrigin";
             this.searchOrigin.Size = new System.Drawing.Size(216, 27);
             this.searchOrigin.Sorted = true;
@@ -604,7 +609,7 @@ namespace CourseWork
             this.MakeTextBox.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MakeTextBox.Location = new System.Drawing.Point(36, 9);
             this.MakeTextBox.Name = "MakeTextBox";
-            this.MakeTextBox.PlaceholderText = "Make";
+            this.MakeTextBox.PlaceholderText = "Car name";
             this.MakeTextBox.Size = new System.Drawing.Size(205, 30);
             this.MakeTextBox.TabIndex = 0;
             // 
@@ -647,6 +652,34 @@ namespace CourseWork
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(340, 100);
             this.panel3.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(0, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 19);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "Condition:";
+            // 
+            // searchCondition
+            // 
+            this.searchCondition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchCondition.FormattingEnabled = true;
+            this.searchCondition.Items.AddRange(new object[] {
+            "Both",
+            "Brand new",
+            "Used"});
+            this.searchCondition.Location = new System.Drawing.Point(93, 47);
+            this.searchCondition.Name = "searchCondition";
+            this.searchCondition.Size = new System.Drawing.Size(216, 27);
+            this.searchCondition.Sorted = true;
+            this.searchCondition.TabIndex = 48;
             // 
             // VehiclesForm
             // 
@@ -715,5 +748,7 @@ namespace CourseWork
         private System.Windows.Forms.NumericUpDown mileageFrom;
         private System.Windows.Forms.ComboBox searchOrigin;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox searchCondition;
     }
 }

@@ -13,10 +13,12 @@ namespace CourseWork
         private Button currentBtn;
         private Form currentChildForm;
         private bool isAdmin;
+        private User currUser;
 
         public MainForm(User user)
         {
             InitializeComponent();
+            currUser = user;
             wlcmLbl.Text = "Welcome, " + user.Name;
             if (user.Status == "admin")
             {
@@ -100,6 +102,7 @@ namespace CourseWork
         private void button1_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            OpenChildForm(new AccForm(currUser));
         }
 
         private void homeBtn_Click(object sender, EventArgs e)

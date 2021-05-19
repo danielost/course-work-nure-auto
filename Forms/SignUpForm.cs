@@ -53,18 +53,7 @@ namespace CourseWork
                 WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
-            if (LengthCheck(RegPassConfirm))
-            {
-                WrongDataLabel.Text = "You didn't confirm the password";
-                WrongDataLabel.ForeColor = Color.Red;
-                return;
-            }
-            if (RegPass.Text != RegPassConfirm.Text)
-            {
-                WrongDataLabel.Text = "Password confirmation was not successful";
-                WrongDataLabel.ForeColor = Color.Red;
-                return;
-            }
+            
 
             if (RegLogin.Text.Length < 4)
             {
@@ -78,6 +67,40 @@ namespace CourseWork
                 WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
+
+            for (int i = 0; i < RegLogin.Text.Length; i++)
+            {
+                if (RegLogin.Text[i] == ' ')
+                {
+                    WrongDataLabel.Text = "White spaces are not allowed in the login";
+                    WrongDataLabel.ForeColor = Color.Red;
+                    return;
+                }
+            }
+
+            for (int i = 0; i < RegPass.Text.Length; i++)
+            {
+                if (RegPass.Text[i] == ' ')
+                {
+                    WrongDataLabel.Text = "White spaces are not allowed in the password";
+                    WrongDataLabel.ForeColor = Color.Red;
+                    return;
+                }
+            }
+
+            if (LengthCheck(RegPassConfirm))
+            {
+                WrongDataLabel.Text = "You didn't confirm the password";
+                WrongDataLabel.ForeColor = Color.Red;
+                return;
+            }
+            if (RegPass.Text != RegPassConfirm.Text)
+            {
+                WrongDataLabel.Text = "Password confirmation was not successful";
+                WrongDataLabel.ForeColor = Color.Red;
+                return;
+            }
+
             User user = new User(RegName.Text, RegLogin.Text, RegPass.Text, "user");
             Serializer<User> sr = new Serializer<User>();
             List<User> readUsers = sr.Deserialize("data.save");
