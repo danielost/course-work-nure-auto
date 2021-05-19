@@ -187,7 +187,7 @@ namespace CourseWork
             // 
             // homeBtn
             // 
-            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Default;
             this.homeBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeBtn.Image")));
             this.homeBtn.Location = new System.Drawing.Point(65, 42);
             this.homeBtn.Name = "homeBtn";
@@ -195,7 +195,6 @@ namespace CourseWork
             this.homeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homeBtn.TabIndex = 0;
             this.homeBtn.TabStop = false;
-            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
             // panel3
             // 

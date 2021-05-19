@@ -78,6 +78,7 @@ namespace CourseWork
             this.cancelBtn.TabIndex = 53;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // editLogin
             // 
@@ -110,6 +111,7 @@ namespace CourseWork
             this.saveBtn.TabIndex = 50;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // editBtn
             // 

@@ -13,6 +13,7 @@ namespace CourseWork
         private Button currentBtn;
         private Form currentChildForm;
         private bool isAdmin;
+        private bool isSupplier;
         private User currUser;
 
         public MainForm(User user)
@@ -20,16 +21,36 @@ namespace CourseWork
             InitializeComponent();
             currUser = user;
             wlcmLbl.Text = "Welcome, " + user.Name;
+
             if (user.Status == "admin")
             {
                 isAdmin = true;
             }
             else isAdmin = false;
+
+            if (user.Status == "supplier")
+            {
+                isSupplier = true;
+            }
+            else isSupplier = false;
+
             if (!isAdmin)
             {
-                adminPanelBtn.Hide();
-                requestSupplyBtn.Hide();
+                if (isSupplier)
+                {
+                    adminPanelBtn.Hide();
+                }
+                else
+                {
+                    requestSupplyBtn.Hide();
+                    adminPanelBtn.Hide();
+                }              
             }
+
+            
+
+            ActivateBtn(catalogBtn);
+            OpenChildForm(new VehiclesForm(isAdmin));
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -82,6 +103,7 @@ namespace CourseWork
         private void contactsBtn_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            OpenChildForm(new ContactsForm());
         }
 
         private void helpBtn_Click(object sender, EventArgs e)
@@ -103,17 +125,6 @@ namespace CourseWork
         {
             ActivateBtn(sender);
             OpenChildForm(new AccForm(currUser));
-        }
-
-        private void homeBtn_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
-
-        private void Reset()
-        {
-            DisableBtn();
-            labelCurr.Text = "Home";
         }
 
         private void logOutBtn_Click_1(object sender, EventArgs e)
