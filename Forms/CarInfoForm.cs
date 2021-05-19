@@ -25,9 +25,9 @@ namespace CourseWork
             if (!isAdmin)
             {
                 editBtn.Hide();
-            }
-            EditBtnsHide();
+            }           
             currentCar = car;
+            EditBtnsHide();
             Reload(car);           
         }
 
@@ -63,6 +63,16 @@ namespace CourseWork
             editPhotoBtn.Show();
             editMileage.Show();
             editOrigin.Show();
+            cancelBtn.Show();
+
+
+            yearLbl.Text = "Year: ";
+            typeLbl.Text = "Type: ";
+            engineLbl.Text = "Engine: ";
+            conditionLbl.Text = "Condition: ";
+            priceLbl.Text = "";
+            mileageLbl.Text = "Mileage: ";
+            originLbl.Text = "Origin: ";
         }
 
         private void EditBtnsHide()
@@ -77,6 +87,9 @@ namespace CourseWork
             editPhotoBtn.Hide();
             editMileage.Hide();
             editOrigin.Hide();
+            cancelBtn.Hide();
+
+            Reload(currentCar);
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -148,6 +161,11 @@ namespace CourseWork
                 }
             }
             sr.Serialize(carList.List, "cars.save");
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            EditBtnsHide();
         }
     }
 }

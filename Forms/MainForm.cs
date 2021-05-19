@@ -45,9 +45,7 @@ namespace CourseWork
                     requestSupplyBtn.Hide();
                     adminPanelBtn.Hide();
                 }              
-            }
-
-            
+            }    
 
             ActivateBtn(catalogBtn);
             OpenChildForm(new VehiclesForm(isAdmin));

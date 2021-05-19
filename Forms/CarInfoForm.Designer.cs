@@ -52,6 +52,7 @@ namespace CourseWork
             this.originLbl = new System.Windows.Forms.Label();
             this.editOrigin = new System.Windows.Forms.ComboBox();
             this.editMileage = new System.Windows.Forms.NumericUpDown();
+            this.cancelBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.infoFormCarPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editPower)).BeginInit();
@@ -179,7 +180,7 @@ namespace CourseWork
             // 
             this.editYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editYear.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.editYear.Location = new System.Drawing.Point(816, 52);
+            this.editYear.Location = new System.Drawing.Point(528, 54);
             this.editYear.Maximum = new decimal(new int[] {
             2021,
             0,
@@ -214,7 +215,7 @@ namespace CourseWork
             "SUV",
             "Truck",
             "Van"});
-            this.editType.Location = new System.Drawing.Point(816, 87);
+            this.editType.Location = new System.Drawing.Point(528, 86);
             this.editType.Name = "editType";
             this.editType.Size = new System.Drawing.Size(216, 27);
             this.editType.Sorted = true;
@@ -224,7 +225,7 @@ namespace CourseWork
             // 
             this.editPower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editPower.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.editPower.Location = new System.Drawing.Point(843, 124);
+            this.editPower.Location = new System.Drawing.Point(546, 120);
             this.editPower.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -254,7 +255,7 @@ namespace CourseWork
             0,
             0,
             65536});
-            this.editCapacity.Location = new System.Drawing.Point(843, 159);
+            this.editCapacity.Location = new System.Drawing.Point(741, 120);
             this.editCapacity.Maximum = new decimal(new int[] {
             10,
             0,
@@ -284,7 +285,7 @@ namespace CourseWork
             this.editCondition.Items.AddRange(new object[] {
             "Brand new",
             "Used"});
-            this.editCondition.Location = new System.Drawing.Point(816, 194);
+            this.editCondition.Location = new System.Drawing.Point(568, 153);
             this.editCondition.Name = "editCondition";
             this.editCondition.Size = new System.Drawing.Size(216, 27);
             this.editCondition.Sorted = true;
@@ -299,7 +300,7 @@ namespace CourseWork
             0,
             0,
             0});
-            this.editPrice.Location = new System.Drawing.Point(816, 330);
+            this.editPrice.Location = new System.Drawing.Point(63, 251);
             this.editPrice.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -328,7 +329,7 @@ namespace CourseWork
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveBtn.ForeColor = System.Drawing.Color.White;
-            this.SaveBtn.Location = new System.Drawing.Point(885, 365);
+            this.SaveBtn.Location = new System.Drawing.Point(474, 259);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(147, 31);
             this.SaveBtn.TabIndex = 22;
@@ -387,7 +388,7 @@ namespace CourseWork
             "Sweden",
             "UK",
             "USA"});
-            this.editOrigin.Location = new System.Drawing.Point(816, 269);
+            this.editOrigin.Location = new System.Drawing.Point(541, 217);
             this.editOrigin.Name = "editOrigin";
             this.editOrigin.Size = new System.Drawing.Size(216, 27);
             this.editOrigin.Sorted = true;
@@ -402,7 +403,7 @@ namespace CourseWork
             0,
             0,
             0});
-            this.editMileage.Location = new System.Drawing.Point(816, 231);
+            this.editMileage.Location = new System.Drawing.Point(557, 185);
             this.editMileage.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -411,6 +412,23 @@ namespace CourseWork
             this.editMileage.Name = "editMileage";
             this.editMileage.Size = new System.Drawing.Size(216, 27);
             this.editMileage.TabIndex = 27;
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cancelBtn.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn.Location = new System.Drawing.Point(651, 259);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(147, 31);
+            this.cancelBtn.TabIndex = 22;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // CarInfoForm
             // 
@@ -423,6 +441,7 @@ namespace CourseWork
             this.Controls.Add(this.originLbl);
             this.Controls.Add(this.mileageLbl);
             this.Controls.Add(this.editPhotoBtn);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.editPrice);
             this.Controls.Add(this.editCondition);
@@ -478,5 +497,6 @@ namespace CourseWork
         private System.Windows.Forms.Label originLbl;
         private System.Windows.Forms.ComboBox editOrigin;
         private System.Windows.Forms.NumericUpDown editMileage;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }
