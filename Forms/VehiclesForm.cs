@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -30,7 +31,7 @@ namespace CourseWork
             advSrch = false;
             AdvancedSearchPanel.Hide();
         }
-        
+
         private void FlowReset(List<Car> list)
         {
             foreach (Control control in flowLayoutPanel1.Controls)
@@ -63,7 +64,7 @@ namespace CourseWork
             }
         }
 
-        
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -145,6 +146,60 @@ namespace CourseWork
                 mileageTo.Value = mileageFrom.Value;
                 mileageFrom.Value = temp;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<Car> cars = sr.Deserialize("cars.save");
+            List<Car> result = new List<Car>();
+            string toFind = MakeTextBox.Text;
+            toFind.Replace(" ", "");
+            if (!advSrch)
+            {
+                foreach (Car car in cars)
+                {
+                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) != -1)
+                    {
+                        result.Add(car);
+                    }
+                }
+            }
+            else
+            {
+                result = cars;
+                if (AtLeastOneChecked())
+                {
+                    CheckBox[] cbs = new CheckBox[7] { sedanCheckBox, coupeCheckBox, SUVCheckBox, CUVCheckBox, vanCheckBox, truckCheckBox, supercarCheckBox };
+                    for (int i = 0; i < cbs.Length; i++)
+                    {
+                        if (!cbs[i].Checked)
+                        {
+                            foreach (Car car in cars.ToList())
+                            {
+                                if (car.Type == cbs[i].Text)
+                                {
+                                    result.Remove(car);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                foreach (Car car in result.ToList())
+                {
+                    if (car.Origin != searchOrigin.Text && car.Year > yearTo.Value && car.Year < yearFrom.Value && car.Mileage > mileageTo.Value && car.Mileage < mileageFrom.Value && car.Price > priceTo.Value && car.Price < priceFrom.Value)
+                    {
+                        result.Remove(car);
+                    }
+                }
+            }
+
+            FlowReset(result);
+        }
+
+        private bool AtLeastOneChecked()
+        {
+            return sedanCheckBox.Checked || coupeCheckBox.Checked || SUVCheckBox.Checked || CUVCheckBox.Checked || vanCheckBox.Checked || truckCheckBox.Checked || supercarCheckBox.Checked;
         }
     }
 }

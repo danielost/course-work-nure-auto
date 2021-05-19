@@ -66,18 +66,23 @@ namespace CourseWork
 
         private void DelCarBtn_Click_1(object sender, EventArgs e)
         {
-            CarList carList = new CarList();
-            Serializer<Car> sr = new Serializer<Car>();
-            carList.List = sr.Deserialize("cars.save");
-            for (int i = carList.List.Count - 1; i >= 0; i--)
+            DialogResult dialogResult = MessageBox.Show("Are you sure to delete?", "Confirm", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
             {
-                if (carList.List[i].Compare(currentCar))
+                CarList carList = new CarList();
+                Serializer<Car> sr = new Serializer<Car>();
+                carList.List = sr.Deserialize("cars.save");
+                for (int i = carList.List.Count - 1; i >= 0; i--)
                 {
-                    carList.List.RemoveAt(i);
+                    if (carList.List[i].Compare(currentCar))
+                    {
+                        carList.List.RemoveAt(i);
+                    }
                 }
-            }
-            sr.Serialize(carList.List, "cars.save");
-            this.Hide();
+                sr.Serialize(carList.List, "cars.save");
+                this.Hide();
+            }          
         }
 
         private void carName_Click(object sender, EventArgs e)

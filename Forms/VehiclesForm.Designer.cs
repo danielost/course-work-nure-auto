@@ -58,6 +58,7 @@ namespace CourseWork
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.vehiclesNavPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.AdvSrchBtn = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AddCarBtn = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@ namespace CourseWork
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.vehiclesBG.SuspendLayout();
             this.AdvancedSearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mileageTo)).BeginInit();
@@ -79,7 +79,6 @@ namespace CourseWork
             ((System.ComponentModel.ISupportInitialize)(this.yearFrom)).BeginInit();
             this.vehiclesNavPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // vehiclesBG
@@ -189,7 +188,7 @@ namespace CourseWork
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(93, 173);
+            this.label10.Location = new System.Drawing.Point(91, 173);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 19);
             this.label10.TabIndex = 42;
@@ -230,7 +229,7 @@ namespace CourseWork
             this.priceTo.Size = new System.Drawing.Size(107, 27);
             this.priceTo.TabIndex = 40;
             this.priceTo.Value = new decimal(new int[] {
-            80000,
+            150000,
             0,
             0,
             0});
@@ -260,7 +259,7 @@ namespace CourseWork
             this.priceFrom.Size = new System.Drawing.Size(107, 27);
             this.priceFrom.TabIndex = 39;
             this.priceFrom.Value = new decimal(new int[] {
-            4000,
+            2000,
             0,
             0,
             0});
@@ -282,7 +281,7 @@ namespace CourseWork
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(93, 136);
+            this.label7.Location = new System.Drawing.Point(91, 136);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 19);
             this.label7.TabIndex = 37;
@@ -365,7 +364,7 @@ namespace CourseWork
             this.yearFrom.Size = new System.Drawing.Size(57, 27);
             this.yearFrom.TabIndex = 30;
             this.yearFrom.Value = new decimal(new int[] {
-            2021,
+            1970,
             0,
             0,
             0});
@@ -522,7 +521,7 @@ namespace CourseWork
             // vehiclesNavPanel
             // 
             this.vehiclesNavPanel.BackColor = System.Drawing.Color.Gray;
-            this.vehiclesNavPanel.Controls.Add(this.pictureBox1);
+            this.vehiclesNavPanel.Controls.Add(this.button1);
             this.vehiclesNavPanel.Controls.Add(this.AdvSrchBtn);
             this.vehiclesNavPanel.Controls.Add(this.panel1);
             this.vehiclesNavPanel.Controls.Add(this.MakeTextBox);
@@ -532,12 +531,27 @@ namespace CourseWork
             this.vehiclesNavPanel.Size = new System.Drawing.Size(1044, 48);
             this.vehiclesNavPanel.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(252, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 30);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdvSrchBtn
             // 
             this.AdvSrchBtn.AutoSize = true;
             this.AdvSrchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdvSrchBtn.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AdvSrchBtn.Location = new System.Drawing.Point(281, 16);
+            this.AdvSrchBtn.Location = new System.Drawing.Point(335, 15);
             this.AdvSrchBtn.Name = "AdvSrchBtn";
             this.AdvSrchBtn.Size = new System.Drawing.Size(131, 19);
             this.AdvSrchBtn.TabIndex = 4;
@@ -634,16 +648,6 @@ namespace CourseWork
             this.panel3.Size = new System.Drawing.Size(340, 100);
             this.panel3.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CourseWork.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(247, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // VehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -665,7 +669,6 @@ namespace CourseWork
             this.vehiclesNavPanel.ResumeLayout(false);
             this.vehiclesNavPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,6 +714,6 @@ namespace CourseWork
         private System.Windows.Forms.NumericUpDown mileageTo;
         private System.Windows.Forms.NumericUpDown mileageFrom;
         private System.Windows.Forms.ComboBox searchOrigin;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
