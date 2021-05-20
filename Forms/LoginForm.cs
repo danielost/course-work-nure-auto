@@ -70,12 +70,10 @@ namespace CourseWork
             if (PassAutoBox.UseSystemPasswordChar)
             {
                 PassAutoBox.UseSystemPasswordChar = false;
-                showBtn.Text = "Hide";
             }
             else
             {
                 PassAutoBox.UseSystemPasswordChar = true;
-                showBtn.Text = "Show";
             }
         }
     }

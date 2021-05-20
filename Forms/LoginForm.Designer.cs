@@ -72,11 +72,11 @@ namespace CourseWork
             this.showBtn.BackColor = System.Drawing.Color.White;
             this.showBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showBtn.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.showBtn.Location = new System.Drawing.Point(721, 380);
+            this.showBtn.Location = new System.Drawing.Point(737, 380);
             this.showBtn.Name = "showBtn";
-            this.showBtn.Size = new System.Drawing.Size(39, 15);
+            this.showBtn.Size = new System.Drawing.Size(19, 15);
             this.showBtn.TabIndex = 11;
-            this.showBtn.Text = "Show";
+            this.showBtn.Text = "👁";
             this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
             // 
             // button1

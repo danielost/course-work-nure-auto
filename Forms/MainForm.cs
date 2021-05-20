@@ -112,6 +112,14 @@ namespace CourseWork
         private void requestSupplyBtn_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            if (isAdmin)
+            {
+                OpenChildForm(new SuppliesAdminForm());
+            }
+            else
+            {
+                //OpenChildForm(new SuppliesForm());
+            }
         }
 
         private void adminPanelBtn_Click(object sender, EventArgs e)

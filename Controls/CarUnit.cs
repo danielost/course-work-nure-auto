@@ -78,6 +78,7 @@ namespace CourseWork
                     if (carList.List[i].Compare(currentCar))
                     {
                         carList.List.RemoveAt(i);
+                        break;
                     }
                 }
                 sr.Serialize(carList.List, "cars.save");

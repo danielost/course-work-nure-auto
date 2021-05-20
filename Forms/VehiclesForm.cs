@@ -71,21 +71,22 @@ namespace CourseWork
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<Car> cars = sr.Deserialize("cars.save");
+            CarSort cs = new CarSort();
             if (comboBox1.Text == "Price Ascending")
-            {
-                CarSort.BubbleSortPriceAsc(cars);
+            {             
+                cs.BubbleSortPriceAsc(cars);
             }
             if (comboBox1.Text == "Price Descending")
             {
-                CarSort.BubbleSortPriceDesc(cars);
+                cs.BubbleSortPriceDesc(cars);
             }
             if (comboBox1.Text == "Name (A-Z)")
             {
-                CarSort.BubbleSortNameAsc(cars);
+                cs.BubbleSortNameAsc(cars);
             }
             else
             {
-                CarSort.BubbleSortNameDesc(cars);
+                cs.BubbleSortNameDesc(cars);
             }
             FlowReset(cars);
         }
