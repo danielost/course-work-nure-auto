@@ -50,7 +50,7 @@ namespace CourseWork
                 return;
             }
             cr = new CarRequest(LoginTextBox.Text);
-            cr.WriteLogin(LoginTextBox.Text);
+            cr.Write(LoginTextBox.Text, "supplierLogin.txt");
             Reload();
 
             HideInfo();
@@ -142,21 +142,29 @@ namespace CourseWork
                 MakeTextBox.Text = "";
                 ModelTextBox.Text = "";
                 AmountUpDown.Value = 1;
-            }
 
-            if (statusLbl.Text == "Status: declined")
-            {
-                clearField.Show();
+                supLbl.Text = "Supplier: " + cr.Read("supplierLogin.txt");
+
+                if (statusLbl.Text == "Status: declined")
+                {
+                    clearField.Show();
+                }
+
+                if (File.Exists("status.txt"))
+                {
+                    statusLbl.Text = "Status: " + cr.Read("status.txt");
+                }
+                else
+                {
+                    statusLbl.Text = "Status: none";
+                }
+
             }
 
             if (currentList == null)
             {
                 addToTheCatalogueBtn.Hide();
                 cancelBtn.Hide();
-            }
-            else
-            {
-                supLbl.Text = "Supplier: " + cr.ReadLogin();
             }
         }
 
@@ -174,7 +182,7 @@ namespace CourseWork
 
         private void addToTheCatalogueBtn_Click(object sender, EventArgs e)
         {
-            if (statusLbl.Text == "Stasus: arrived")
+            if (statusLbl.Text != "Stasus: arrived")
             {
                 MessageBox.Show("The request isn't here yet");
                 return;
@@ -208,7 +216,8 @@ namespace CourseWork
             if (dialogResult == DialogResult.Yes)
             {
                 Clear();
-            }
+                File.Delete("status.txt");
+            }            
             else return;
         }
     }

@@ -118,7 +118,7 @@ namespace CourseWork
             }
             else
             {
-                //OpenChildForm(new SuppliesForm());
+                OpenChildForm(new SuppliesForm(currUser.Login));
             }
         }
 

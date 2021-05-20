@@ -31,5 +31,8 @@
     <Compile Update="Forms\SuppliesAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\SuppliesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

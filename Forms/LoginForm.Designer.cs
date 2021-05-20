@@ -42,6 +42,7 @@ namespace CourseWork
             this.SignInButton = new System.Windows.Forms.Button();
             this.PassAutoBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@ namespace CourseWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.showBtn);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.WrongDataLabel);
@@ -186,6 +188,16 @@ namespace CourseWork
             this.PassAutoBox.TabIndex = 2;
             this.PassAutoBox.UseSystemPasswordChar = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(784, 458);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(268, 105);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Fast log in";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -218,5 +230,6 @@ namespace CourseWork
         private System.Windows.Forms.Label WrongDataLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label showBtn;
+        private System.Windows.Forms.Button button2;
     }
 }

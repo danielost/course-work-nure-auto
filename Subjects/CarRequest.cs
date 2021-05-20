@@ -36,21 +36,19 @@ namespace CourseWork
             }          
         }
 
-        public void WriteLogin(string login)
+        public void Write(string data, string nameTxt)
         {
-            string name = "supplierLogin.txt";
-            string path = Path.Combine(Environment.CurrentDirectory, name);
+            string path = Path.Combine(Environment.CurrentDirectory, nameTxt);
 
-            File.WriteAllText(path, login);
+            File.WriteAllText(path, data);
         }
 
-        public string ReadLogin()
+        public string Read(string nameTxt)
         {
-            string name = "supplierLogin.txt";
             string path;
-            if (File.Exists(Path.Combine(Environment.CurrentDirectory, name)))
+            if (File.Exists(Path.Combine(Environment.CurrentDirectory, nameTxt)))
             {
-                path = Path.Combine(Environment.CurrentDirectory, name);
+                path = Path.Combine(Environment.CurrentDirectory, nameTxt);
                 return File.ReadAllText(path);
             }
             else    
