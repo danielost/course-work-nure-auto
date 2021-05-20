@@ -30,6 +30,16 @@ namespace CourseWork
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.supLbl = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.clearField = new System.Windows.Forms.Button();
+            this.statusLbl = new System.Windows.Forms.Label();
+            this.cancelBtn = new System.Windows.Forms.Button();
+            this.addToTheCatalogueBtn = new System.Windows.Forms.Button();
+            this.ReqCurrent = new System.Windows.Forms.DataGridView();
+            this.AdvSrchBtn = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.PriceTextBox = new System.Windows.Forms.NumericUpDown();
             this.AmountUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,20 +48,26 @@ namespace CourseWork
             this.AddButton = new System.Windows.Forms.Button();
             this.ModelTextBox = new System.Windows.Forms.TextBox();
             this.MakeTextBox = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.NewReqGrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReqCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PriceTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountUpDown)).BeginInit();
-            this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NewReqGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.Controls.Add(this.supLbl);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.cancelBtn);
+            this.panel1.Controls.Add(this.addToTheCatalogueBtn);
+            this.panel1.Controls.Add(this.ReqCurrent);
+            this.panel1.Controls.Add(this.AdvSrchBtn);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.PriceTextBox);
             this.panel1.Controls.Add(this.AmountUpDown);
             this.panel1.Controls.Add(this.panel2);
@@ -60,7 +76,6 @@ namespace CourseWork
             this.panel1.Controls.Add(this.AddButton);
             this.panel1.Controls.Add(this.ModelTextBox);
             this.panel1.Controls.Add(this.MakeTextBox);
-            this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.NewReqGrid);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -68,9 +83,135 @@ namespace CourseWork
             this.panel1.Size = new System.Drawing.Size(1044, 601);
             this.panel1.TabIndex = 0;
             // 
+            // supLbl
+            // 
+            this.supLbl.AutoSize = true;
+            this.supLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.supLbl.Font = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.supLbl.Location = new System.Drawing.Point(436, 78);
+            this.supLbl.Name = "supLbl";
+            this.supLbl.Size = new System.Drawing.Size(158, 29);
+            this.supLbl.TabIndex = 64;
+            this.supLbl.Text = "Supplier: none";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.clearField);
+            this.panel4.Controls.Add(this.statusLbl);
+            this.panel4.Location = new System.Drawing.Point(436, 131);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(498, 30);
+            this.panel4.TabIndex = 63;
+            // 
+            // clearField
+            // 
+            this.clearField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.clearField.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearField.Dock = System.Windows.Forms.DockStyle.Left;
+            this.clearField.FlatAppearance.BorderSize = 0;
+            this.clearField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearField.ForeColor = System.Drawing.Color.White;
+            this.clearField.Location = new System.Drawing.Point(143, 0);
+            this.clearField.Name = "clearField";
+            this.clearField.Size = new System.Drawing.Size(174, 30);
+            this.clearField.TabIndex = 64;
+            this.clearField.Text = "Clear the field";
+            this.clearField.UseVisualStyleBackColor = false;
+            // 
+            // statusLbl
+            // 
+            this.statusLbl.AutoSize = true;
+            this.statusLbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.statusLbl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.statusLbl.Font = new System.Drawing.Font("Roboto Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statusLbl.Location = new System.Drawing.Point(0, 0);
+            this.statusLbl.Name = "statusLbl";
+            this.statusLbl.Size = new System.Drawing.Size(143, 29);
+            this.statusLbl.TabIndex = 59;
+            this.statusLbl.Text = "Status: none";
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn.Location = new System.Drawing.Point(626, 197);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(174, 28);
+            this.cancelBtn.TabIndex = 62;
+            this.cancelBtn.Text = "Cancel request";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            // 
+            // addToTheCatalogueBtn
+            // 
+            this.addToTheCatalogueBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.addToTheCatalogueBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addToTheCatalogueBtn.FlatAppearance.BorderSize = 0;
+            this.addToTheCatalogueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addToTheCatalogueBtn.ForeColor = System.Drawing.Color.White;
+            this.addToTheCatalogueBtn.Location = new System.Drawing.Point(436, 197);
+            this.addToTheCatalogueBtn.Name = "addToTheCatalogueBtn";
+            this.addToTheCatalogueBtn.Size = new System.Drawing.Size(174, 28);
+            this.addToTheCatalogueBtn.TabIndex = 61;
+            this.addToTheCatalogueBtn.Text = "Add to the catalogue";
+            this.addToTheCatalogueBtn.UseVisualStyleBackColor = false;
+            // 
+            // ReqCurrent
+            // 
+            this.ReqCurrent.AllowUserToResizeRows = false;
+            this.ReqCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ReqCurrent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReqCurrent.Enabled = false;
+            this.ReqCurrent.Location = new System.Drawing.Point(436, 241);
+            this.ReqCurrent.Name = "ReqCurrent";
+            this.ReqCurrent.RowTemplate.Height = 25;
+            this.ReqCurrent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ReqCurrent.Size = new System.Drawing.Size(596, 348);
+            this.ReqCurrent.TabIndex = 58;
+            // 
+            // AdvSrchBtn
+            // 
+            this.AdvSrchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AdvSrchBtn.AutoSize = true;
+            this.AdvSrchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdvSrchBtn.Font = new System.Drawing.Font("Roboto Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdvSrchBtn.Location = new System.Drawing.Point(831, 18);
+            this.AdvSrchBtn.Name = "AdvSrchBtn";
+            this.AdvSrchBtn.Size = new System.Drawing.Size(201, 33);
+            this.AdvSrchBtn.TabIndex = 57;
+            this.AdvSrchBtn.Text = "Current request";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(345, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 28);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Finish";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.panel3.Location = new System.Drawing.Point(425, 64);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(2, 523);
+            this.panel3.TabIndex = 55;
+            // 
             // PriceTextBox
             // 
-            this.PriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PriceTextBox.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PriceTextBox.Increment = new decimal(new int[] {
             100,
@@ -99,13 +240,7 @@ namespace CourseWork
             // 
             // AmountUpDown
             // 
-            this.AmountUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AmountUpDown.Font = new System.Drawing.Font("Roboto Light", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AmountUpDown.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
             this.AmountUpDown.Location = new System.Drawing.Point(12, 159);
             this.AmountUpDown.Maximum = new decimal(new int[] {
             5,
@@ -131,7 +266,7 @@ namespace CourseWork
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.panel2.Location = new System.Drawing.Point(12, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(404, 2);
+            this.panel2.Size = new System.Drawing.Size(415, 2);
             this.panel2.TabIndex = 52;
             // 
             // LoginTextBox
@@ -191,39 +326,6 @@ namespace CourseWork
             this.MakeTextBox.Size = new System.Drawing.Size(205, 30);
             this.MakeTextBox.TabIndex = 2;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(432, 241);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(600, 348);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(592, 320);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(592, 320);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // NewReqGrid
             // 
             this.NewReqGrid.AllowUserToResizeRows = false;
@@ -250,9 +352,11 @@ namespace CourseWork
             this.Text = "SuppliesAdminForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReqCurrent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PriceTextBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmountUpDown)).EndInit();
-            this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NewReqGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -262,9 +366,6 @@ namespace CourseWork
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView NewReqGrid;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox ModelTextBox;
         private System.Windows.Forms.TextBox MakeTextBox;
         private System.Windows.Forms.Button AddButton;
@@ -273,5 +374,15 @@ namespace CourseWork
         private System.Windows.Forms.TextBox LoginTextBox;
         private System.Windows.Forms.NumericUpDown AmountUpDown;
         private System.Windows.Forms.NumericUpDown PriceTextBox;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label AdvSrchBtn;
+        private System.Windows.Forms.DataGridView ReqCurrent;
+        private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Button addToTheCatalogueBtn;
+        private System.Windows.Forms.Label statusLbl;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button clearField;
+        private System.Windows.Forms.Label supLbl;
     }
 }

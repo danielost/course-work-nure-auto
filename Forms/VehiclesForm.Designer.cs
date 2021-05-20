@@ -31,6 +31,8 @@ namespace CourseWork
         {
             this.vehiclesBG = new System.Windows.Forms.Panel();
             this.AdvancedSearchPanel = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.searchCondition = new System.Windows.Forms.ComboBox();
             this.mileageTo = new System.Windows.Forms.NumericUpDown();
             this.mileageFrom = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -69,8 +71,6 @@ namespace CourseWork
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.searchCondition = new System.Windows.Forms.ComboBox();
             this.vehiclesBG.SuspendLayout();
             this.AdvancedSearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mileageTo)).BeginInit();
@@ -131,9 +131,35 @@ namespace CourseWork
             this.AdvancedSearchPanel.Size = new System.Drawing.Size(1044, 245);
             this.AdvancedSearchPanel.TabIndex = 2;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(0, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 19);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "Condition:";
+            // 
+            // searchCondition
+            // 
+            this.searchCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchCondition.FormattingEnabled = true;
+            this.searchCondition.Items.AddRange(new object[] {
+            "Both",
+            "Brand new",
+            "Used"});
+            this.searchCondition.Location = new System.Drawing.Point(93, 47);
+            this.searchCondition.Name = "searchCondition";
+            this.searchCondition.Size = new System.Drawing.Size(216, 27);
+            this.searchCondition.Sorted = true;
+            this.searchCondition.TabIndex = 48;
+            // 
             // mileageTo
             // 
-            this.mileageTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.mileageTo.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mileageTo.Increment = new decimal(new int[] {
             100,
@@ -158,7 +184,6 @@ namespace CourseWork
             // 
             // mileageFrom
             // 
-            this.mileageFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.mileageFrom.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mileageFrom.Increment = new decimal(new int[] {
             100,
@@ -211,7 +236,6 @@ namespace CourseWork
             // 
             // priceTo
             // 
-            this.priceTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.priceTo.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.priceTo.Increment = new decimal(new int[] {
             100,
@@ -241,7 +265,6 @@ namespace CourseWork
             // 
             // priceFrom
             // 
-            this.priceFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.priceFrom.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.priceFrom.Increment = new decimal(new int[] {
             100,
@@ -326,7 +349,6 @@ namespace CourseWork
             // 
             // yearTo
             // 
-            this.yearTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.yearTo.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.yearTo.Location = new System.Drawing.Point(252, 127);
             this.yearTo.Maximum = new decimal(new int[] {
@@ -351,7 +373,6 @@ namespace CourseWork
             // 
             // yearFrom
             // 
-            this.yearFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.yearFrom.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.yearFrom.Location = new System.Drawing.Point(142, 127);
             this.yearFrom.Maximum = new decimal(new int[] {
@@ -398,7 +419,6 @@ namespace CourseWork
             // 
             // searchOrigin
             // 
-            this.searchOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchOrigin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchOrigin.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -652,34 +672,6 @@ namespace CourseWork
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(340, 100);
             this.panel3.TabIndex = 1;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(0, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 19);
-            this.label12.TabIndex = 49;
-            this.label12.Text = "Condition:";
-            // 
-            // searchCondition
-            // 
-            this.searchCondition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.searchCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchCondition.FormattingEnabled = true;
-            this.searchCondition.Items.AddRange(new object[] {
-            "Both",
-            "Brand new",
-            "Used"});
-            this.searchCondition.Location = new System.Drawing.Point(93, 47);
-            this.searchCondition.Name = "searchCondition";
-            this.searchCondition.Size = new System.Drawing.Size(216, 27);
-            this.searchCondition.Sorted = true;
-            this.searchCondition.TabIndex = 48;
             // 
             // VehiclesForm
             // 

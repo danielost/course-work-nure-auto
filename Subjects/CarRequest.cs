@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace CourseWork
@@ -33,6 +34,29 @@ namespace CourseWork
                     return;
                 }
             }          
+        }
+
+        public void WriteLogin(string login)
+        {
+            string name = "supplierLogin.txt";
+            string path = Path.Combine(Environment.CurrentDirectory, name);
+
+            File.WriteAllText(path, login);
+        }
+
+        public string ReadLogin()
+        {
+            string name = "supplierLogin.txt";
+            string path;
+            if (File.Exists(Path.Combine(Environment.CurrentDirectory, name)))
+            {
+                path = Path.Combine(Environment.CurrentDirectory, name);
+                return File.ReadAllText(path);
+            }
+            else    
+            {
+                return "";
+            }           
         }
     }
 }
