@@ -143,6 +143,7 @@ namespace CourseWork
             this.cancelBtn.TabIndex = 62;
             this.cancelBtn.Text = "Cancel request";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // addToTheCatalogueBtn
             // 
@@ -157,6 +158,7 @@ namespace CourseWork
             this.addToTheCatalogueBtn.TabIndex = 61;
             this.addToTheCatalogueBtn.Text = "Add to the catalogue";
             this.addToTheCatalogueBtn.UseVisualStyleBackColor = false;
+            this.addToTheCatalogueBtn.Click += new System.EventHandler(this.addToTheCatalogueBtn_Click);
             // 
             // ReqCurrent
             // 

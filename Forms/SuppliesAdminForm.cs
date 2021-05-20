@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -86,11 +87,11 @@ namespace CourseWork
                 return;
             }
 
-            Car newCar = new Car(MakeTextBox.Text, ModelTextBox.Text, 2.0, 160, "sedan", "Brand new", (int)PriceTextBox.Value, 2021, 0, "USA");
+            Car newCar = new Car(MakeTextBox.Text, ModelTextBox.Text, 2.0, 160, "Sedan", "Brand new", (int)PriceTextBox.Value, 2021, 0, "USA");
             for (int i = 0; i < AmountUpDown.Value; i++)
             {
                 cr.requestedCars.Add(newCar);
-            }           
+            }
             Reload();
         }
 
@@ -118,7 +119,7 @@ namespace CourseWork
             }
 
             NewReqGrid.DataSource = null;
-            
+
 
             srCar.Serialize(cr.requestedCars, "request.save");
 
@@ -169,6 +170,46 @@ namespace CourseWork
             ReqCurrent.Columns["base64image"].Visible = false;
             ReqCurrent.Columns["Mileage"].Visible = false;
             ReqCurrent.Columns["Origin"].Visible = false;
+        }
+
+        private void addToTheCatalogueBtn_Click(object sender, EventArgs e)
+        {
+            if (statusLbl.Text == "Stasus: arrived")
+            {
+                MessageBox.Show("The request isn't here yet");
+                return;
+            }
+            List<Car> cars = srCar.Deserialize("cars.save");
+            foreach (Car car in currentList)
+            {
+                cars.Add(car);
+            }
+            srCar.Serialize(cars, "cars.save");
+            MessageBox.Show("The cars are successfully added");
+            Clear();
+        }
+
+        private void Clear()
+        {
+            File.Delete("request.save");
+            ReqCurrent.DataSource = null;
+            currentList = null;
+            addToTheCatalogueBtn.Hide();
+            cancelBtn.Hide();
+            AddButton.Show();
+            button1.Show();
+            statusLbl.Text = "Status: none";
+            supLbl.Text = "Supplier: none";
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure to delete?", "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Clear();
+            }
+            else return;
         }
     }
 }
