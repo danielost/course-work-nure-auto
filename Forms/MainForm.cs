@@ -19,6 +19,9 @@ namespace CourseWork
         public MainForm(User user)
         {
             InitializeComponent();
+
+            this.MinimumSize = new Size(1000, 550);
+
             currUser = user;
             wlcmLbl.Text = "Welcome, " + user.Name;
 

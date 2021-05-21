@@ -369,7 +369,7 @@ namespace CourseWork
             this.Name = "AddCarForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddCarForm";
+            this.Text = "Nure Automotive - Add a car";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addMileage)).EndInit();

@@ -17,6 +17,7 @@ namespace CourseWork
         public LoginForm()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(600, 600);
             appUsers = new AppUsers();
             Serializer<User> sr = new Serializer<User>();
             appUsers.users = sr.Deserialize("data.save");
@@ -70,20 +71,6 @@ namespace CourseWork
             {
                 PassAutoBox.UseSystemPasswordChar = true;
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mf = new MainForm(new User("Admin", "admin", "12345", "admin"));
-            mf.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mf = new MainForm(new User("FCA norcal", "fcanorcal", "fiatchrysler", "supplier"));
-            mf.Show();
         }
     }
 }

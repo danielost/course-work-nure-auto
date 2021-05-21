@@ -13,6 +13,7 @@ namespace CourseWork
         public SignUpForm()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(600, 600);
             WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
         }
 

@@ -15,6 +15,8 @@ namespace CourseWork
         public AddCarForm()
         {
             InitializeComponent();
+            this.MinimumSize = this.Size;
+            this.MaximumSize = this.Size;
             addType.SelectedIndex = 0;
             addCondition.SelectedIndex = 0;
             addOrigin.SelectedIndex = 0;

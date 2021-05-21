@@ -178,7 +178,6 @@ namespace CourseWork
             // 
             // editYear
             // 
-            this.editYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editYear.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editYear.Location = new System.Drawing.Point(528, 54);
             this.editYear.Maximum = new decimal(new int[] {
@@ -202,7 +201,6 @@ namespace CourseWork
             // 
             // editType
             // 
-            this.editType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.editType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editType.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -223,7 +221,6 @@ namespace CourseWork
             // 
             // editPower
             // 
-            this.editPower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editPower.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editPower.Location = new System.Drawing.Point(546, 120);
             this.editPower.Maximum = new decimal(new int[] {
@@ -247,7 +244,6 @@ namespace CourseWork
             // 
             // editCapacity
             // 
-            this.editCapacity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editCapacity.DecimalPlaces = 1;
             this.editCapacity.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editCapacity.Increment = new decimal(new int[] {
@@ -277,7 +273,6 @@ namespace CourseWork
             // 
             // editCondition
             // 
-            this.editCondition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.editCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editCondition.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -293,7 +288,6 @@ namespace CourseWork
             // 
             // editPrice
             // 
-            this.editPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editPrice.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editPrice.Increment = new decimal(new int[] {
             100,
@@ -322,7 +316,6 @@ namespace CourseWork
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveBtn.FlatAppearance.BorderSize = 0;
@@ -374,7 +367,6 @@ namespace CourseWork
             // 
             // editOrigin
             // 
-            this.editOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.editOrigin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editOrigin.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -396,7 +388,6 @@ namespace CourseWork
             // 
             // editMileage
             // 
-            this.editMileage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editMileage.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editMileage.Increment = new decimal(new int[] {
             100,
@@ -415,7 +406,6 @@ namespace CourseWork
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
