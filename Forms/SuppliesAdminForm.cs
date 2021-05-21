@@ -19,10 +19,10 @@ namespace CourseWork
         public SuppliesAdminForm()
         {
             InitializeComponent();
-            clearField.Hide();
             srUser = new Serializer<User>();
             srCar = new Serializer<Car>();
             cr = new CarRequest("login");
+            textBox1.Hide();
             CreateCurrentGrid();
         }
 
@@ -145,14 +145,30 @@ namespace CourseWork
 
                 supLbl.Text = "Supplier: " + cr.Read("supplierLogin.txt");
 
-                if (statusLbl.Text == "Status: declined")
-                {
-                    clearField.Show();
-                }
+                
 
                 if (File.Exists("status.txt"))
                 {
-                    statusLbl.Text = "Status: " + cr.Read("status.txt");
+                    string status = cr.Read("status.txt");
+                    statusLbl.Text = "Status: " + status;
+                    if (status == "declined")
+                    {
+                        textBox1.Show();
+                        textBox1.Text = cr.Read("comment.txt");
+                    }
+                    if (status == "accepted")
+                    {
+                        cancelBtn.Hide();
+                    }
+                    if (File.Exists("time.txt"))
+                    {
+                        string time = cr.Read("time.txt");
+                        DateTime parsedTime = DateTime.Parse(time);
+                        if (DateTime.Compare(DateTime.Now, parsedTime) > 0)
+                        {
+                            statusLbl.Text = "Status: arrived";
+                        }
+                    }                   
                 }
                 else
                 {
@@ -182,7 +198,7 @@ namespace CourseWork
 
         private void addToTheCatalogueBtn_Click(object sender, EventArgs e)
         {
-            if (statusLbl.Text != "Stasus: arrived")
+            if (statusLbl.Text != "Status: arrived")
             {
                 MessageBox.Show("The request isn't here yet");
                 return;
@@ -194,6 +210,10 @@ namespace CourseWork
             }
             srCar.Serialize(cars, "cars.save");
             MessageBox.Show("The cars are successfully added");
+            File.Delete("status.txt");
+            File.Delete("request.save");
+            File.Delete("supplierLogin.txt");
+            File.Delete("time.txt");
             Clear();
         }
 
@@ -216,6 +236,7 @@ namespace CourseWork
             if (dialogResult == DialogResult.Yes)
             {
                 Clear();
+                textBox1.Hide();
                 File.Delete("status.txt");
             }            
             else return;

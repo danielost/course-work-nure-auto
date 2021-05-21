@@ -30,6 +30,8 @@ namespace CourseWork
             FlowReset(carList.List);
             advSrch = false;
             AdvancedSearchPanel.Hide();
+            searchCondition.SelectedIndex = 0;
+            searchOrigin.SelectedIndex = 0;
         }
 
         private void FlowReset(List<Car> list)
@@ -54,8 +56,7 @@ namespace CourseWork
         {
             if (!advSrch)
             {
-                searchCondition.SelectedIndex = 0;
-                searchOrigin.SelectedIndex = 0;
+                
                 AdvancedSearchPanel.Show();
                 advSrch = true;
             }
@@ -74,7 +75,7 @@ namespace CourseWork
             CarSort cs = new CarSort();
             if (comboBox1.Text == "Price Ascending")
             {             
-                cs.BubbleSortPriceAsc(cars);
+                cs.BubbleSortPriceAsc(cars);              
             }
             if (comboBox1.Text == "Price Descending")
             {
@@ -88,6 +89,7 @@ namespace CourseWork
             {
                 cs.BubbleSortNameDesc(cars);
             }
+            MakeTextBox.Text = cars[0].Model;
             FlowReset(cars);
         }
 
@@ -189,19 +191,43 @@ namespace CourseWork
                     }
                 }
 
-                foreach (Car car in result.ToList())
+                foreach (Car car in cars.ToList())
                 {
-                    if (car.Origin != searchOrigin.Text && car.Year > yearTo.Value && car.Year < yearFrom.Value && car.Mileage > mileageTo.Value && car.Mileage < mileageFrom.Value && car.Price > priceTo.Value && car.Price < priceFrom.Value)
+                    if (car.Condition != searchCondition.Text && searchCondition.Text != "Both")
                     {
-                        result.Remove(car);
+                        cars.Remove(car);
                     }
                 }
 
-                foreach (Car car in result.ToList())
+                foreach (Car car in cars.ToList())
                 {
-                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) == -1 || (car.Model + car.Make).ToLower().IndexOf(toFind.ToLower()) == -1)
+                    if (car.Origin != searchOrigin.Text && searchOrigin.Text != "All")
                     {
-                        result.Remove(car);
+                        cars.Remove(car);
+                    }
+                }
+
+                foreach (Car car in cars.ToList())
+                {
+                    if (car.Year < yearFrom.Value || car.Year > yearTo.Value)
+                    {
+                        cars.Remove(car);
+                    }
+                }
+
+                foreach (Car car in cars.ToList())
+                {
+                    if (car.Price < priceFrom.Value || car.Price > priceTo.Value)
+                    {
+                        cars.Remove(car);
+                    }
+                }
+
+                foreach (Car car in cars.ToList())
+                {
+                    if (car.Mileage < mileageFrom.Value || car.Mileage > mileageTo.Value)
+                    {
+                        cars.Remove(car);
                     }
                 }
             }

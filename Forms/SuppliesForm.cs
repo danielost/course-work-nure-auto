@@ -18,13 +18,29 @@ namespace CourseWork
         {
             InitializeComponent();
             cr = new CarRequest(login);
-            if (cr.Read("supplierLogin.txt") == login && File.Exists("request.save") && cr.Read("status.txt") != "declined")
+
+            if (cr.Read("supplierLogin.txt") == login)
             {
-                sr = new Serializer<Car>();
-                cars = sr.Deserialize("request.save");
-                ReqCurrent.DataSource = cars;
-                HideCurrent();
+                if (File.Exists("status.txt"))
+                {
+                    if (cr.Read("status.txt") != "declined" && cr.Read("status.txt") != "accepted" && cr.Read("status.txt") != "arrived")
+                    {
+                        sr = new Serializer<Car>();
+                        cars = sr.Deserialize("request.save");
+                        ReqCurrent.DataSource = cars;
+                        HideCurrent();
+                    }
+                }
+                else
+                {
+                    sr = new Serializer<Car>();
+                    cars = sr.Deserialize("request.save");
+                    ReqCurrent.DataSource = cars;
+                    HideCurrent();
+                }
+                
             }
+
             if (cars == null)
             {
                 CurrReqLbl.Text = "Current requests – you have no requests";
@@ -56,7 +72,7 @@ namespace CourseWork
         {
             if (textBox1.Text == "")
             {
-                MessageBox.Show("Please leave a comment on denial");           
+                MessageBox.Show("Please leave a comment on denial");
                 return;
             }
 
@@ -65,10 +81,27 @@ namespace CourseWork
             if (dialogResult == DialogResult.Yes)
             {
                 cr.Write("declined", "status.txt");
+                cr.Write(textBox1.Text, "comment.txt");
                 ReqCurrent.DataSource = null;
                 CurrReqLbl.Text = "Current requests – you have no requests";
                 HideControls();
             }
+        }
+
+        private void AcceptBtn_Click(object sender, EventArgs e)
+        {
+            if (DateTime.Compare(DateTime.Now, dateTimePicker1.Value) >= 0)
+            {
+                textBox1.Text = dateTimePicker1.Value.ToString();
+                MessageBox.Show("Please pick an upcoming date");
+                return;
+            }
+
+            cr.Write("accepted", "status.txt");
+            cr.Write(dateTimePicker1.Text, "time.txt");
+            HideControls();
+            ReqCurrent.DataSource = null;
+            MessageBox.Show("The request accepted!");
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CourseWork
 {
-    public class Car : IComparable
+    public class Car
     {
         public string Make { get; set; }
 

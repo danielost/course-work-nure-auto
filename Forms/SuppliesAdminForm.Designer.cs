@@ -30,9 +30,9 @@ namespace CourseWork
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.supLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.clearField = new System.Windows.Forms.Button();
             this.statusLbl = new System.Windows.Forms.Label();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.addToTheCatalogueBtn = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@ namespace CourseWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.supLbl);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.cancelBtn);
@@ -83,6 +84,20 @@ namespace CourseWork
             this.panel1.Size = new System.Drawing.Size(1044, 601);
             this.panel1.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(436, 241);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Comments on denial";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(596, 348);
+            this.textBox1.TabIndex = 65;
+            // 
             // supLbl
             // 
             this.supLbl.AutoSize = true;
@@ -96,27 +111,11 @@ namespace CourseWork
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.clearField);
             this.panel4.Controls.Add(this.statusLbl);
             this.panel4.Location = new System.Drawing.Point(436, 131);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(498, 30);
             this.panel4.TabIndex = 63;
-            // 
-            // clearField
-            // 
-            this.clearField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.clearField.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearField.Dock = System.Windows.Forms.DockStyle.Left;
-            this.clearField.FlatAppearance.BorderSize = 0;
-            this.clearField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearField.ForeColor = System.Drawing.Color.White;
-            this.clearField.Location = new System.Drawing.Point(143, 0);
-            this.clearField.Name = "clearField";
-            this.clearField.Size = new System.Drawing.Size(174, 30);
-            this.clearField.TabIndex = 64;
-            this.clearField.Text = "Clear the field";
-            this.clearField.UseVisualStyleBackColor = false;
             // 
             // statusLbl
             // 
@@ -384,7 +383,7 @@ namespace CourseWork
         private System.Windows.Forms.Button addToTheCatalogueBtn;
         private System.Windows.Forms.Label statusLbl;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button clearField;
         private System.Windows.Forms.Label supLbl;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

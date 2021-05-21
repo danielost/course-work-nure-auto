@@ -108,6 +108,7 @@ namespace CourseWork
             this.AcceptBtn.TabIndex = 60;
             this.AcceptBtn.Text = "Accept";
             this.AcceptBtn.UseVisualStyleBackColor = false;
+            this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
             // 
             // ReqCurrent
             // 

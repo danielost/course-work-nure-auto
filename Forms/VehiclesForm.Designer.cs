@@ -71,6 +71,7 @@ namespace CourseWork
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.vehiclesBG.SuspendLayout();
             this.AdvancedSearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mileageTo)).BeginInit();
@@ -81,6 +82,7 @@ namespace CourseWork
             ((System.ComponentModel.ISupportInitialize)(this.yearFrom)).BeginInit();
             this.vehiclesNavPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // vehiclesBG
@@ -98,6 +100,7 @@ namespace CourseWork
             // AdvancedSearchPanel
             // 
             this.AdvancedSearchPanel.BackColor = System.Drawing.Color.Gray;
+            this.AdvancedSearchPanel.Controls.Add(this.dataGridView1);
             this.AdvancedSearchPanel.Controls.Add(this.label12);
             this.AdvancedSearchPanel.Controls.Add(this.searchCondition);
             this.AdvancedSearchPanel.Controls.Add(this.mileageTo);
@@ -673,6 +676,18 @@ namespace CourseWork
             this.panel3.Size = new System.Drawing.Size(340, 100);
             this.panel3.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(628, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(404, 239);
+            this.dataGridView1.TabIndex = 50;
+            // 
             // VehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -694,6 +709,7 @@ namespace CourseWork
             this.vehiclesNavPanel.ResumeLayout(false);
             this.vehiclesNavPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -742,5 +758,6 @@ namespace CourseWork
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox searchCondition;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
