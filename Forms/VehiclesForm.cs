@@ -65,33 +65,7 @@ namespace CourseWork
                 AdvancedSearchPanel.Hide();
                 advSrch = false;
             }
-        }
-
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<Car> cars = sr.Deserialize("cars.save");
-            CarSort cs = new CarSort();
-            if (comboBox1.Text == "Price Ascending")
-            {             
-                cs.BubbleSortPriceAsc(cars);              
-            }
-            if (comboBox1.Text == "Price Descending")
-            {
-                cs.BubbleSortPriceDesc(cars);
-            }
-            if (comboBox1.Text == "Name (A-Z)")
-            {
-                cs.BubbleSortNameAsc(cars);
-            }
-            else
-            {
-                cs.BubbleSortNameDesc(cars);
-            }
-            MakeTextBox.Text = cars[0].Model;
-            FlowReset(cars);
-        }
+        }      
 
         private void yearFrom_ValueChanged(object sender, EventArgs e)
         {

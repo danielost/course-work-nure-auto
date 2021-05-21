@@ -56,4 +56,18 @@ namespace CourseWork
             return this.Make.CompareTo(objCar.Make);
         }
     }
+
+    public class CarOperation
+    {
+        public Car Car;
+        public bool IsSold;
+        public DateTime Time;
+
+        public CarOperation(Car car, bool isSold)
+        {
+            Car = car;
+            IsSold = isSold;
+            Time = DateTime.Now;
+        }
+    }
 }
