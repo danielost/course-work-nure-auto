@@ -26,3 +26,4 @@ C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\o
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.ContactsForm.resources
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.SuppliesAdminForm.resources
 C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.SuppliesForm.resources
+C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\obj\Debug\netcoreapp3.1\CourseWork.AdminPanelForm.resources

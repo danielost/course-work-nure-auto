@@ -13,12 +13,14 @@ namespace CourseWork
     {
         private bool isCreated;
         private Serializer<CarOperation> operationSr;
+        private int income;
 
         public AdminPanelForm()
         {
             InitializeComponent();
             isCreated = false;
             operationSr = new Serializer<CarOperation>();
+            income = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,14 +37,26 @@ namespace CourseWork
 
             List<CarOperation> operations = operationSr.Deserialize("carOperations.save");
 
-            foreach (CarOperation curr in operations)
-            {
-                if (DateTime.Compare(curr.Time, timeFrom) < 0 && DateTime.Compare(curr.Time, timeTo) > 0)
-                {
-                    textBox1.Text += $"{curr.Car.Make} ";
-                }
+            textBox1.Text = operations[1].Car.Make;
 
-            }
+            //foreach (CarOperation curr in operations)
+            //{
+            //    if (DateTime.Compare(curr.Time, timeFrom) > 0 && DateTime.Compare(curr.Time, timeTo) < 0)
+            //    {
+            //        textBox1.Text += $"{curr.Car.Year} {curr.Car.Make} {curr.Car.Model} - ";
+            //        if (curr.IsSold)
+            //        {
+            //            textBox1.Text += $"sold for ${curr.Car.Price}";
+            //            income += curr.Car.Price;
+            //        }
+            //        else
+            //        {
+            //            textBox1.Text += $"acquired for ${curr.Car.Price}";
+            //            income -= curr.Car.Price;
+            //        }
+            //        textBox1.Text += "";
+            //    }
+            //}
         }
 
         private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)

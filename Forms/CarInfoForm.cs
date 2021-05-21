@@ -13,6 +13,7 @@ namespace CourseWork
     {
         private Car currentCar;
         private Serializer<Car> sr;
+        private Serializer<CarOperation> operationSr;
         private CarList carList;
         private BaseImageConverter bic;
 
@@ -21,6 +22,7 @@ namespace CourseWork
             InitializeComponent();
             bic = new BaseImageConverter();
             sr = new Serializer<Car>();
+            operationSr = new Serializer<CarOperation>();
             carList = new CarList();
             if (!isAdmin)
             {
@@ -38,17 +40,29 @@ namespace CourseWork
 
         private void purchaseBtn_Click(object sender, EventArgs e)
         {
-            carList.List = sr.Deserialize("cars.save");
-            for (int i = carList.List.Count - 1; i >= 0; i--)
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to buy this vehicle?", "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                if (carList.List[i].Compare(currentCar))
+                carList.List = sr.Deserialize("cars.save");
+                for (int i = carList.List.Count - 1; i >= 0; i--)
                 {
-                    carList.List.RemoveAt(i);
+                    if (carList.List[i].Compare(currentCar))
+                    {
+                        carList.List.RemoveAt(i);
+                    }
                 }
-            }
-            sr.Serialize(carList.List, "cars.save");
-            MessageBox.Show("Congratulations! You just bought a new car.");
-            this.Close();
+                sr.Serialize(carList.List, "cars.save");
+                List<CarOperation> operation = new List<CarOperation>();
+                if (File.Exists("carOperations.save"))
+                {
+                    operation = operationSr.Deserialize("carOperations.save");
+                }
+                operation.Add(new CarOperation(currentCar, true));
+                operationSr.Serialize(operation, "carOperations.save");
+
+                MessageBox.Show("Congratulations! You just bought a new car.");
+                this.Close();
+            }          
         }
 
         private void EditBtnsShow()

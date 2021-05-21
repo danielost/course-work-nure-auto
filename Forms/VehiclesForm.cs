@@ -130,23 +130,21 @@ namespace CourseWork
         private void button1_Click(object sender, EventArgs e)
         {
             List<Car> cars = sr.Deserialize("cars.save");
-            List<Car> result = new List<Car>();
             string name = MakeTextBox.Text;
             string toFind = String.Concat(name.Where(c => !Char.IsWhiteSpace(c)));
 
             if (!advSrch)
             {
-                foreach (Car car in cars)
+                foreach (Car car in cars.ToList())
                 {
-                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) != -1 || (car.Model + car.Make).ToLower().IndexOf(toFind.ToLower()) != -1)
+                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) == -1 && (car.Model + car.Make).ToLower().IndexOf(toFind.ToLower()) == -1)
                     {
-                        result.Add(car);
+                        cars.Remove(car);
                     }
                 }
             }
             else
             {
-                result = cars;
                 if (AtLeastOneChecked())
                 {
                     CheckBox[] cbs = new CheckBox[7] { sedanCheckBox, coupeCheckBox, SUVCheckBox, CUVCheckBox, vanCheckBox, truckCheckBox, supercarCheckBox };
@@ -158,7 +156,7 @@ namespace CourseWork
                             {
                                 if (car.Type == cbs[i].Text)
                                 {
-                                    result.Remove(car);
+                                    cars.Remove(car);
                                 }
                             }
                         }
@@ -204,9 +202,17 @@ namespace CourseWork
                         cars.Remove(car);
                     }
                 }
+
+                foreach (Car car in cars.ToList())
+                {
+                    if ((car.Make + car.Model).ToLower().IndexOf(toFind.ToLower()) == -1 && (car.Model + car.Make).ToLower().IndexOf(toFind.ToLower()) == -1)
+                    {
+                        cars.Remove(car);
+                    }
+                }
             }
 
-            FlowReset(result);
+            FlowReset(cars);
         }
 
         private bool AtLeastOneChecked()

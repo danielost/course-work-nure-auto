@@ -14,6 +14,7 @@ namespace CourseWork
         private CarRequest cr;
         private Serializer<User> srUser;
         private Serializer<Car> srCar;
+        private Serializer<CarOperation> srOperation;
         List<Car> currentList;
 
         public SuppliesAdminForm()
@@ -21,6 +22,7 @@ namespace CourseWork
             InitializeComponent();
             srUser = new Serializer<User>();
             srCar = new Serializer<Car>();
+            srOperation = new Serializer<CarOperation>();
             cr = new CarRequest("login");
             textBox1.Hide();
             CreateCurrentGrid();
@@ -214,6 +216,16 @@ namespace CourseWork
             File.Delete("request.save");
             File.Delete("supplierLogin.txt");
             File.Delete("time.txt");
+            List<CarOperation> operation = new List<CarOperation>();
+            if (File.Exists("carOperations.save"))
+            {
+                operation = srOperation.Deserialize("carOperations.save");
+            }
+            foreach (Car car in currentList)
+            {
+                operation.Add(new CarOperation(car, false));
+            }
+            srOperation.Serialize(operation, "carOperations.save");
             Clear();
         }
 

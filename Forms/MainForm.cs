@@ -125,6 +125,7 @@ namespace CourseWork
         private void adminPanelBtn_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            OpenChildForm(new AdminPanelForm());
         }
 
         private void button1_Click(object sender, EventArgs e)
