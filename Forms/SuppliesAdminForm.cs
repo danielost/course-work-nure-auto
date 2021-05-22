@@ -16,6 +16,7 @@ namespace CourseWork
         private Serializer<Car> srCar;
         private Serializer<CarOperation> srOperation;
         List<Car> currentList;
+        private bool isCreated;
 
         public SuppliesAdminForm()
         {
@@ -26,36 +27,45 @@ namespace CourseWork
             cr = new CarRequest("login");
             textBox1.Hide();
             CreateCurrentGrid();
+            isCreated = false;
         }
 
         private void ReqButton_Click(object sender, EventArgs e)
         {
-            if (currentList != null)
+            if (LoginTextBox.Text != "")
             {
-                MessageBox.Show("A request already exists");
-                return;
-            }
-
-            List<User> users = srUser.Deserialize("data.save");
-            bool exists = false;
-            foreach (User currUser in users)
-            {
-                if (currUser.Login == LoginTextBox.Text)
+                if (currentList != null)
                 {
-                    exists = true;
-                    break;
+                    MessageBox.Show("A request already exists");
+                    return;
                 }
-            }
-            if (!exists)
-            {
-                MessageBox.Show("There is no supplier with such login registered");
-                return;
-            }
-            cr = new CarRequest(LoginTextBox.Text);
-            cr.Write(LoginTextBox.Text, "supplierLogin.txt");
-            Reload();
 
-            HideInfo();
+                List<User> users = srUser.Deserialize("data.save");
+                bool exists = false;
+                foreach (User currUser in users)
+                {
+                    if (currUser.Login == LoginTextBox.Text)
+                    {
+                        exists = true;
+                        break;
+                    }
+                }
+                if (!exists)
+                {
+                    MessageBox.Show("There is no supplier with such login registered");
+                    return;
+                }
+                isCreated = true;
+                cr = new CarRequest(LoginTextBox.Text);
+                cr.Write(LoginTextBox.Text, "supplierLogin.txt");
+                Reload();
+
+                HideInfo();
+            }
+            else
+            {
+                MessageBox.Show("Empty login");
+            }
         }
 
         private void HideInfo()
@@ -72,6 +82,15 @@ namespace CourseWork
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if (!isCreated)
+            {
+                return;
+            }
+            if (LoginTextBox.Text == "")
+            {
+                MessageBox.Show("Empty login");
+                return;
+            }
             if (cr == null)
             {
                 MessageBox.Show("You didn't create a request");
