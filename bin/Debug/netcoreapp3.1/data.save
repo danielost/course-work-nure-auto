@@ -1,1 +1,1 @@
-[{"Name":"admin","Login":"admin","Password":"password","Status":"admin"},{"Name":"Simple User","Login":"user","Password":"qwerty","Status":"user"},{"Name":"FCA North","Login":"fcanorcal","Password":"fiatchrysler","Status":"supplier"}]
+[{"Name":"admin","Login":"admin","Password":"password","Status":"admin"},{"Name":"FCA North","Login":"fcanorcal","Password":"fiatchrysler","Status":"supplier"},{"Name":"Simple User","Login":"user123","Password":"qwerty45","Status":"user"}]

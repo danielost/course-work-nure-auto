@@ -42,12 +42,14 @@ namespace CourseWork
                 WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
+
             if (LengthCheck(RegLogin))
             {
                 WrongDataLabel.Text = "You didn't enter the login";
                 WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
+
             if (LengthCheck(RegPass))
             {
                 WrongDataLabel.Text = "You didn't enter the password";
@@ -55,13 +57,13 @@ namespace CourseWork
                 return;
             }
             
-
             if (RegLogin.Text.Length < 4)
             {
                 WrongDataLabel.Text = "Minimum login length is 4 symbols";
                 WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
+
             if (RegPass.Text.Length < 6)
             {
                 WrongDataLabel.Text = "Minimum password length is 6 symbols";
@@ -95,6 +97,7 @@ namespace CourseWork
                 WrongDataLabel.ForeColor = Color.Red;
                 return;
             }
+
             if (RegPass.Text != RegPassConfirm.Text)
             {
                 WrongDataLabel.Text = "Password confirmation was not successful";
@@ -105,6 +108,7 @@ namespace CourseWork
             User user = new User(RegName.Text, RegLogin.Text, RegPass.Text, "user");
             Serializer<User> sr = new Serializer<User>();
             List<User> readUsers = sr.Deserialize("data.save");
+
             foreach (User currUser in readUsers)
             {
                 if (currUser.Login == user.Login)
@@ -114,6 +118,7 @@ namespace CourseWork
                     return;
                 }
             }
+
             WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
             readUsers.Add(user);
             sr.Serialize(readUsers, "data.save");

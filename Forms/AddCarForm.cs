@@ -79,6 +79,7 @@ namespace CourseWork
                 MessageBox.Show("Origin field is empty");
                 return;
             }
+
             CarList carList = new CarList();
             Serializer<Car> sr = new Serializer<Car>();
             carList.List = sr.Deserialize("cars.save");

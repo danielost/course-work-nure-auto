@@ -37,8 +37,7 @@ namespace CourseWork
                     cars = sr.Deserialize("request.save");
                     ReqCurrent.DataSource = cars;
                     HideCurrent();
-                }
-                
+                }              
             }
 
             if (cars == null)

@@ -27,7 +27,7 @@ namespace CourseWork
 
         public List<T> Deserialize(string fileName)
         {
-            string jsonFilePath = @"C:\Users\Daniel\Desktop\2 Семестр\ООП\Курсовая\Car Dealeship\bin\Debug\netcoreapp3.1\" + fileName;
+            string jsonFilePath = Path.Combine(Environment.CurrentDirectory, fileName);
             if (File.Exists(jsonFilePath))
             {
                 using (StreamReader r = new StreamReader(jsonFilePath))

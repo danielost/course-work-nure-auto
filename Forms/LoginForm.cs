@@ -13,13 +13,14 @@ namespace CourseWork
     public partial class LoginForm : Form
     {
         AppUsers appUsers;
+        Serializer<User> sr;
 
         public LoginForm()
         {
             InitializeComponent();
             this.MinimumSize = new Size(600, 600);
             appUsers = new AppUsers();
-            Serializer<User> sr = new Serializer<User>();
+            sr = new Serializer<User>();
             appUsers.users = sr.Deserialize("data.save");
             WrongDataLabel.ForeColor = Color.FromArgb(217, 217, 217);
         }
@@ -42,11 +43,6 @@ namespace CourseWork
             }
         }
 
-        private bool LengthCheck(TextBox tb)
-        {
-            return tb.Text.Length == 0;
-        }
-
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -58,8 +54,6 @@ namespace CourseWork
             SignUpForm suf = new SignUpForm();
             suf.Show();
         }
-
-        
 
         private void showBtn_Click(object sender, EventArgs e)
         {
